@@ -1,0 +1,5 @@
+# Robots.txt for Deodha Foundation
+User-agent: *
+Allow: /
+
+Sitemap: https://deodhafoundation.org/sitemap.xml
