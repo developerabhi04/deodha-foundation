@@ -7,6 +7,7 @@ import { useLanguage } from '../../lib/LanguageContext';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
 
+
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -19,13 +20,28 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+    //   nav: {
+    //     home: 'Home',
+    //     about: 'About Us',
+    //     project: 'Project',
+    //     programs: 'Programs',
+    //     Gallery: 'Gallery',
+    //     News: 'News',
+    //     joinUs: 'Join Us',
+    //     contact: 'Contact',
+
+    //     donate: 'Donate',
+    //     volunteer: 'Volunteer',
+    // },
+
     const navLinks = [
         { href: '/', label: t.nav.home },
         { href: '/about', label: t.nav.about },
+        { href: '/project', label: t.nav.project },
         { href: '/programs', label: t.nav.programs },
-        { href: '/gallery', label: t.nav.gallery },
-        { href: '/events', label: t.nav.events },
-        { href: '/blog', label: t.nav.blog },
+        { href: '/gallery', label: t.nav.Gallery },
+        { href: '/news', label: t.nav.News },
         { href: '/contact', label: t.nav.contact },
     ];
 

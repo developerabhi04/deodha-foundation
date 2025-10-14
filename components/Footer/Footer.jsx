@@ -104,11 +104,11 @@ export default function Footer() {
                         <br />
                         {t.footer.developedBy}{" "}
                         <Link
-                            href="https://araniinfotech.com"
+                            href="https://aranisoftware.com"
                             target="_blank"
                             className="font-medium hover:text-brand-green transition-colors"
                         >
-                            Arani Infotech Pvt. Ltd.
+                            Arani Software Solutions
                         </Link>
                     </p>
                 </div>

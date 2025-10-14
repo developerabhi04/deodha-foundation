@@ -262,8 +262,8 @@ export default function HeroSlider() {
                             aria-label={`Slide ${index + 1}`}
                         >
                             <div className={`transition-all duration-300 rounded-full ${index === currentSlide
-                                    ? 'w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-500'
-                                    : 'w-2 h-2 bg-white/40 group-hover:bg-white/60'
+                                ? 'w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-500'
+                                : 'w-2 h-2 bg-white/40 group-hover:bg-white/60'
                                 }`}></div>
                         </button>
                     ))}
