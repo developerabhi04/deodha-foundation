@@ -1,0 +1,341 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+    TrendingUp, Award, Calendar, Download,
+    Users, Heart as HeartIcon, Send, UserPlus, DollarSign
+} from 'lucide-react';
+
+
+
+const ProjectsSection = () => {
+    const [activeTab, setActiveTab] = useState('ongoing'); // 'ongoing', 'completed', 'upcoming'
+
+
+
+    // Stats Data
+    const stats = [
+        { label: 'Children Supported', value: 500, suffix: '+', icon: Users, color: 'bg-blue-500' },
+        { label: 'Women Empowered', value: 200, suffix: '+', icon: HeartIcon, color: 'bg-pink-500' },
+        { label: 'Villagers Reached', value: 1000, suffix: '+', icon: Users, color: 'bg-green-500' },
+        { label: 'Active Volunteers', value: 100, suffix: '+', icon: UserPlus, color: 'bg-purple-500' },
+    ];
+
+
+    // Projects Data
+    const ongoingProjects = [
+        {
+            id: 1,
+            title: 'Main Gate Beautification Project',
+            description: 'Construction of grand entrance gate (स्वागत द्वार) symbolizing village pride and identity.',
+            budget: '₹2.42 lakh',
+            progress: 60,
+            status: 'Ongoing',
+            image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80',
+        },
+        {
+            id: 2,
+            title: 'Educational Quality Improvement',
+            description: 'Digital library setup, teacher training, and after-school tuition programs.',
+            budget: 'Multi-phase',
+            progress: 35,
+            status: 'Planning',
+            image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80',
+        },
+        {
+            id: 3,
+            title: 'Cultural Revival Programs',
+            description: 'Revival of Rastriya Natya Kala Parishad and traditional folk arts.',
+            budget: 'Community funded',
+            progress: 40,
+            status: 'Active',
+            image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&q=80',
+        },
+    ];
+
+    const completedProjects = [
+        {
+            id: 1,
+            title: 'Road Repair & Drainage Cleaning',
+            description: 'Major community-driven infrastructure project eliminating waterlogging.',
+            budget: '₹1.51 lakh',
+            completionDate: 'August 2025',
+            impact: '500+ families benefited',
+            image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
+        },
+        {
+            id: 2,
+            title: 'Sanitation & Awareness Campaigns',
+            description: 'Village-wide cleanliness drives and social awareness programs.',
+            budget: 'Community funded',
+            completionDate: '2025',
+            impact: 'Improved village hygiene',
+            image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80',
+        },
+    ];
+
+    const upcomingProjects = [
+        {
+            id: 1,
+            title: 'Digital Library Inauguration',
+            description: 'Launch of new digital library with e-learning resources and computer training center.',
+            budget: '₹5 lakh',
+            startDate: 'January 2026',
+            status: 'Planned',
+            image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
+        },
+        {
+            id: 2,
+            title: 'Women Empowerment Center',
+            description: 'Skill development and vocational training center for village women.',
+            budget: '₹3 lakh',
+            startDate: 'March 2026',
+            status: 'Planned',
+            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+        },
+        {
+            id: 3,
+            title: 'Solar Street Lighting Project',
+            description: 'Installing solar-powered street lights across main village roads.',
+            budget: '₹4 lakh',
+            startDate: 'February 2026',
+            status: 'Planned',
+            image: 'https://images.unsplash.com/photo-1509391111737-a6f1241a85d4?w=600&q=80',
+        },
+    ];
+
+    return (
+        <section id="projects" className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Projects</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Transforming Dheodha through community-driven development initiatives
+                    </p>
+                </div>
+
+                {/* Tab Navigation */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        onClick={() => setActiveTab('ongoing')}
+                        className={`px-8 py-4 rounded-full font-semibold transition-all ${activeTab === 'ongoing'
+                            ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-lg scale-105'
+                            : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                            }`}
+                    >
+                        <div className="flex items-center space-x-2">
+                            <TrendingUp className="w-5 h-5" />
+                            <span>Ongoing Projects</span>
+                            <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'ongoing' ? 'bg-white/20' : 'bg-yellow-100 text-yellow-700'
+                                }`}>
+                                {ongoingProjects.length}
+                            </span>
+                        </div>
+                    </button>
+
+                    <button
+                        onClick={() => setActiveTab('completed')}
+                        className={`px-8 py-4 rounded-full font-semibold transition-all ${activeTab === 'completed'
+                            ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg scale-105'
+                            : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                            }`}
+                    >
+                        <div className="flex items-center space-x-2">
+                            <Award className="w-5 h-5" />
+                            <span>Completed Projects</span>
+                            <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'completed' ? 'bg-white/20' : 'bg-green-100 text-green-700'
+                                }`}>
+                                {completedProjects.length}
+                            </span>
+                        </div>
+                    </button>
+
+                    <button
+                        onClick={() => setActiveTab('upcoming')}
+                        className={`px-8 py-4 rounded-full font-semibold transition-all ${activeTab === 'upcoming'
+                            ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg scale-105'
+                            : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                            }`}
+                    >
+                        <div className="flex items-center space-x-2">
+                            <Calendar className="w-5 h-5" />
+                            <span>Upcoming Projects</span>
+                            <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'upcoming' ? 'bg-white/20' : 'bg-blue-100 text-blue-700'
+                                }`}>
+                                {upcomingProjects.length}
+                            </span>
+                        </div>
+                    </button>
+                </div>
+
+                {/* Projects Grid */}
+                <div className="mb-20">
+                    {/* Ongoing Projects */}
+                    {activeTab === 'ongoing' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        >
+                            {ongoingProjects.map((project, index) => (
+                                <motion.div
+                                    key={project.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
+                                >
+                                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                                    <div className="p-6">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                                {project.status}
+                                            </span>
+                                            <span className="text-green-600 font-bold">{project.budget}</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                                        <p className="text-gray-600 mb-4">{project.description}</p>
+                                        <div className="space-y-2">
+                                            <div className="flex justify-between text-sm text-gray-600">
+                                                <span>Progress</span>
+                                                <span className="font-semibold">{project.progress}%</span>
+                                            </div>
+                                            <div className="w-full bg-gray-200 rounded-full h-2">
+                                                <div
+                                                    className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full transition-all"
+                                                    style={{ width: `${project.progress}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
+
+                    {/* Completed Projects */}
+                    {activeTab === 'completed' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="grid md:grid-cols-2 gap-8"
+                        >
+                            {completedProjects.map((project, index) => (
+                                <motion.div
+                                    key={project.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
+                                >
+                                    <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
+                                    <div className="p-6">
+                                        <div className="flex items-center space-x-2 mb-3">
+                                            <Award className="w-5 h-5 text-green-600" />
+                                            <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                                Completed
+                                            </span>
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                                        <p className="text-gray-600 mb-4">{project.description}</p>
+                                        <div className="space-y-2 text-sm text-gray-600">
+                                            {project.budget && (
+                                                <div className="flex justify-between">
+                                                    <span>Budget:</span>
+                                                    <span className="font-semibold">{project.budget}</span>
+                                                </div>
+                                            )}
+                                            <div className="flex justify-between">
+                                                <span>Completed:</span>
+                                                <span className="font-semibold">{project.completionDate}</span>
+                                            </div>
+                                            <div className="flex justify-between">
+                                                <span>Impact:</span>
+                                                <span className="font-semibold text-green-600">{project.impact}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
+
+                    {/* Upcoming Projects */}
+                    {activeTab === 'upcoming' && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        >
+                            {upcomingProjects.map((project, index) => (
+                                <motion.div
+                                    key={project.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
+                                >
+                                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                                    <div className="p-6">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                                {project.status}
+                                            </span>
+                                            <span className="text-blue-600 font-bold">{project.budget}</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                                        <p className="text-gray-600 mb-4">{project.description}</p>
+                                        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                                            <div className="flex items-center space-x-2 text-sm text-gray-600">
+                                                <Calendar className="w-4 h-4" />
+                                                <span>Expected: {project.startDate}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    )}
+                </div>
+
+                {/* Impact Reports */}
+                <div id="impact-reports" className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Impact Reports</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Transparent reporting of our community development work
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {stats.map((stat, index) => (
+                            <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg">
+                                <div className={`${stat.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                                    <stat.icon className="w-8 h-8 text-white" />
+                                </div>
+                                <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}{stat.suffix}</div>
+                                <div className="text-gray-600">{stat.label}</div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-8">
+                        <a
+                            href="#"
+                            className="inline-flex items-center space-x-2 bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+                        >
+                            <Download className="w-5 h-5" />
+                            <span>Download Detailed Report</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+
+export default ProjectsSection;

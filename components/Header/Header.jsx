@@ -75,12 +75,12 @@ export default function Header() {
                             <div className="hidden sm:block">
                                 <div className={`text-base md:text-lg lg:text-xl font-black leading-tight transition-colors ${scrolled ? 'text-gray-900' : 'text-white'
                                     }`}>
-                                    {language === 'hi' ? 'ध्यवाधा फाउंडेशन' : 'DHEWADHA '}
+                                    {language === 'hi' ? 'ध्यवाधा ' : 'DHEWADHA '}
                                 </div>
-                                <div className={`text-[10px] md:text-xs font-bold transition-colors ${scrolled ? 'text-brand-green' : 'text-green-600'
+                                {/* <div className={`text-[10px] md:text-xs font-bold transition-colors ${scrolled ? 'text-brand-green' : 'text-green-600'
                                     }`}>
                                     {language === 'hi' ? 'समुदायों को सशक्त बनाना' : 'Vikas samiti'}
-                                </div>
+                                </div> */}
                             </div>
                         </Link>
 

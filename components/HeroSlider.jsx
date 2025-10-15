@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight, Heart, Users, Award, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 
+
+
+
+
+
+
 export default function HeroSlider() {
     const { language } = useLanguage();
     const [currentSlide, setCurrentSlide] = useState(0);
