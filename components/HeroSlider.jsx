@@ -20,7 +20,7 @@ export default function HeroSlider() {
             id: 1,
             image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80&auto=format&fit=crop',
             overlayColor: 'from-green-500/70 to-emerald-600/30',
-            badge: { en: 'SERVING SINCE 2016', hi: '2016 से सेवारत' },
+            // badge: { en: 'SERVING SINCE 2016', hi: '2016 से सेवारत' },
             title: {
                 en: ['Transforming Lives', 'in Rural Bihar'],
                 hi: ['ग्रामीण बिहार में', 'जीवन बदल रहे हैं']
@@ -29,17 +29,17 @@ export default function HeroSlider() {
                 en: 'Empowering 500+ children, 200+ women across 15+ villages through education, healthcare, and livelihood programs',
                 hi: 'शिक्षा, स्वास्थ्य सेवा और आजीविका कार्यक्रमों के माध्यम से 15+ गांवों में 500+ बच्चों, 200+ महिलाओं को सशक्त बना रहे हैं'
             },
-            stats: [
-                { value: '500+', label: { en: 'Lives Impacted', hi: 'प्रभावित जीवन' } },
-                { value: '15+', label: { en: 'Villages', hi: 'गाँव' } },
-                { value: '100+', label: { en: 'Volunteers', hi: 'स्वयंसेवक' } }
-            ]
+            // stats: [
+            //     { value: '500+', label: { en: 'Lives Impacted', hi: 'प्रभावित जीवन' } },
+            //     { value: '15+', label: { en: 'Villages', hi: 'गाँव' } },
+            //     { value: '100+', label: { en: 'Volunteers', hi: 'स्वयंसेवक' } }
+            // ]
         },
         {
             id: 2,
             image: 'https://images.unsplash.com/photo-1509099836639-18ba9f7b5d3d?w=1920&q=80&auto=format&fit=crop',
             overlayColor: 'from-blue-500/70 to-cyan-600/30',
-            badge: { en: '100% TRANSPARENT', hi: '100% पारदर्शी' },
+            // badge: { en: '100% TRANSPARENT', hi: '100% पारदर्शी' },
             title: {
                 en: ['Women Empowerment', 'Skill Development'],
                 hi: ['महिला सशक्तिकरण', 'कौशल विकास']
@@ -48,17 +48,17 @@ export default function HeroSlider() {
                 en: 'Training 200+ rural women in tailoring, handicrafts, and entrepreneurship for financial independence',
                 hi: 'वित्तीय स्वतंत्रता के लिए 200+ ग्रामीण महिलाओं को सिलाई, हस्तशिल्प और उद्यमिता में प्रशिक्षण'
             },
-            stats: [
-                { value: '200+', label: { en: 'Women Trained', hi: 'प्रशिक्षित महिलाएं' } },
-                { value: '90%', label: { en: 'Success Rate', hi: 'सफलता दर' } },
-                { value: '₹50K+', label: { en: 'Avg Income', hi: 'औसत आय' } }
-            ]
+            // stats: [
+            //     { value: '200+', label: { en: 'Women Trained', hi: 'प्रशिक्षित महिलाएं' } },
+            //     { value: '90%', label: { en: 'Success Rate', hi: 'सफलता दर' } },
+            //     { value: '₹50K+', label: { en: 'Avg Income', hi: 'औसत आय' } }
+            // ]
         },
         {
             id: 3,
             image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1920&q=80&auto=format&fit=crop',
             overlayColor: 'from-orange-500/70 to-red-600/30',
-            badge: { en: 'GOVT. RECOGNIZED', hi: 'सरकार द्वारा मान्यता प्राप्त' },
+            // badge: { en: 'GOVT. RECOGNIZED', hi: 'सरकार द्वारा मान्यता प्राप्त' },
             title: {
                 en: ['Quality Education', 'For Every Child'],
                 hi: ['गुणवत्तापूर्ण शिक्षा', 'हर बच्चे के लिए']
@@ -67,11 +67,11 @@ export default function HeroSlider() {
                 en: 'Free books, scholarships, and after-school programs ensuring no child is left behind in Nawada District',
                 hi: 'मुफ्त किताबें, छात्रवृत्ति और स्कूल के बाद के कार्यक्रम यह सुनिश्चित करते हैं कि नवादा जिले में कोई भी बच्चा पीछे न रहे'
             },
-            stats: [
-                { value: '500+', label: { en: 'Students', hi: 'छात्र' } },
-                { value: '₹10L+', label: { en: 'Scholarships', hi: 'छात्रवृत्ति' } },
-                { value: '95%', label: { en: 'Pass Rate', hi: 'उत्तीर्ण दर' } }
-            ]
+            // stats: [
+            //     { value: '500+', label: { en: 'Students', hi: 'छात्र' } },
+            //     { value: '₹10L+', label: { en: 'Scholarships', hi: 'छात्रवृत्ति' } },
+            //     { value: '95%', label: { en: 'Pass Rate', hi: 'उत्तीर्ण दर' } }
+            // ]
         }
     ];
 
@@ -161,10 +161,10 @@ export default function HeroSlider() {
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                     className="mb-4"
                                 >
-                                    <div className="inline-block bg-yellow-400/90 backdrop-blur-sm text-black px-5 py-2 rounded-full font-black text-xs uppercase tracking-wider shadow-lg">
+                                    {/* <div className="inline-block bg-yellow-400/90 backdrop-blur-sm text-black px-5 py-2 rounded-full font-black text-xs uppercase tracking-wider shadow-lg">
                                         <Award size={14} className="inline mr-2" />
                                         {slides[currentSlide].badge[language]}
-                                    </div>
+                                    </div> */}
                                 </motion.div>
 
                                 {/* Title - Smaller & Centered */}
@@ -194,7 +194,7 @@ export default function HeroSlider() {
                                 </motion.p>
 
                                 {/* Stats Bar - Centered */}
-                                <motion.div
+                                {/* <motion.div
                                     initial={{ y: 30, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: 0.8, duration: 0.5 }}
@@ -206,7 +206,7 @@ export default function HeroSlider() {
                                             <div className="text-[10px] md:text-xs font-semibold text-white uppercase">{stat.label[language]}</div>
                                         </div>
                                     ))}
-                                </motion.div>
+                                </motion.div> */}
 
                                 {/* CTA Buttons - Centered & Smaller */}
                                 <motion.div
@@ -238,7 +238,7 @@ export default function HeroSlider() {
             </AnimatePresence>
 
             {/* Navigation Arrows - Bottom Left */}
-            {imagesLoaded && (
+            {/* {imagesLoaded && (
                 <div className="absolute bottom-8 left-8 z-10 flex gap-3">
                     <button
                         onClick={prevSlide}
@@ -255,7 +255,7 @@ export default function HeroSlider() {
                         <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>
-            )}
+            )} */}
 
             {/* Slide Indicators - Bottom Center */}
             {imagesLoaded && (
@@ -268,7 +268,7 @@ export default function HeroSlider() {
                             aria-label={`Slide ${index + 1}`}
                         >
                             <div className={`transition-all duration-300 rounded-full ${index === currentSlide
-                                ? 'w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-500'
+                                ? 'w-8 h-2 bg-gradient-to-r from-yellow-400 to-green-500'
                                 : 'w-2 h-2 bg-white/40 group-hover:bg-white/60'
                                 }`}></div>
                         </button>

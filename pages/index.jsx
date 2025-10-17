@@ -104,16 +104,18 @@ const Home = () => {
     </section>
   );
 
+  
+
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white">
       <HeroSlider />
       <AboutSection />
       <ProjectsSection />
-      <ProgramsSection />
+      {/* <ProgramsSection /> */}
       <GallerySection />
       <NewsSection />
-      <JoinSection />
+      {/* <JoinSection /> */}
     </div>
   );
 };
