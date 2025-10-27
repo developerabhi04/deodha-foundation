@@ -1,14 +1,43 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
-
-
-
-
+import { ChevronRight, ChevronLeft, Download, Users, GraduationCap, Heart, Sprout } from 'lucide-react';
+import Stats from '../../components/Stats'; // Adjust path as needed
 
 // Community Programs Section with Advanced Slider
 const ProgramsSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    // Stats data
+    const stats = [
+        {
+            value: 10000,
+            suffix: '+',
+            label: 'Lives Impacted',
+            icon: Users,
+            color: 'bg-green-500'
+        },
+        {
+            value: 500,
+            suffix: '+',
+            label: 'Students Educated',
+            icon: GraduationCap,
+            color: 'bg-blue-500'
+        },
+        {
+            value: 300,
+            suffix: '+',
+            label: 'Farmers Supported',
+            icon: Sprout,
+            color: 'bg-emerald-500'
+        },
+        {
+            value: 200,
+            suffix: '+',
+            label: 'Women Empowered',
+            icon: Heart,
+            color: 'bg-pink-500'
+        },
+    ];
 
     const programs = [
         {
@@ -282,9 +311,8 @@ const ProgramsSection = () => {
                     ))}
                 </div>
 
-
                 {/* Impact Reports */}
-                <div id="impact-reports" className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+                <div id="impact-reports" className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 mt-16">
                     <div className="text-center mb-8">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Impact Reports</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -292,7 +320,8 @@ const ProgramsSection = () => {
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {/* Stats Component */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {stats.map((stat, index) => (
                             <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg">
                                 <div className={`${stat.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -304,7 +333,7 @@ const ProgramsSection = () => {
                         ))}
                     </div>
 
-                    <div className="text-center mt-8">
+                    <div className="text-center">
                         <a
                             href="#"
                             className="inline-flex items-center space-x-2 bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
@@ -315,11 +344,7 @@ const ProgramsSection = () => {
                     </div>
                 </div>
             </div>
-
-
         </section>
-
-
     );
 };
 

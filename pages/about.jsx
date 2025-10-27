@@ -1,9 +1,29 @@
 // About page - mission, vision, history timeline, team (UI-only)
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import TeamCard from '../components/TeamCard';
 import { team } from '../lib/data';
+import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, Eye, Target, Users } from 'lucide-react';
+
+// Dynamically import Swiper with SSR disabled
+const Swiper = dynamic(() => import('swiper/react').then((mod) => mod.Swiper), {
+  ssr: false,
+});
+
+const SwiperSlide = dynamic(() => import('swiper/react').then((mod) => mod.SwiperSlide), {
+  ssr: false,
+});
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+// Import Swiper modules
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 export default function About() {
   const timeline = [
@@ -326,8 +346,6 @@ export default function About() {
                       </div>
                     </div>
 
-
-
                     {/* Bottom Accent */}
                     <div className={`h-2 bg-gradient-to-r ${member.color}`}></div>
                   </motion.div>
@@ -369,20 +387,20 @@ export default function About() {
 
       {/* Custom Swiper Styles */}
       <style jsx global>{`
-                .team-swiper .swiper-pagination-bullet {
-                width: 12px;
-                height: 12px;
-                background: #6366f1;
-                opacity: 0.4;
-                }
-                
-                .team-swiper .swiper-pagination-bullet-active {
-                opacity: 1;
-                width: 36px;
-                border-radius: 6px;
-                background: linear-gradient(to right, #6366f1, #a855f7);
-                }
-           `}</style>
+        .team-swiper .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background: #6366f1;
+          opacity: 0.4;
+        }
+        
+        .team-swiper .swiper-pagination-bullet-active {
+          opacity: 1;
+          width: 36px;
+          border-radius: 6px;
+          background: linear-gradient(to right, #6366f1, #a855f7);
+        }
+      `}</style>
     </>
   );
 }
