@@ -14,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 
 
@@ -92,20 +93,20 @@ const AboutSection = () => {
                             </div>
 
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <a
+                                <Link
                                     href="/about"
                                     className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center space-x-2"
                                 >
                                     <span>Meet Our Team</span>
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/contact"
                                     className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-green-500 hover:text-green-600 transition-all inline-flex items-center space-x-2"
                                 >
                                     <Phone className="w-5 h-5" />
                                     <span>Get in Touch</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
@@ -175,13 +176,13 @@ const AboutSection = () => {
 
                                 {/* View Full Team Link */}
                                 <div className="mt-6 text-center">
-                                    <a
+                                    <Link
                                         href="/team"
                                         className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold text-sm transition-colors"
                                     >
                                         <span>View Detailed Profiles</span>
                                         <ArrowRight className="w-4 h-4" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 

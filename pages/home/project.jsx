@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
     TrendingUp, Award, Calendar, Download,
-    Users, Heart as HeartIcon, Send, UserPlus, DollarSign
+    Users, Heart as HeartIcon, Send, UserPlus, DollarSign,
+    ArrowRight
 } from 'lucide-react';
+import Link from 'next/link';
 
 
 
@@ -301,7 +303,22 @@ const ProjectsSection = () => {
                     )}
                 </div>
 
-                
+                {/* View All Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                    className="text-center mt-16"
+                >
+                    <Link
+                        href="/project"
+                        className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all"
+                    >
+                        <span>Explore All Projects</span>
+                        <ArrowRight className="w-6 h-6" />
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );

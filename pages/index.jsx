@@ -11,6 +11,7 @@ import AboutSection from './home/about';
 import ProjectsSection from './home/project';
 import ProgramsSection from './home/program';
 import NewsSection from './home/news';
+import Link from 'next/link';
 
 
 const Home = () => {
@@ -45,13 +46,13 @@ const Home = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href="#gallery"
+          <Link
+            href="/gallery"
             className="inline-flex items-center space-x-2 bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border-2 border-gray-300 hover:border-green-500 hover:text-green-600 transition-all"
           >
             <span>View Full Gallery</span>
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

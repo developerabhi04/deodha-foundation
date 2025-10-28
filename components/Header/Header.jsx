@@ -138,7 +138,7 @@ export default function Header() {
 
                             {/* Join Now Button - Desktop */}
                             <Link
-                                href="/donate"
+                                href="/contact"
                                 className="hidden md:flex items-center gap-2 bg-gradient-to-r from-green-500 via-green-500 to-green-600 text-white px-4 md:px-6 lg:px-8 py-2 md:py-2 rounded-full font-black text-xs md:text-sm uppercase shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
                             >
                                 <Heart size={16} className="md:w-5 md:h-5" fill="white" />
@@ -148,7 +148,7 @@ export default function Header() {
 
                             {/* Mobile Join Button */}
                             <Link
-                                href="/donate"
+                                href="/contact"
                                 className="md:hidden flex items-center gap-1 bg-gradient-to-r from-orange-500 to-red-600 text-white px-3 py-2 rounded-full font-bold text-xs shadow-lg"
                             >
                                 <Heart size={14} fill="white" />

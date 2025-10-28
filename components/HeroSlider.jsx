@@ -216,7 +216,7 @@ export default function HeroSlider() {
                                     className="flex flex-col sm:flex-row gap-3 justify-center"
                                 >
                                     <Link
-                                        href="/donate"
+                                        href="/about"
                                         className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 via-red-500 to-pink-600 text-white px-6 py-3 rounded-full font-black text-sm uppercase shadow-2xl hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300"
                                     >
                                         <Heart size={18} fill="white" />
