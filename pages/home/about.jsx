@@ -48,18 +48,12 @@ const AboutSection = () => {
             role: 'Vice Secretary',
             image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&q=80',
             color: 'from-orange-500 to-amber-600',
-        },
-        {
-            name: 'Rishav Mishra',
-            role: 'Website & Tech Manager',
-            image: 'https://rishavmishra.com/assets/Avatar-CnoY_3lK.jpg',
-            color: 'from-teal-500 to-cyan-600',
-        },
+        }
     ];
     return (
         <section id="about" className="relative py-16 overflow-hidden">
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-blue-50">
+            <div className="absolute inset-0 min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50">
                 <div className="absolute inset-0" style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
                 }}></div>
@@ -99,14 +93,14 @@ const AboutSection = () => {
 
                             <div className="flex flex-wrap gap-4 pt-4">
                                 <a
-                                    href="#founding-members"
+                                    href="/about"
                                     className="group bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center space-x-2"
                                 >
                                     <span>Meet Our Team</span>
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
                                 <a
-                                    href="#contact"
+                                    href="/contact"
                                     className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-green-500 hover:text-green-600 transition-all inline-flex items-center space-x-2"
                                 >
                                     <Phone className="w-5 h-5" />
@@ -182,7 +176,7 @@ const AboutSection = () => {
                                 {/* View Full Team Link */}
                                 <div className="mt-6 text-center">
                                     <a
-                                        href="#founding-members"
+                                        href="/team"
                                         className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold text-sm transition-colors"
                                     >
                                         <span>View Detailed Profiles</span>
@@ -207,7 +201,7 @@ const AboutSection = () => {
 
 
 
-               
+
 
 
 
@@ -461,7 +455,7 @@ const AboutSection = () => {
     }
 `}</style>
 
-               
+
             </div>
         </section>
     )

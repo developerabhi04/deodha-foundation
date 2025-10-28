@@ -108,7 +108,7 @@ const Home = () => {
 
 
   return (
-    <div className=" bg-white">
+    <>
       <HeroSlider />
       <AboutSection />
       <ProjectsSection />
@@ -116,7 +116,7 @@ const Home = () => {
       <GallerySection />
       <NewsSection />
       {/* <JoinSection /> */}
-    </div>
+    </>
   );
 };
 
