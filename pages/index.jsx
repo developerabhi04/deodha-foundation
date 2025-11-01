@@ -1,4 +1,4 @@
-// Home.jsx - Complete Implementation
+// pages/Home.jsx - With Translation Support
 import React from 'react';
 import {
   Menu, X, ChevronDown, ChevronRight, Phone, Mail, MapPin,
@@ -12,29 +12,30 @@ import ProjectsSection from './home/project';
 import ProgramsSection from './home/program';
 import NewsSection from './home/news';
 import Link from 'next/link';
-
+import { useLanguage } from '../lib/LanguageContext';
 
 const Home = () => {
+  const { language, t } = useLanguage();
 
-  // Gallery Section
+  // Gallery Section with Translations
   const GallerySection = () => (
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Gallery</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t.gallery.title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Moments capturing our journey of community development
+            {t.gallery.subtitle}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80', caption: 'Dheodha village landscape' },
-            { url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80', caption: 'Education initiatives' },
-            { url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80', caption: 'Road repair project' },
-            { url: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&q=80', caption: 'Cultural programs' },
-            { url: 'https://images.unsplash.com/photo-1509099836639-18ba9f7b5d3d?w=600&q=80', caption: 'Women empowerment' },
-            { url: 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=600&q=80', caption: 'Health awareness' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg', caption: language === 'hi' ? 'धेवधा गांव का दृश्य' : 'Dheodha village landscape' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761988428/Screenshot_2025-11-01_143140_qtujbz.png', caption: language === 'hi' ? 'शिक्षा पहल' : 'Education initiatives' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943478/535406181_1167017038795096_2461049160579214706_n_zw0cey.jpg', caption: language === 'hi' ? 'सड़क मरम्मत परियोजना' : 'Road repair project' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/45409174_2402526893097762_5143301432350343168_n_g8x7zd.jpg', caption: language === 'hi' ? 'सांस्कृतिक कार्यक्रम' : 'Cultural programs' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943491/564625741_1220718416758291_2852318103725747144_n_d49x2c.jpg', caption: language === 'hi' ? 'महिला सशक्तिकरण' : 'Women empowerment' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DP_2015_3_v1njsg.jpg', caption: language === 'hi' ? 'स्वास्थ्य जागरूकता' : 'Health awareness' },
           ].map((item, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all">
               <img src={item.url} alt={item.caption} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300" />
@@ -50,7 +51,7 @@ const Home = () => {
             href="/gallery"
             className="inline-flex items-center space-x-2 bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border-2 border-gray-300 hover:border-green-500 hover:text-green-600 transition-all"
           >
-            <span>View Full Gallery</span>
+            <span>{t.common.viewFullGallery}</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -58,65 +59,13 @@ const Home = () => {
     </section>
   );
 
- 
-  // Join Us Section
-  const JoinSection = () => (
-    <section id="join" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Join Us</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Be part of Dheodha's transformation journey
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Volunteer Registration */}
-          <div id="volunteer-registration" className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <UserPlus className="w-8 h-8 text-blue-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-4">Volunteer</h3>
-            <p className="text-gray-600 text-center mb-6">
-              Join 100+ active volunteers contributing time and skills for community development.
-            </p>
-            <ul className="space-y-2 mb-6 text-sm text-gray-700">
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-5 h-5 text-blue-600 mt-0.5" />
-                <span>Participate in community programs</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-5 h-5 text-blue-600 mt-0.5" />
-                <span>Share your professional expertise</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <ChevronRight className="w-5 h-5 text-blue-600 mt-0.5" />
-                <span>Make a lasting impact</span>
-              </li>
-            </ul>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Register Now
-            </button>
-          </div>
-
-
-        </div>
-      </div>
-    </section>
-  );
-
-  
-
-
   return (
     <>
       <HeroSlider />
       <AboutSection />
       <ProjectsSection />
-      {/* <ProgramsSection /> */}
       <GallerySection />
       <NewsSection />
-      {/* <JoinSection /> */}
     </>
   );
 };

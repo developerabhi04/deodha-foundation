@@ -2,9 +2,9 @@
 import Head from 'next/head';
 
 export default function SEO({ title, description, image, url }) {
-    const siteTitle = 'Deodha Foundation';
+    const siteTitle = 'Deodha Vikas Samiti';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-    const defaultDescription = 'Deodha Foundation empowers communities through education, healthcare, and livelihood programs.';
+    const defaultDescription = 'Deodha Vikas Samati empowers communities through education, healthcare, and livelihood programs.';
     const defaultImage = 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80&auto=format&fit=crop';
 
     return (

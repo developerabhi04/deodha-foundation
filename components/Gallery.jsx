@@ -1,43 +1,36 @@
-// Responsive gallery grid with filtering (UI-only)
-import { useState } from 'react';
+// components/Gallery.jsx - Responsive gallery grid with random image display
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Gallery({ images, onImageClick }) {
-    const [filter, setFilter] = useState('all');
+    const [shuffledImages, setShuffledImages] = useState([]);
 
-    const filters = ['all', 'education', 'healthcare', 'livelihood'];
+    // Shuffle array function
+    const shuffleArray = (array) => {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    };
 
-    const filteredImages = filter === 'all'
-        ? images
-        : images.filter((img) => img.program === filter);
+    // Shuffle images on component mount
+    useEffect(() => {
+        setShuffledImages(shuffleArray(images));
+    }, [images]);
 
     return (
         <div>
-            {/* Filter Buttons */}
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {filters.map((f) => (
-                    <button
-                        key={f}
-                        onClick={() => setFilter(f)}
-                        className={`px-6 py-2 rounded-lg font-semibold capitalize transition-all focus-ring ${filter === f
-                                ? 'bg-brand-green text-white'
-                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                            }`}
-                    >
-                        {f}
-                    </button>
-                ))}
-            </div>
-
             {/* Gallery Grid */}
             <motion.div
                 layout
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             >
                 <AnimatePresence>
-                    {filteredImages.map((image) => (
+                    {shuffledImages.map((image, index) => (
                         <motion.div
-                            key={image.id}
+                            key={image.id || index}
                             layout
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -45,11 +38,11 @@ export default function Gallery({ images, onImageClick }) {
                             transition={{ duration: 0.3 }}
                             whileHover={{ y: -4 }}
                             className="relative group cursor-pointer rounded-lg overflow-hidden shadow-md aspect-square"
-                            onClick={() => onImageClick(image.id - 1)}
+                            onClick={() => onImageClick(images.findIndex(img => img.id === image.id))}
                         >
                             <img
                                 src={image.url}
-                                alt={image.alt}
+                                alt={image.alt || image.caption}
                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 loading="lazy"
                             />

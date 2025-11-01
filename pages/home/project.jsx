@@ -1,3 +1,4 @@
+// components/home/project.jsx - With Translation Support
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -6,71 +7,78 @@ import {
     ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
-
-
+import { useLanguage } from '../../lib/LanguageContext';
 
 const ProjectsSection = () => {
+    const { language, t } = useLanguage();
     const [activeTab, setActiveTab] = useState('ongoing'); // 'ongoing', 'completed', 'upcoming'
-
-
 
     // Stats Data
     const stats = [
-        { label: 'Children Supported', value: 500, suffix: '+', icon: Users, color: 'bg-blue-500' },
-        { label: 'Women Empowered', value: 200, suffix: '+', icon: HeartIcon, color: 'bg-pink-500' },
-        { label: 'Villagers Reached', value: 1000, suffix: '+', icon: Users, color: 'bg-green-500' },
-        { label: 'Active Volunteers', value: 100, suffix: '+', icon: UserPlus, color: 'bg-purple-500' },
+        { label: language === 'hi' ? 'बच्चे समर्थित' : 'Children Supported', value: 500, suffix: '+', icon: Users, color: 'bg-blue-500' },
+        { label: language === 'hi' ? 'सशक्त महिलाएं' : 'Women Empowered', value: 200, suffix: '+', icon: HeartIcon, color: 'bg-pink-500' },
+        { label: language === 'hi' ? 'ग्रामीण तक पहुंच' : 'Villagers Reached', value: 1000, suffix: '+', icon: Users, color: 'bg-green-500' },
+        { label: language === 'hi' ? 'सक्रिय स्वयंसेवक' : 'Active Volunteers', value: 100, suffix: '+', icon: UserPlus, color: 'bg-purple-500' },
     ];
-
 
     // Projects Data
     const ongoingProjects = [
         {
             id: 1,
-            title: 'Main Gate Beautification Project',
-            description: 'Construction of grand entrance gate (स्वागत द्वार) symbolizing village pride and identity.',
+            title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना' : 'Main Gate Beautification Project',
+            description: language === 'hi' 
+                ? 'गांव के गौरव और पहचान का प्रतीक भव्य प्रवेश द्वार (स्वागत द्वार) का निर्माण।'
+                : 'Construction of grand entrance gate (स्वागत द्वार) symbolizing village pride and identity.',
             budget: '₹2.42 lakh',
             progress: 60,
-            status: 'Ongoing',
-            image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80',
+            status: language === 'hi' ? 'चल रहा' : 'Ongoing',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg',
         },
         {
             id: 2,
-            title: 'Educational Quality Improvement',
-            description: 'Digital library setup, teacher training, and after-school tuition programs.',
-            budget: 'Multi-phase',
+            title: language === 'hi' ? 'शैक्षिक गुणवत्ता सुधार' : 'Educational Quality Improvement',
+            description: language === 'hi'
+                ? 'डिजिटल लाइब्रेरी सेटअप, शिक्षक प्रशिक्षण, और स्कूल के बाद ट्यूशन कार्यक्रम।'
+                : 'Digital library setup, teacher training, and after-school tuition programs.',
+            budget: language === 'hi' ? 'बहु-चरण' : 'Multi-phase',
             progress: 35,
-            status: 'Planning',
-            image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80',
+            status: language === 'hi' ? 'योजना' : 'Planning',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
         },
         {
             id: 3,
-            title: 'Cultural Revival Programs',
-            description: 'Revival of Rastriya Natya Kala Parishad and traditional folk arts.',
-            budget: 'Community funded',
+            title: language === 'hi' ? 'सांस्कृतिक पुनरुद्धार कार्यक्रम' : 'Cultural Revival Programs',
+            description: language === 'hi'
+                ? 'राष्ट्रीय नाट्य कला परिषद और पारंपरिक लोक कलाओं का पुनरुद्धार।'
+                : 'Revival of Rastriya Natya Kala Parishad and traditional folk arts.',
+            budget: language === 'hi' ? 'समुदाय द्वारा वित्त पोषित' : 'Community funded',
             progress: 40,
-            status: 'Active',
-            image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&q=80',
+            status: language === 'hi' ? 'सक्रिय' : 'Active',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
         },
     ];
 
     const completedProjects = [
         {
             id: 1,
-            title: 'Road Repair & Drainage Cleaning',
-            description: 'Major community-driven infrastructure project eliminating waterlogging.',
+            title: language === 'hi' ? 'सड़क मरम्मत और नाली सफाई' : 'Road Repair & Drainage Cleaning',
+            description: language === 'hi'
+                ? 'जलभराव को खत्म करने वाली प्रमुख सामुदायिक बुनियादी ढांचा परियोजना।'
+                : 'Major community-driven infrastructure project eliminating waterlogging.',
             budget: '₹1.51 lakh',
-            completionDate: 'August 2025',
-            impact: '500+ families benefited',
-            image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
+            completionDate: language === 'hi' ? 'अगस्त 2025' : 'August 2025',
+            impact: language === 'hi' ? '500+ परिवार लाभान्वित' : '500+ families benefited',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761997126/abd97183-3e9b-41ad-ba51-05170a964670_csr2md.png',
         },
         {
             id: 2,
-            title: 'Sanitation & Awareness Campaigns',
-            description: 'Village-wide cleanliness drives and social awareness programs.',
-            budget: 'Community funded',
+            title: language === 'hi' ? 'स्वच्छता और जागरूकता अभियान' : 'Sanitation & Awareness Campaigns',
+            description: language === 'hi'
+                ? 'गांव भर में स्वच्छता अभियान और सामाजिक जागरूकता कार्यक्रम।'
+                : 'Village-wide cleanliness drives and social awareness programs.',
+            budget: language === 'hi' ? 'समुदाय द्वारा वित्त पोषित' : 'Community funded',
             completionDate: '2025',
-            impact: 'Improved village hygiene',
+            impact: language === 'hi' ? 'सुधरी हुई गांव की स्वच्छता' : 'Improved village hygiene',
             image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80',
         },
     ];
@@ -78,29 +86,35 @@ const ProjectsSection = () => {
     const upcomingProjects = [
         {
             id: 1,
-            title: 'Digital Library Inauguration',
-            description: 'Launch of new digital library with e-learning resources and computer training center.',
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी उद्घाटन' : 'Digital Library Inauguration',
+            description: language === 'hi'
+                ? 'ई-लर्निंग संसाधनों और कंप्यूटर प्रशिक्षण केंद्र के साथ नई डिजिटल लाइब्रेरी का शुभारंभ।'
+                : 'Launch of new digital library with e-learning resources and computer training center.',
             budget: '₹5 lakh',
-            startDate: 'January 2026',
-            status: 'Planned',
+            startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
             image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
         },
         {
             id: 2,
-            title: 'Women Empowerment Center',
-            description: 'Skill development and vocational training center for village women.',
+            title: language === 'hi' ? 'महिला सशक्तिकरण केंद्र' : 'Women Empowerment Center',
+            description: language === 'hi'
+                ? 'गांव की महिलाओं के लिए कौशल विकास और व्यावसायिक प्रशिक्षण केंद्र।'
+                : 'Skill development and vocational training center for village women.',
             budget: '₹3 lakh',
-            startDate: 'March 2026',
-            status: 'Planned',
+            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
             image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
         },
         {
             id: 3,
-            title: 'Solar Street Lighting Project',
-            description: 'Installing solar-powered street lights across main village roads.',
+            title: language === 'hi' ? 'सोलर स्ट्रीट लाइटिंग परियोजना' : 'Solar Street Lighting Project',
+            description: language === 'hi'
+                ? 'मुख्य गांव की सड़कों पर सोलर-संचालित स्ट्रीट लाइट्स स्थापित करना।'
+                : 'Installing solar-powered street lights across main village roads.',
             budget: '₹4 lakh',
-            startDate: 'February 2026',
-            status: 'Planned',
+            startDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
             image: 'https://images.unsplash.com/photo-1509391111737-a6f1241a85d4?w=600&q=80',
         },
     ];
@@ -110,9 +124,14 @@ const ProjectsSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Projects</h2>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                        {language === 'hi' ? 'हमारी परियोजनाएं' : 'Our Projects'}
+                    </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Transforming Dheodha through community-driven development initiatives
+                        {language === 'hi' 
+                            ? 'समुदाय-संचालित विकास पहलों के माध्यम से धेवधा का परिवर्तन'
+                            : 'Transforming Dheodha through community-driven development initiatives'
+                        }
                     </p>
                 </div>
 
@@ -127,7 +146,7 @@ const ProjectsSection = () => {
                     >
                         <div className="flex items-center space-x-2">
                             <TrendingUp className="w-5 h-5" />
-                            <span>Ongoing Projects</span>
+                            <span>{language === 'hi' ? 'चल रहे प्रोजेक्ट्स' : 'Ongoing Projects'}</span>
                             <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'ongoing' ? 'bg-white/20' : 'bg-yellow-100 text-yellow-700'
                                 }`}>
                                 {ongoingProjects.length}
@@ -144,7 +163,7 @@ const ProjectsSection = () => {
                     >
                         <div className="flex items-center space-x-2">
                             <Award className="w-5 h-5" />
-                            <span>Completed Projects</span>
+                            <span>{language === 'hi' ? 'पूर्ण प्रोजेक्ट्स' : 'Completed Projects'}</span>
                             <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'completed' ? 'bg-white/20' : 'bg-green-100 text-green-700'
                                 }`}>
                                 {completedProjects.length}
@@ -161,7 +180,7 @@ const ProjectsSection = () => {
                     >
                         <div className="flex items-center space-x-2">
                             <Calendar className="w-5 h-5" />
-                            <span>Upcoming Projects</span>
+                            <span>{language === 'hi' ? 'आगामी प्रोजेक्ट्स' : 'Upcoming Projects'}</span>
                             <span className={`ml-2 px-2 py-1 rounded-full text-xs ${activeTab === 'upcoming' ? 'bg-white/20' : 'bg-blue-100 text-blue-700'
                                 }`}>
                                 {upcomingProjects.length}
@@ -200,7 +219,7 @@ const ProjectsSection = () => {
                                         <p className="text-gray-600 mb-4">{project.description}</p>
                                         <div className="space-y-2">
                                             <div className="flex justify-between text-sm text-gray-600">
-                                                <span>Progress</span>
+                                                <span>{language === 'hi' ? 'प्रगति' : 'Progress'}</span>
                                                 <span className="font-semibold">{project.progress}%</span>
                                             </div>
                                             <div className="w-full bg-gray-200 rounded-full h-2">
@@ -237,7 +256,7 @@ const ProjectsSection = () => {
                                         <div className="flex items-center space-x-2 mb-3">
                                             <Award className="w-5 h-5 text-green-600" />
                                             <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                                                Completed
+                                                {language === 'hi' ? 'पूर्ण' : 'Completed'}
                                             </span>
                                         </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
@@ -245,16 +264,16 @@ const ProjectsSection = () => {
                                         <div className="space-y-2 text-sm text-gray-600">
                                             {project.budget && (
                                                 <div className="flex justify-between">
-                                                    <span>Budget:</span>
+                                                    <span>{language === 'hi' ? 'बजट:' : 'Budget:'}</span>
                                                     <span className="font-semibold">{project.budget}</span>
                                                 </div>
                                             )}
                                             <div className="flex justify-between">
-                                                <span>Completed:</span>
+                                                <span>{language === 'hi' ? 'पूर्ण:' : 'Completed:'}</span>
                                                 <span className="font-semibold">{project.completionDate}</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span>Impact:</span>
+                                                <span>{language === 'hi' ? 'प्रभाव:' : 'Impact:'}</span>
                                                 <span className="font-semibold text-green-600">{project.impact}</span>
                                             </div>
                                         </div>
@@ -293,7 +312,7 @@ const ProjectsSection = () => {
                                         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                                             <div className="flex items-center space-x-2 text-sm text-gray-600">
                                                 <Calendar className="w-4 h-4" />
-                                                <span>Expected: {project.startDate}</span>
+                                                <span>{language === 'hi' ? 'अपेक्षित:' : 'Expected:'} {project.startDate}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -315,7 +334,7 @@ const ProjectsSection = () => {
                         href="/project"
                         className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all"
                     >
-                        <span>Explore All Projects</span>
+                        <span>{language === 'hi' ? 'सभी परियोजनाएं देखें' : 'Explore All Projects'}</span>
                         <ArrowRight className="w-6 h-6" />
                     </Link>
                 </motion.div>
@@ -323,6 +342,5 @@ const ProjectsSection = () => {
         </section>
     );
 };
-
 
 export default ProjectsSection;

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
-import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 
 export default function Donate() {
@@ -20,16 +19,12 @@ export default function Donate() {
 
     return (
         <>
-            <SEO
-                title="Donate"
-                description="Support our programs and help us create lasting impact in education, healthcare, and livelihoods."
-                image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80&auto=format&fit=crop"
-            />
+          
 
             <Hero
                 title="Make a Difference"
                 subtitle="Your contribution helps us empower communities and transform lives. Every rupee counts."
-                backgroundImage="https://images.unsplash.com/photo-1509099836639-18ba9f7b5d3d?w=1200&q=80&auto=format&fit=crop"
+                backgroundImage="https://res.cloudinary.com/dusalynec/image/upload/v1762001895/IMG_2626_jrqyt0.jpg"
             />
 
             <section className="py-16">

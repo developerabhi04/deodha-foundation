@@ -1,66 +1,93 @@
+// components/home/news.jsx - Complete with Translation Support
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bell, Download, FileText, TrendingUp, MapPin, Clock, Calendar } from 'lucide-react';
+import { useLanguage } from '../../lib/LanguageContext';
 
 const NewsSection = () => {
+    const { language, t } = useLanguage();
     const [selectedTab, setSelectedTab] = useState('announcements');
 
     const upcomingEvents = [
         {
             id: 1,
-            title: 'Durga Puja Cultural Program',
+            title: language === 'hi' ? 'दुर्गा पूजा सांस्कृतिक कार्यक्रम' : 'Durga Puja Cultural Program',
             date: '2025-10-20',
-            location: 'Dheodha Village',
-            time: '6:00 PM',
-            category: 'Cultural'
+            location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
+            time: language === 'hi' ? 'शाम 6:00 बजे' : '6:00 PM',
+            category: language === 'hi' ? 'सांस्कृतिक' : 'Cultural'
         },
         {
             id: 2,
-            title: 'Digital Library Inauguration',
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी उद्घाटन' : 'Digital Library Inauguration',
             date: '2026-01-15',
-            location: 'Dheodha Village',
-            time: '10:00 AM',
-            category: 'Education'
+            location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
+            time: language === 'hi' ? 'सुबह 10:00 बजे' : '10:00 AM',
+            category: language === 'hi' ? 'शिक्षा' : 'Education'
         },
     ];
 
     const announcements = [
         {
             id: 1,
-            title: 'Main Gate Construction: 60% Complete',
-            date: 'Oct 14',
-            type: 'Project',
+            title: language === 'hi' ? 'मुख्य द्वार निर्माण' : 'Main Gate Construction',
+            date: language === 'hi' ? '14 अक्टूबर' : 'Oct 14',
+            type: language === 'hi' ? 'परियोजना' : 'Project',
             priority: 'high',
             icon: '🏗️'
         },
         {
             id: 2,
-            title: 'Digital Library Planning Completed',
-            date: 'Oct 10',
-            type: 'Education',
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी योजना' : 'Digital Library Planning',
+            date: language === 'hi' ? '10 अक्टूबर' : 'Oct 10',
+            type: language === 'hi' ? 'शिक्षा' : 'Education',
             icon: '📚'
         },
         {
             id: 3,
-            title: 'Women SHG Registration Open',
-            date: 'Oct 5',
-            type: 'Empowerment',
+            title: language === 'hi' ? 'महिला SHG पंजीकरण खुला' : 'Women SHG Registration Open',
+            date: language === 'hi' ? '5 अक्टूबर' : 'Oct 5',
+            type: language === 'hi' ? 'सशक्तिकरण' : 'Empowerment',
             priority: 'high',
             icon: '👩‍🏫'
         },
     ];
 
     const documents = [
-        { id: 1, title: 'Budget Report', size: '2.3 MB', icon: '📊', isNew: true },
-        { id: 2, title: 'Certificate', size: '1.5 MB', icon: '📜', isNew: false },
-        { id: 3, title: 'Statement', size: '3.1 MB', icon: '💰', isNew: true },
+        { 
+            id: 1, 
+            title: language === 'hi' ? 'बजट रिपोर्ट' : 'Budget Report', 
+            size: '2.3 MB', 
+            icon: '📊', 
+            isNew: true 
+        },
+        { 
+            id: 2, 
+            title: language === 'hi' ? 'प्रमाण पत्र' : 'Certificate', 
+            size: '1.5 MB', 
+            icon: '📜', 
+            isNew: false 
+        },
+        { 
+            id: 3, 
+            title: language === 'hi' ? 'विवरण' : 'Statement', 
+            size: '3.1 MB', 
+            icon: '💰', 
+            isNew: true 
+        },
     ];
 
-    const newsTickerItems = [
-        'Main Gate: 60% Done',
-        'Digital Library: Jan 15',
-        'SHG Registration: Oct 30',
-    ];
+    const newsTickerItems = language === 'hi'
+        ? [
+            'मुख्य द्वार: 60% पूर्ण',
+            'डिजिटल लाइब्रेरी: 15 जनवरी',
+            'SHG पंजीकरण: 30 अक्टूबर',
+        ]
+        : [
+            'Main Gate: 60% Done',
+            'Digital Library: Jan 15',
+            'SHG Registration: Oct 30',
+        ];
 
     return (
         <section id="news" className="py-8 bg-gray-50">
@@ -73,11 +100,17 @@ const NewsSection = () => {
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
                         </div>
                         <Bell className="w-3 h-3 text-red-600" />
-                        <span className="text-xs font-bold text-gray-900">LATEST</span>
+                        <span className="text-xs font-bold text-gray-900">
+                            {language === 'hi' ? 'नवीनतम' : 'LATEST'}
+                        </span>
                     </div>
                     <h2 className="text-2xl lg:text-3xl font-bold">
-                        <span className="text-gray-900">News & </span>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">Updates</span>
+                        <span className="text-gray-900">
+                            {language === 'hi' ? 'समाचार और ' : 'News & '}
+                        </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
+                            {language === 'hi' ? 'अपडेट' : 'Updates'}
+                        </span>
                     </h2>
                 </div>
 
@@ -89,7 +122,9 @@ const NewsSection = () => {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
                             </div>
-                            <span className="text-white font-bold text-xs">NEWS</span>
+                            <span className="text-white font-bold text-xs">
+                                {language === 'hi' ? 'समाचार' : 'NEWS'}
+                            </span>
                         </div>
                         <div className="flex-1 overflow-hidden px-2">
                             <div className="animate-scroll-left whitespace-nowrap inline-block">
@@ -115,7 +150,7 @@ const NewsSection = () => {
                                 }`}
                         >
                             <Bell className="w-3 h-3 inline mr-1" />
-                            ANNOUNCEMENTS
+                            {language === 'hi' ? 'घोषणाएं' : 'ANNOUNCEMENTS'}
                         </button>
                         <button
                             onClick={() => setSelectedTab('events')}
@@ -125,7 +160,7 @@ const NewsSection = () => {
                                 }`}
                         >
                             <Calendar className="w-3 h-3 inline mr-1" />
-                            EVENTS
+                            {language === 'hi' ? 'कार्यक्रम' : 'EVENTS'}
                         </button>
                     </div>
 
@@ -151,7 +186,7 @@ const NewsSection = () => {
                                                         </span>
                                                         {announcement.priority === 'high' && (
                                                             <span className="ml-1 bg-red-500 text-white px-2 py-0.5 rounded text-xs font-bold animate-pulse">
-                                                                URGENT
+                                                                {language === 'hi' ? 'तत्काल' : 'URGENT'}
                                                             </span>
                                                         )}
                                                     </div>
@@ -161,7 +196,7 @@ const NewsSection = () => {
                                             <h3 className="text-sm font-bold text-gray-900 mb-1.5 leading-tight">{announcement.title}</h3>
                                             <button className="flex items-center space-x-1 bg-orange-100 hover:bg-orange-200 text-orange-700 px-2 py-1 rounded text-xs font-bold transition-colors">
                                                 <Download className="w-3 h-3" />
-                                                <span>Download</span>
+                                                <span>{language === 'hi' ? 'डाउनलोड करें' : 'Download'}</span>
                                             </button>
                                         </motion.div>
                                     ))}
@@ -181,7 +216,12 @@ const NewsSection = () => {
                                             <div className="flex items-start space-x-3">
                                                 <div className="bg-green-600 text-white rounded-lg p-2 text-center flex-shrink-0 shadow-md">
                                                     <div className="text-lg font-bold leading-none">{new Date(event.date).getDate()}</div>
-                                                    <div className="text-xs uppercase font-bold">{new Date(event.date).toLocaleString('default', { month: 'short' })}</div>
+                                                    <div className="text-xs uppercase font-bold">
+                                                        {language === 'hi' 
+                                                            ? new Date(event.date).toLocaleString('hi-IN', { month: 'short' })
+                                                            : new Date(event.date).toLocaleString('default', { month: 'short' })
+                                                        }
+                                                    </div>
                                                 </div>
                                                 <div className="flex-1">
                                                     <span className="bg-green-500 text-white px-2 py-0.5 rounded text-xs font-bold">
@@ -214,7 +254,7 @@ const NewsSection = () => {
                                 <div className="bg-orange-600 text-white px-2 py-1.5">
                                     <h3 className="font-bold text-xs flex items-center space-x-1">
                                         <FileText className="w-3 h-3" />
-                                        <span>DOCS</span>
+                                        <span>{language === 'hi' ? 'दस्तावेज़' : 'DOCS'}</span>
                                     </h3>
                                 </div>
                                 <div className="p-2 space-y-1">
@@ -245,20 +285,20 @@ const NewsSection = () => {
                             <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-2.5 text-white">
                                 <h3 className="font-bold text-xs mb-2 flex items-center space-x-1">
                                     <TrendingUp className="w-3 h-3" />
-                                    <span>STATS</span>
+                                    <span>{language === 'hi' ? 'आंकड़े' : 'STATS'}</span>
                                 </h3>
                                 <div className="bg-white/20 rounded-lg p-1.5 mb-1.5 text-center">
                                     <div className="text-lg font-bold">₹3.93L</div>
-                                    <div className="text-xs">Total</div>
+                                    <div className="text-xs">{language === 'hi' ? 'कुल' : 'Total'}</div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-1.5">
                                     <div className="bg-white/20 rounded-lg p-1.5 text-center">
                                         <div className="text-base font-bold">2</div>
-                                        <div className="text-xs">Done</div>
+                                        <div className="text-xs">{language === 'hi' ? 'पूर्ण' : 'Done'}</div>
                                     </div>
                                     <div className="bg-white/20 rounded-lg p-1.5 text-center">
                                         <div className="text-base font-bold">3</div>
-                                        <div className="text-xs">Active</div>
+                                        <div className="text-xs">{language === 'hi' ? 'सक्रिय' : 'Active'}</div>
                                     </div>
                                 </div>
                             </div>

@@ -10,13 +10,13 @@ export default function Partners() {
       <SEO
         title="Partners"
         description="Our partners and collaborators in creating social impact."
-        image="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&q=80&auto=format&fit=crop"
+        image="https://res.cloudinary.com/dusalynec/image/upload/v1762001895/IMG_2626_jrqyt0.jpg"
       />
 
       <Hero
         title="Our Partners"
         subtitle="Working together to create lasting change and empower communities."
-        backgroundImage="https://images.unsplash.com/photo-1509099836639-18ba9f7b5d3d?w=1200&q=80&auto=format&fit=crop"
+        backgroundImage="https://res.cloudinary.com/dusalynec/image/upload/v1762001895/IMG_2626_jrqyt0.jpg"
       />
 
       <section className="py-16">
