@@ -117,7 +117,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-start">
+                  {/* <div className="flex items-start">
                     <div className="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center flex-shrink-0">
                       <Clock size={20} className="text-white" />
                     </div>
@@ -139,13 +139,13 @@ export default function Contact() {
                         )}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Map Placeholder */}
-                <div className="mt-8 rounded-lg overflow-hidden shadow-md h-64">
+                <div className="mt-12 rounded-lg overflow-hidden shadow-md h-72">
                   <iframe
-                    src="https://maps.app.goo.gl/LYvi9KEosMyuEaDr8"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53646.64694671025!2d85.67534506665197!3d24.978772129881946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f25104a245d999%3A0xadd601e531e9d304!2sDhewadha%20Chhatarwar%2C%20Bihar!5e1!3m2!1sen!2sin!4v1762013173170!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
