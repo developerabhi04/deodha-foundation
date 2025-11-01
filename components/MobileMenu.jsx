@@ -1,13 +1,20 @@
-// Mobile menu overlay component
-import { motion, AnimatePresence } from 'framer-motion';
+import { X, Globe, Heart, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { X, Heart } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../lib/LanguageContext';
 
 export default function MobileMenu({ isOpen, onClose, navLinks }) {
     const router = useRouter();
-    const { language } = useLanguage();
+    const { language, switchLanguage, t } = useLanguage();
+
+    const handleLanguageSwitch = (lang) => {
+        switchLanguage(lang);
+        // Optional: Close menu after language switch
+        // onClose();
+    };
+
+    const isActive = (path) => router.pathname === path;
 
     return (
         <AnimatePresence>
@@ -19,7 +26,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
                     />
 
                     {/* Menu Panel */}
@@ -28,56 +35,110 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
-                        className="fixed top-0 right-0 bottom-0 w-80 bg-gradient-to-b from-white to-gray-50 shadow-2xl z-50 overflow-y-auto"
+                        className="fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-white shadow-2xl z-[70] overflow-y-auto"
                     >
                         {/* Header */}
-                        <div className="bg-gradient-to-r from-brand-green to-brand-green-dark p-6 text-white">
+                        <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 sticky top-0 z-10">
                             <div className="flex items-center justify-between mb-4">
-                                <div>
-                                    <h2 className="text-2xl font-black">
-                                        {language === 'hi' ? 'मेनू' : 'Menu'}
-                                    </h2>
-                                    <p className="text-sm text-green-100">
-                                        {language === 'hi' ? 'ध्यवाधा फाउंडेशन' : 'Dhewadha Foundation'}
-                                    </p>
-                                </div>
+                                <h2 className="text-xl font-black text-white">
+                                    {language === 'hi' ? 'मेन्यू' : 'Menu'}
+                                </h2>
                                 <button
                                     onClick={onClose}
-                                    className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                                    className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                                     aria-label="Close menu"
                                 >
-                                    <X size={24} />
+                                    <X size={24} className="text-white" />
                                 </button>
+                            </div>
+
+                            {/* Language Switcher in Mobile Menu */}
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <Globe size={16} className="text-white" />
+                                    <span className="text-xs font-bold text-white uppercase">
+                                        {language === 'hi' ? 'भाषा चुनें' : 'Select Language'}
+                                    </span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-2">
+                                    <button
+                                        onClick={() => handleLanguageSwitch('en')}
+                                        className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-semibold text-sm transition-all ${language === 'en'
+                                            ? 'bg-white text-green-600 shadow-lg'
+                                            : 'bg-white/20 text-white hover:bg-white/30'
+                                            }`}
+                                    >
+                                        🇬🇧 English
+                                    </button>
+                                    <button
+                                        onClick={() => handleLanguageSwitch('hi')}
+                                        className={`flex items-center justify-center gap-2 px-3 py-2 rounded-lg font-semibold text-sm transition-all ${language === 'hi'
+                                            ? 'bg-white text-green-600 shadow-lg'
+                                            : 'bg-white/20 text-white hover:bg-white/30'
+                                            }`}
+                                    >
+                                        🇮🇳 हिन्दी
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
                         {/* Navigation Links */}
                         <nav className="p-6">
-                            <ul className="space-y-2">
-                                {navLinks.map((link) => (
-                                    <li key={link.href}>
+                            <div className="space-y-2">
+                                {navLinks.map((link, index) => (
+                                    <motion.div
+                                        key={link.href}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.05 }}
+                                    >
                                         <Link
                                             href={link.href}
                                             onClick={onClose}
-                                            className={`block px-4 py-3 rounded-lg font-semibold transition-all ${router.pathname === link.href
-                                                    ? 'bg-brand-green text-white'
-                                                    : 'text-gray-700 hover:bg-green-50 hover:text-brand-green'
+                                            className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm uppercase tracking-wide transition-all ${isActive(link.href)
+                                                ? 'bg-green-50 text-green-600 shadow-md'
+                                                : 'text-gray-700 hover:bg-gray-50'
                                                 }`}
                                         >
+                                            <span className={`w-1.5 h-1.5 rounded-full ${isActive(link.href) ? 'bg-green-600' : 'bg-gray-300'
+                                                }`}></span>
                                             {link.label}
                                         </Link>
-                                    </li>
+                                    </motion.div>
                                 ))}
-                            </ul>
+                            </div>
                         </nav>
 
-                        {/* Footer Info */}
-                        <div className="p-6 border-t border-gray-200 mt-auto">
-                            <p className="text-sm text-gray-600 text-center">
-                                {language === 'hi'
-                                    ? '2016 से समुदायों को सशक्त बनाना'
-                                    : 'Empowering communities since 2016'}
-                            </p>
+                        {/* Footer Actions */}
+                        <div className="p-6 border-t border-gray-100 space-y-3">
+                            {/* Join Button */}
+                            <Link
+                                href="/contact"
+                                onClick={onClose}
+                                className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl font-black text-sm uppercase shadow-lg hover:shadow-xl transition-all"
+                            >
+                                <Heart size={18} fill="white" />
+                                {language === 'hi' ? 'अभी जुड़ें' : 'Join Us Now'}
+                            </Link>
+
+                            {/* Contact Info */}
+                            <div className="bg-gray-50 rounded-xl p-4 space-y-2">
+                                <a
+                                    href="tel:+919525383048"
+                                    className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
+                                >
+                                    <Phone size={16} />
+                                    <span className="text-sm font-semibold">+91 95253 83048</span>
+                                </a>
+                                <a
+                                    href="mailto:dhewadhavikas@gmail.com"
+                                    className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
+                                >
+                                    <Mail size={16} />
+                                    <span className="text-sm font-semibold">dhewadhavikas@gmail.com</span>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 </>
