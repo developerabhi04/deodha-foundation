@@ -69,16 +69,6 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                                     </li>
                                 ))}
                             </ul>
-
-                            {/* Donate Button in Menu */}
-                            <Link
-                                href="/donate"
-                                onClick={onClose}
-                                className="mt-6 w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-6 py-4 rounded-full font-black text-center hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
-                            >
-                                <Heart size={20} fill="black" />
-                                {language === 'hi' ? '' : 'Join Us'}
-                            </Link>
                         </nav>
 
                         {/* Footer Info */}
