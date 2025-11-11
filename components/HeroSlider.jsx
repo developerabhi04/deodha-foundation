@@ -29,23 +29,23 @@ export default function HeroSlider() {
             // DESKTOP CONTENT
             desktop: {
                 title: {
-                    en: ['Transforming Lives', 'in Rural Bihar'],
-                    hi: ['ग्रामीण बिहार में', 'जीवन परिवर्तन']
+                    en: ['Dheodha Development Committee', 'A New Path of Change'],
+                    hi: ['धेवधा विकास समिति', 'बदलाव की नई राह']
                 },
                 subtitle: {
-                    en: 'Empowering 500+ children, 200+ women across 15+ villages through education, healthcare, and livelihood programs',
-                    hi: 'शिक्षा, स्वास्थ्य देखभाल और आजीविका कार्यक्रमों के माध्यम से 15+ गांवों में 500+ बच्चों, 200+ महिलाओं को सशक्त बना रहे हैं'
+                    en: `The Dheodha Development Committee aims to connect every citizen to the mainstream of development by walking on a new path of change.`,
+                    hi: `धेवधा विकास समिति का उद्देश्य है बदलाव की नई राह पर चलते हुए हर नागरिक को विकास की मुख्यधारा से जोड़ना।`
                 }
             },
             // MOBILE CONTENT
             mobile: {
                 title: {
-                    en: ['Transforming Lives', 'in Rural Bihar'],
-                    hi: ['ग्रामीण बिहार में', 'जीवन परिवर्तन']
+                    en: ['Dheodha Development Committee', 'A New Path of Change'],
+                    hi: ['धेवधा विकास समिति', 'बदलाव की नई राह']
                 },
                 subtitle: {
-                    en: 'Empowering 500+ children & 200+ women across villages',
-                    hi: '500+ बच्चों और 200+ महिलाओं को सशक्त बना रहे हैं'
+                    en: `Connecting every citizen to the path of progress through unity, education, and development.`,
+                    hi: `हर नागरिक को शिक्षा, एकजुटता और विकास की मुख्यधारा से जोड़ना।`
                 }
             }
         },
@@ -55,51 +55,52 @@ export default function HeroSlider() {
             overlayColor: 'from-blue-300/70 to-cyan-300/30',
             desktop: {
                 title: {
-                    en: ['Women Empowerment', 'Through Skill Development'],
-                    hi: ['कौशल विकास के माध्यम से', 'महिला सशक्तिकरण']
+                    en: ['Dheodha’s Pride,', 'Our Responsibility'],
+                    hi: ['धेवधा का गौरव,', 'हमारी जिम्मेदारी']
                 },
                 subtitle: {
-                    en: 'Training 200+ rural women in tailoring, handicrafts, and entrepreneurship for financial independence',
-                    hi: 'वित्तीय स्वतंत्रता के लिए 200+ ग्रामीण महिलाओं को सिलाई, हस्तशिल्प और उद्यमिता में प्रशिक्षण दे रहे हैं'
+                    en: 'Let’s move forward together on this new path of transformation where every dream comes true and Dheodha becomes a model of development.',
+                    hi: 'साथ मिलकर बदलाव की नई राह पर कदम बढ़ाएँ, जहाँ हर सपना साकार हो और धेवधा बने विकास का आदर्श उदाहरण।'
                 }
             },
             mobile: {
                 title: {
-                    en: ['Women', 'Empowerment'],
-                    hi: ['महिला', 'सशक्तिकरण']
+                    en: ['Dheodha’s Pride,', 'Our Responsibility'],
+                    hi: ['धेवधा का', 'गौरव']
                 },
                 subtitle: {
-                    en: 'Training 200+ women in tailoring & entrepreneurship',
-                    hi: '200+ महिलाओं को सिलाई और उद्यमिता में प्रशिक्षण'
+                    en: 'Together towards a brighter, stronger Dheodha.',
+                    hi: 'साथ मिलकर एक सशक्त धेवधा की ओर।'
                 }
             }
         },
         {
             id: 3,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/107812243_3790381330978971_788955600235734830_n_mv5wkw.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
             overlayColor: 'from-orange-300/70 to-red-300/30',
             desktop: {
                 title: {
-                    en: ['Quality Education', 'For Every Child'],
-                    hi: ['हर बच्चे के लिए', 'गुणवत्तापूर्ण शिक्षा']
+                    en: ['Village Development,', 'Everyone’s Effort'],
+                    hi: ['गाँव का विकास,', 'सबका प्रयास']
                 },
                 subtitle: {
-                    en: 'Free books, scholarships, and after-school programs ensuring no child is left behind in Nawada District',
-                    hi: 'मुफ्त पुस्तकें, छात्रवृत्ति और स्कूल के बाद के कार्यक्रम यह सुनिश्चित करते हैं कि नवादा जिले में कोई भी बच्चा पीछे न रहे'
+                    en: 'Our identity lies in unity and progress — uplifting the village through education, culture, and social development.',
+                    hi: 'हमारी पहचान है एकजुटता और प्रगति – शिक्षा, संस्कृति और सामाजिक विकास के माध्यम से गाँव को नई ऊँचाइयों तक पहुँचाना।'
                 }
             },
             mobile: {
                 title: {
-                    en: ['Quality Education', 'For Every Child'],
-                    hi: ['गुणवत्तापूर्ण', 'शिक्षा']
+                    en: ['Village Development,', 'Everyone’s Effort'],
+                    hi: ['गाँव का', 'विकास']
                 },
                 subtitle: {
-                    en: 'Free books & scholarships for every child',
-                    hi: 'हर बच्चे के लिए मुफ्त पुस्तकें और छात्रवृत्ति'
+                    en: 'Unity and progress through education and culture.',
+                    hi: 'शिक्षा और संस्कृति के माध्यम से एकजुटता और प्रगति।'
                 }
             }
         }
     ];
+
 
     useEffect(() => {
         const imagePromises = slides.map((slide) => {
@@ -200,8 +201,8 @@ export default function HeroSlider() {
                                                 } 
                                                 font-black leading-tight 
                                                 ${index === 0
-                                                    ? 'text-white mb-1'
-                                                    : 'text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500'
+                                                    ? 'text-white mb-2'
+                                                    : 'text-transparent p-2 text-[100px] bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500'
                                                 }
                                             `}
                                         >

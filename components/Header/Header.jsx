@@ -58,13 +58,13 @@ export default function Header() {
                             </div>
 
                             {/* Foundation Name */}
-                            <div className="hidden sm:block">
+                            {/* <div className="hidden sm:block">
                                 <div className={`text-base md:text-lg lg:text-xl font-black leading-tight transition-colors ${
                                     scrolled ? 'text-gray-900' : 'text-white'
                                 }`}>
                                     {language === 'hi' ? 'ध्यवाधा' : 'DHEWADHA'}
                                 </div>
-                            </div>
+                            </div> */}
                         </Link>
 
                         {/* Desktop Navigation */}

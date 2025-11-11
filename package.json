@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^10.16.0",
+    "@cyntler/react-doc-viewer": "^1.17.1",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.290.0",
     "next": "14.2.18",
+    "pdfjs-dist": "^5.4.394",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-pdf": "^10.2.0",
     "swiper": "^12.0.2"
   },
   "devDependencies": {

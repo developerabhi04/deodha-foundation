@@ -44,7 +44,7 @@ const AboutSection = () => {
         },
         {
             name: language === 'hi' ? 'ब्रजेश कुमार' : 'Brajesh Kumar',
-            role: language === 'hi' ? 'उप सचिव' : 'Vice Secretary',
+            role: language === 'hi' ? 'उप-सचिव' : 'Vice-Secretary',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761914290/BrajeshPhoto_zyqivv.jpg',
             color: 'from-orange-500 to-amber-600',
         }
@@ -56,7 +56,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'शिक्षा' : 'Education',
             titleHindi: 'शिक्षा',
             icon: '📚',
-            image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80',
+            image: 'https://savioursfoundation.org/wp-content/uploads/2021/03/teach-for-india-1024x576.jpg',
             description: language === 'hi'
                 ? 'गुणवत्ता सुधार, डिजिटल शिक्षण संसाधन, स्कूल के बाद ट्यूशन सहायता, और छात्र भागीदारी कार्यक्रमों के माध्यम से शिक्षा में परिवर्तन।'
                 : 'Transforming education through quality improvement, digital learning resources, after-school tuition support, and engaging student participation programs.',
@@ -289,13 +289,13 @@ const AboutSection = () => {
                                 {/* Stats Bar */}
                                 <div className="mt-6 grid grid-cols-3 gap-4 pt-6 border-t-2 border-gray-100">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-green-600">6</div>
+                                        <div className="text-2xl font-bold text-green-600">140</div>
                                         <div className="text-xs text-gray-600">
                                             {language === 'hi' ? 'मुख्य सदस्य' : 'Core Members'}
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-blue-600">₹3.93L</div>
+                                        <div className="text-2xl font-bold text-blue-600">₹4.22L</div>
                                         <div className="text-xs text-gray-600">
                                             {language === 'hi' ? 'निवेश' : 'Investment'}
                                         </div>
