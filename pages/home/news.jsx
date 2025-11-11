@@ -225,7 +225,7 @@ const NewsSection = () => {
         {
             id: 3,
             title: language === 'hi' ? 'धेवधा विकास समिति की विचारधारा' : 'Dheodha Vikas Samiti Ideology',
-            titleOriginal: 'deodha vikas धेवधा विकास समिति की विचारधारा.pdf',
+            titleOriginal: 'thought.pdf',
             description: language === 'hi' ? 'समिति के उद्देश्य और विजन' : 'Committee objectives and vision',
             filePath: '/documents/thought.pdf',  // ✅ FIXED
             fileType: 'pdf',
