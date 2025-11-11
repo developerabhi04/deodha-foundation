@@ -215,7 +215,7 @@ const NewsSection = () => {
             title: language === 'hi' ? 'धेवधा ग्राम के महत्वपूर्ण जगह' : 'Important Places of Dheodha Village',
             titleOriginal: 'धेवधा ग्राम के महत्वपूर्ण जगह.docx',
             description: language === 'hi' ? 'गांव के प्रमुख स्थानों की सूची और विवरण' : 'List and details of major places in the village',
-            filePath: '../../public/documents/place.docx',  // ✅ FIXED
+            filePath: '/documents/place.docx',  // ✅ FIXED
             fileType: 'docx',
             icon: '📍',
             size: '180 KB',
