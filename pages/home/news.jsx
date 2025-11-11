@@ -270,7 +270,7 @@ const NewsSection = () => {
                             </button>
                         </div>
 
-                        <div className="grid md:grid-cols-4 gap-0">
+                        <div className="grid md:grid-cols-5 gap-0">
                             {/* Main Content */}
                             <div className="md:col-span-3 p-3 border-r border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white max-h-[600px] overflow-y-auto">
                                 {selectedTab === 'announcements' && (
@@ -368,8 +368,9 @@ const NewsSection = () => {
                             </div>
 
                             {/* Sidebar */}
-                            <div className="md:col-span-1 bg-gradient-to-b from-gray-50 to-white p-2.5 space-y-2.5">
+                            <div className="md:col-span-2 bg-gradient-to-b from-gray-50 to-white p-2.5 space-y-5">
                                 {/* Documents */}
+                                
                                 <div className="bg-white rounded-lg border-2 border-indigo-200 overflow-hidden shadow-sm">
                                     <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 py-1.5">
                                         <h3 className="font-bold text-xs flex items-center space-x-1">
