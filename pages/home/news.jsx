@@ -172,29 +172,7 @@ const NewsSection = () => {
         }
     ];
 
-    const documents = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'बजट रिपोर्ट 2025' : 'Budget Report 2025',
-            size: '2.3 MB',
-            icon: '📊',
-            isNew: true
-        },
-        {
-            id: 2,
-            title: language === 'hi' ? 'परियोजना प्रमाण पत्र' : 'Project Certificate',
-            size: '1.5 MB',
-            icon: '📜',
-            isNew: false
-        },
-        {
-            id: 3,
-            title: language === 'hi' ? 'वित्तीय विवरण' : 'Financial Statement',
-            size: '3.1 MB',
-            icon: '💰',
-            isNew: true
-        },
-    ];
+  
 
     // ✅ CORRECTED - Use /documents/ not ../../public/documents/
     const referenceDocuments = [
@@ -430,37 +408,7 @@ const NewsSection = () => {
 
                             {/* Mini Sidebar */}
                             <div className="md:col-span-1 bg-gray-50 p-2.5 space-y-2.5">
-                                {/* Documents */}
-                                <div className="bg-white rounded-lg border border-orange-300 overflow-hidden">
-                                    <div className="bg-orange-600 text-white px-2 py-1.5">
-                                        <h3 className="font-bold text-xs flex items-center space-x-1">
-                                            <FileText className="w-3 h-3" />
-                                            <span>{language === 'hi' ? 'दस्तावेज़' : 'DOCS'}</span>
-                                        </h3>
-                                    </div>
-                                    <div className="p-2 space-y-1">
-                                        {documents.map((doc) => (
-                                            <a
-                                                key={doc.id}
-                                                href="#"
-                                                className="flex items-center space-x-1.5 p-1.5 rounded hover:bg-orange-50 transition-colors group relative"
-                                            >
-                                                {doc.isNew && (
-                                                    <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
-                                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                                                    </span>
-                                                )}
-                                                <span className="text-base">{doc.icon}</span>
-                                                <div className="flex-1 min-w-0">
-                                                    <h4 className="text-xs font-bold text-gray-900 truncate leading-tight">{doc.title}</h4>
-                                                    <p className="text-xs text-gray-500">{doc.size}</p>
-                                                </div>
-                                                <Download className="w-3 h-3 text-gray-400 group-hover:text-orange-600 flex-shrink-0" />
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
+                                
 
                                 {/* Stats - Updated */}
                                 <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-2.5 text-white">
