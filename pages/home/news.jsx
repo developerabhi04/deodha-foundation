@@ -1,21 +1,18 @@
-// components/home/news.jsx - FULLY CORRECTED
+// components/home/news.jsx - PROFESSIONAL & COMPACT
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Bell, Download, FileText, TrendingUp, MapPin, Clock, Calendar, ExternalLink, Book, Eye } from 'lucide-react';
+import { Bell, Download, FileText, TrendingUp, MapPin, Clock, Calendar, ExternalLink, Eye } from 'lucide-react';
 import { useLanguage } from '../../lib/LanguageContext';
 import dynamic from 'next/dynamic';
 
-
-
-// ✅ CORRECT - Disable SSR for PDF/Document viewers
-const PDFModal = dynamic(() => import('@/components/PDFModal'), { 
+const PDFModal = dynamic(() => import('@/components/PDFModal'), {
     ssr: false,
     loading: () => <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
         <div className="text-white">Loading PDF Viewer...</div>
     </div>
 });
 
-const DocumentViewer = dynamic(() => import('@/components/DocumentViewer'), { 
+const DocumentViewer = dynamic(() => import('@/components/DocumentViewer'), {
     ssr: false,
     loading: () => <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
         <div className="text-white">Loading Document Viewer...</div>
@@ -172,74 +169,43 @@ const NewsSection = () => {
         }
     ];
 
-  
-
-    // ✅ CORRECTED - Use /documents/ not ../../public/documents/
     const referenceDocuments = [
         {
             id: 1,
             title: language === 'hi' ? 'परियोजनाएं' : 'Projects',
             titleOriginal: 'Projects.docx',
-            description: language === 'hi' ? 'सभी परियोजनाओं की विस्तृत जानकारी' : 'Detailed information of all projects',
-            filePath: '/documents/Projects.docx',  // ✅ FIXED
+            filePath: '/documents/Projects.docx',
             fileType: 'docx',
             icon: '📁',
             size: '245 KB',
-            isNew: true,
-            category: language === 'hi' ? 'परियोजना' : 'Project'
         },
         {
             id: 2,
-            title: language === 'hi' ? 'धेवधा ग्राम के महत्वपूर्ण जगह' : 'Important Places of Dheodha Village',
-            titleOriginal: 'place.docx',
-            description: language === 'hi' ? 'गांव के प्रमुख स्थानों की सूची और विवरण' : 'List and details of major places in the village',
-            filePath: '/documents/place.docx',  // ✅ FIXED
-            fileType: 'docx',
-            icon: '📍',
-            size: '180 KB',
-            isNew: true,
-            category: language === 'hi' ? 'स्थान' : 'Location'
-        },
-        {
-            id: 3,
-            title: language === 'hi' ? 'धेवधा विकास समिति की विचारधारा' : 'Dheodha Vikas Samiti Ideology',
+            title: language === 'hi' ? 'विचारधारा' : 'Ideology',
             titleOriginal: 'thought.pdf',
-            description: language === 'hi' ? 'समिति के उद्देश्य और विजन' : 'Committee objectives and vision',
-            filePath: '/documents/thought.pdf',  // ✅ FIXED
+            filePath: '/documents/thought.pdf',
             fileType: 'pdf',
             icon: '📜',
             size: '320 KB',
-            isNew: true,
-            category: language === 'hi' ? 'विचारधारा' : 'Ideology'
         }
     ];
 
     const newsTickerItems = language === 'hi'
-        ? [
-            'मुख्य द्वार: 60% पूर्ण',
-            'ऐतिहासिक उपलब्धि हासिल',
-            'छठ घाट सफाई पूर्ण',
-            '5 परियोजनाएं पूर्ण',
-        ]
-        : [
-            'Main Gate: 60% Complete',
-            'Historic Achievement',
-            'Chhath Ghat Cleaning Done',
-            '5 Projects Completed',
-        ];
+        ? ['मुख्य द्वार: 60% पूर्ण', 'ऐतिहासिक उपलब्धि', 'छठ घाट सफाई पूर्ण', '5 परियोजनाएं पूर्ण']
+        : ['Main Gate: 60% Complete', 'Historic Achievement', 'Chhath Ghat Cleaned', '5 Projects Done'];
 
     return (
         <>
-            <section id="news" className="py-8 bg-gray-50">
+            <section id="news" className="py-8 bg-gradient-to-b from-gray-50 to-white">
                 <div className="max-w-6xl mx-auto px-4">
-                    {/* Mini Header */}
+                    {/* Header */}
                     <div className="text-center mb-6">
-                        <div className="inline-flex items-center space-x-2 bg-red-100 px-3 py-1.5 rounded-full mb-3 border border-red-300">
+                        <div className="inline-flex items-center space-x-2 bg-orange-100 px-3 py-1.5 rounded-full mb-3 border border-orange-300">
                             <div className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-500 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
                             </div>
-                            <Bell className="w-3 h-3 text-red-600" />
+                            <Bell className="w-3 h-3 text-orange-600" />
                             <span className="text-xs font-bold text-gray-900">
                                 {language === 'hi' ? 'नवीनतम' : 'LATEST'}
                             </span>
@@ -254,10 +220,10 @@ const NewsSection = () => {
                         </h2>
                     </div>
 
-                    {/* Mini News Ticker */}
-                    <div className="bg-blue-900 border-y border-orange-500 py-1.5 mb-4">
+                    {/* News Ticker */}
+                    <div className="bg-gradient-to-r from-orange-600 to-red-600 border-y-2 border-orange-700 py-1.5 mb-4 rounded">
                         <div className="flex items-center">
-                            <div className="bg-orange-600 px-3 py-1 flex items-center space-x-1.5">
+                            <div className="bg-white/20 px-3 py-1 flex items-center space-x-1.5 backdrop-blur">
                                 <div className="relative flex h-1.5 w-1.5">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
@@ -270,7 +236,7 @@ const NewsSection = () => {
                                 <div className="animate-scroll-left whitespace-nowrap inline-block">
                                     {[...newsTickerItems, ...newsTickerItems].map((item, index) => (
                                         <span key={index} className="text-white font-semibold text-xs mx-3">
-                                            {item} <span className="text-orange-400">•</span>
+                                            {item} <span className="text-white/60">•</span>
                                         </span>
                                     ))}
                                 </div>
@@ -278,15 +244,15 @@ const NewsSection = () => {
                         </div>
                     </div>
 
-                    {/* Compact Main Content */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 mb-6">
-                        {/* Mini Tabs */}
-                        <div className="bg-gray-50 border-b border-orange-400 flex">
+                    {/* Main Content */}
+                    <div className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
+                        {/* Tabs */}
+                        <div className="bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-orange-400 flex">
                             <button
                                 onClick={() => setSelectedTab('announcements')}
-                                className={`flex-1 px-3 py-2 font-bold text-xs transition-all ${selectedTab === 'announcements'
-                                    ? 'bg-orange-600 text-white'
-                                    : 'text-gray-600 hover:bg-gray-100'
+                                className={`flex-1 px-3 py-2.5 font-bold text-xs transition-all ${selectedTab === 'announcements'
+                                    ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
+                                    : 'text-gray-600 hover:bg-gray-200'
                                     }`}
                             >
                                 <Bell className="w-3 h-3 inline mr-1" />
@@ -294,9 +260,9 @@ const NewsSection = () => {
                             </button>
                             <button
                                 onClick={() => setSelectedTab('events')}
-                                className={`flex-1 px-3 py-2 font-bold text-xs transition-all ${selectedTab === 'events'
-                                    ? 'bg-green-600 text-white'
-                                    : 'text-gray-600 hover:bg-gray-100'
+                                className={`flex-1 px-3 py-2.5 font-bold text-xs transition-all ${selectedTab === 'events'
+                                    ? 'bg-gradient-to-r from-emerald-600 to-green-600 text-white shadow-lg'
+                                    : 'text-gray-600 hover:bg-gray-200'
                                     }`}
                             >
                                 <Calendar className="w-3 h-3 inline mr-1" />
@@ -305,27 +271,27 @@ const NewsSection = () => {
                         </div>
 
                         <div className="grid md:grid-cols-4 gap-0">
-                            {/* Main Content - Highly Visible */}
-                            <div className="md:col-span-3 p-3 border-r border-gray-200 bg-gradient-to-br from-white to-gray-50 max-h-[600px] overflow-y-auto">
+                            {/* Main Content */}
+                            <div className="md:col-span-3 p-3 border-r border-gray-200 bg-gradient-to-br from-white via-gray-50 to-white max-h-[600px] overflow-y-auto">
                                 {selectedTab === 'announcements' && (
                                     <div className="space-y-2">
                                         {announcements.map((announcement, index) => (
                                             <motion.div
                                                 key={announcement.id}
-                                                initial={{ opacity: 0, scale: 0.95 }}
-                                                animate={{ opacity: 1, scale: 1 }}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
                                                 transition={{ duration: 0.2, delay: index * 0.05 }}
-                                                className="border-2 border-orange-300 rounded-lg p-3 hover:border-orange-500 transition-all bg-white hover:shadow-md"
+                                                className="border-l-4 border-orange-500 rounded-lg p-3 hover:border-orange-600 transition-all bg-white hover:shadow-md"
                                             >
                                                 <div className="flex items-start justify-between mb-1.5">
                                                     <div className="flex items-center space-x-2">
                                                         <span className="text-2xl">{announcement.icon}</span>
                                                         <div>
-                                                            <span className="bg-orange-500 text-white px-2 py-0.5 rounded text-xs font-bold">
+                                                            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-0.5 rounded text-xs font-bold">
                                                                 {announcement.type}
                                                             </span>
                                                             {announcement.priority === 'high' && (
-                                                                <span className="ml-1 bg-red-500 text-white px-2 py-0.5 rounded text-xs font-bold animate-pulse">
+                                                                <span className="ml-1 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold animate-pulse">
                                                                     {language === 'hi' ? 'तत्काल' : 'URGENT'}
                                                                 </span>
                                                             )}
@@ -338,7 +304,7 @@ const NewsSection = () => {
                                                     href={announcement.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="flex items-center space-x-1 bg-orange-100 hover:bg-orange-200 text-orange-700 px-2 py-1 rounded text-xs font-bold transition-colors w-fit"
+                                                    className="flex items-center space-x-1 bg-orange-50 hover:bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold transition-colors w-fit"
                                                 >
                                                     <ExternalLink className="w-3 h-3" />
                                                     <span>{language === 'hi' ? 'विवरण देखें' : 'View Details'}</span>
@@ -353,13 +319,13 @@ const NewsSection = () => {
                                         {upcomingEvents.map((event, index) => (
                                             <motion.div
                                                 key={event.id}
-                                                initial={{ opacity: 0, scale: 0.95 }}
-                                                animate={{ opacity: 1, scale: 1 }}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
                                                 transition={{ duration: 0.2, delay: index * 0.05 }}
-                                                className="border-2 border-green-300 rounded-lg p-3 hover:border-green-500 transition-all bg-white hover:shadow-md"
+                                                className="border-l-4 border-emerald-500 rounded-lg p-3 hover:border-emerald-600 transition-all bg-white hover:shadow-md"
                                             >
                                                 <div className="flex items-start space-x-3">
-                                                    <div className="bg-green-600 text-white rounded-lg p-2 text-center flex-shrink-0 shadow-md">
+                                                    <div className="bg-gradient-to-br from-emerald-600 to-green-600 text-white rounded-lg p-2 text-center flex-shrink-0 shadow-lg">
                                                         <div className="text-lg font-bold leading-none">{new Date(event.date).getDate()}</div>
                                                         <div className="text-xs uppercase font-bold">
                                                             {language === 'hi'
@@ -369,7 +335,7 @@ const NewsSection = () => {
                                                         </div>
                                                     </div>
                                                     <div className="flex-1">
-                                                        <span className="bg-green-500 text-white px-2 py-0.5 rounded text-xs font-bold">
+                                                        <span className="bg-gradient-to-r from-emerald-500 to-green-500 text-white px-2 py-0.5 rounded text-xs font-bold">
                                                             {event.category}
                                                         </span>
                                                         <h3 className="text-sm font-bold text-gray-900 mt-1 leading-tight">{event.title}</h3>
@@ -388,7 +354,7 @@ const NewsSection = () => {
                                                             href={event.link}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
-                                                            className="flex items-center space-x-1 bg-green-100 hover:bg-green-200 text-green-700 px-2 py-1 rounded text-xs font-bold transition-colors w-fit mt-2"
+                                                            className="flex items-center space-x-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs font-bold transition-colors w-fit mt-2"
                                                         >
                                                             <ExternalLink className="w-3 h-3" />
                                                             <span>{language === 'hi' ? 'विवरण देखें' : 'View Details'}</span>
@@ -397,152 +363,86 @@ const NewsSection = () => {
                                                 </div>
                                             </motion.div>
                                         ))}
-                                        {upcomingEvents.length === 0 && (
-                                            <div className="text-center py-8 text-gray-500">
-                                                {language === 'hi' ? 'कोई आगामी कार्यक्रम नहीं' : 'No Upcoming Events'}
-                                            </div>
-                                        )}
                                     </div>
                                 )}
                             </div>
 
-                            {/* Mini Sidebar */}
-                            <div className="md:col-span-1 bg-gray-50 p-2.5 space-y-2.5">
-                                
+                            {/* Sidebar */}
+                            <div className="md:col-span-1 bg-gradient-to-b from-gray-50 to-white p-2.5 space-y-2.5">
+                                {/* Documents */}
+                                <div className="bg-white rounded-lg border-2 border-indigo-200 overflow-hidden shadow-sm">
+                                    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 py-1.5">
+                                        <h3 className="font-bold text-xs flex items-center space-x-1">
+                                            <FileText className="w-3 h-3" />
+                                            <span>{language === 'hi' ? 'दस्तावेज़' : 'DOCS'}</span>
+                                        </h3>
+                                    </div>
+                                    <div className="p-2 space-y-1">
+                                        {referenceDocuments.map((doc) => (
+                                            <div
+                                                key={doc.id}
+                                                className="border border-gray-200 rounded-lg p-2 hover:border-indigo-300 hover:bg-indigo-50 transition-all group"
+                                            >
+                                                <div className="flex items-center space-x-2 mb-2">
+                                                    <span className="text-xl">{doc.icon}</span>
+                                                    <div className="flex-1 min-w-0">
+                                                        <h4 className="text-xs font-bold text-gray-900 truncate">{doc.title}</h4>
+                                                        <p className="text-xs text-gray-500">{doc.size}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="flex gap-1">
+                                                    <button
+                                                        onClick={() => {
+                                                            if (doc.fileType === 'pdf') {
+                                                                handleViewPdf(doc.filePath, doc.title);
+                                                            } else {
+                                                                handleViewDoc(doc.filePath, doc.title, doc.fileType);
+                                                            }
+                                                        }}
+                                                        className="flex-1 flex items-center justify-center space-x-1 bg-indigo-600 hover:bg-indigo-700 text-white px-2 py-1 rounded text-xs font-bold transition-colors"
+                                                    >
+                                                        <Eye className="w-3 h-3" />
+                                                        <span className="hidden sm:inline">{language === 'hi' ? 'देखें' : 'View'}</span>
+                                                    </button>
+                                                    <button
+                                                        onClick={() => handleDownloadFile(doc.filePath, doc.titleOriginal)}
+                                                        className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-2 py-1 rounded transition-colors"
+                                                        title={language === 'hi' ? 'डाउनलोड' : 'Download'}
+                                                    >
+                                                        <Download className="w-3 h-3" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
 
-                                {/* Stats - Updated */}
-                                <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg p-2.5 text-white">
+                                {/* Stats */}
+                                <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-lg p-2.5 text-white shadow-lg">
                                     <h3 className="font-bold text-xs mb-2 flex items-center space-x-1">
                                         <TrendingUp className="w-3 h-3" />
                                         <span>{language === 'hi' ? 'आंकड़े' : 'STATS'}</span>
                                     </h3>
-                                    <div className="bg-white/20 rounded-lg p-1.5 mb-1.5 text-center">
+                                    <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 mb-1.5 text-center">
                                         <div className="text-lg font-bold">₹4.22L</div>
-                                        <div className="text-xs">{language === 'hi' ? 'कुल बजट' : 'Total Budget'}</div>
+                                        <div className="text-xs">{language === 'hi' ? 'कुल बजट' : 'Budget'}</div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-1.5">
-                                        <div className="bg-white/20 rounded-lg p-1.5 text-center">
+                                        <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
                                             <div className="text-base font-bold">5</div>
                                             <div className="text-xs">{language === 'hi' ? 'पूर्ण' : 'Done'}</div>
                                         </div>
-                                        <div className="bg-white/20 rounded-lg p-1.5 text-center">
+                                        <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
                                             <div className="text-base font-bold">2</div>
-                                            <div className="text-xs">{language === 'hi' ? 'चल रहे' : 'Ongoing'}</div>
+                                            <div className="text-xs">{language === 'hi' ? 'चल रहे' : 'Active'}</div>
                                         </div>
-                                        <div className="bg-white/20 rounded-lg p-1.5 text-center">
+                                        <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
                                             <div className="text-base font-bold">7</div>
-                                            <div className="text-xs">{language === 'hi' ? 'आगामी' : 'Upcoming'}</div>
+                                            <div className="text-xs">{language === 'hi' ? 'आगामी' : 'Coming'}</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Reference Documents Section */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-blue-300">
-                        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-3">
-                            <h3 className="font-bold text-lg flex items-center space-x-2">
-                                <Book className="w-5 h-5" />
-                                <span>{language === 'hi' ? 'संदर्भ दस्तावेज़' : 'Reference Documents'}</span>
-                            </h3>
-                            <p className="text-xs text-blue-100 mt-1">
-                                {language === 'hi' ? 'महत्वपूर्ण दस्तावेज़ और जानकारी' : 'Important documents and information'}
-                            </p>
-                        </div>
-
-                        <div className="p-4 grid md:grid-cols-3 gap-3">
-                            {referenceDocuments.map((doc, index) => (
-                                <motion.div
-                                    key={doc.id}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                                    className="relative border-2 border-blue-200 rounded-lg p-4 hover:border-blue-400 transition-all bg-gradient-to-br from-white to-blue-50 hover:shadow-lg group"
-                                >
-                                    {/* New Badge */}
-                                    {doc.isNew && (
-                                        <div className="absolute -top-2 -right-2 z-10">
-                                            <span className="relative flex h-3 w-3">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                                            </span>
-                                        </div>
-                                    )}
-
-                                    {/* Icon and Category */}
-                                    <div className="flex items-start justify-between mb-3">
-                                        <div className="bg-blue-100 rounded-lg p-3 group-hover:bg-blue-200 transition-colors">
-                                            <span className="text-3xl">{doc.icon}</span>
-                                        </div>
-                                        <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold">
-                                            {doc.category}
-                                        </span>
-                                    </div>
-
-                                    {/* Title */}
-                                    <h4 className="font-bold text-gray-900 mb-1 leading-tight text-sm">
-                                        {doc.title}
-                                    </h4>
-
-                                    {/* Description */}
-                                    <p className="text-xs text-gray-600 mb-3 line-clamp-2">
-                                        {doc.description}
-                                    </p>
-
-                                    {/* File Info */}
-                                    <div className="flex items-center justify-between mb-3 pb-3 border-b border-blue-200">
-                                        <span className="text-xs text-gray-500 font-semibold flex items-center space-x-1">
-                                            <FileText className="w-3 h-3" />
-                                            <span>{doc.size}</span>
-                                        </span>
-                                        <span className="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-bold uppercase">
-                                            {doc.fileType}
-                                        </span>
-                                    </div>
-
-                                    {/* Action Buttons */}
-                                    <div className="space-y-2">
-                                        <button
-                                            onClick={() => {
-                                                if (doc.fileType === 'pdf') {
-                                                    handleViewPdf(doc.filePath, doc.title);
-                                                } else {
-                                                    handleViewDoc(doc.filePath, doc.title, doc.fileType);
-                                                }
-                                            }}
-                                            className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors"
-                                        >
-                                            <Eye className="w-3.5 h-3.5" />
-                                            <span>{language === 'hi' ? 'दस्तावेज़ देखें' : 'View Document'}</span>
-                                        </button>
-
-                                        <button
-                                            onClick={() => handleDownloadFile(doc.filePath, doc.titleOriginal)}
-                                            className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs font-bold transition-colors"
-                                        >
-                                            <Download className="w-3.5 h-3.5" />
-                                            <span>{language === 'hi' ? 'डाउनलोड करें' : 'Download'}</span>
-                                        </button>
-                                    </div>
-
-                                    {/* Original Filename */}
-                                    <div className="mt-2 pt-2 border-t border-blue-100">
-                                        <p className="text-xs text-gray-500 truncate" title={doc.titleOriginal}>
-                                            {language === 'hi' ? 'फाइल:' : 'File:'} {doc.titleOriginal}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        {/* Footer Note */}
-                        <div className="bg-blue-50 border-t border-blue-200 px-4 py-2 text-center">
-                            <p className="text-xs text-blue-700 font-semibold">
-                                {language === 'hi'
-                                    ? '💡 ये दस्तावेज़ धेवधा विकास समिति की आधिकारिक जानकारी प्रदान करते हैं'
-                                    : '💡 These documents provide official information of Dheodha Vikas Samiti'}
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -555,16 +455,9 @@ const NewsSection = () => {
                     .animate-scroll-left {
                         animation: scroll-left 15s linear infinite;
                     }
-                    .line-clamp-2 {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                    }
                 `}</style>
             </section>
 
-            {/* PDF Modal */}
             {pdfModalOpen && (
                 <PDFModal
                     isOpen={pdfModalOpen}
@@ -575,7 +468,6 @@ const NewsSection = () => {
                 />
             )}
 
-            {/* Document Modal (DOCX) */}
             {docModalOpen && (
                 <DocumentViewer
                     isOpen={docModalOpen}
