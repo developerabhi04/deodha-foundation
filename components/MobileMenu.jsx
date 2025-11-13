@@ -129,7 +129,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                                     className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
                                 >
                                     <Phone size={16} />
-                                    <span className="text-sm font-semibold">+91 95253 83048</span>
+                                    <span className="text-sm font-semibold">+91 123456789</span>
                                 </a>
                                 <a
                                     href="mailto:dhewadhavikas@gmail.com"

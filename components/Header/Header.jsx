@@ -7,6 +7,8 @@ import { useLanguage } from '../../lib/LanguageContext';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
 
+
+
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
