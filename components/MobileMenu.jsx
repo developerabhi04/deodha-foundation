@@ -125,14 +125,14 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                             {/* Contact Info */}
                             <div className="bg-gray-50 rounded-xl p-4 space-y-2">
                                 <a
-                                    href="tel:+919525383048"
+                                    href="tel:+918800864076"
                                     className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
                                 >
                                     <Phone size={16} />
-                                    <span className="text-sm font-semibold">+91 123456789</span>
+                                    <span className="text-sm font-semibold">+91 8800864076</span>
                                 </a>
                                 <a
-                                    href="mailto:dhewadhavikas@gmail.com"
+                                    href="mailto:dhewadhavikassamiti@gmail.com"
                                     className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
                                 >
                                     <Mail size={16} />

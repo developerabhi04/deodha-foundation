@@ -76,7 +76,7 @@ const ProgramsSection = () => {
             title: language === 'hi' ? 'स्वास्थ्य और स्वच्छता' : 'Health & Hygiene',
             titleHindi: 'स्वास्थ्य और स्वच्छता',
             icon: '🏥',
-            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061620/Image00001dss-1_afdlmp.jpg',
             gradient: 'from-red-500 to-pink-600',
             bgGradient: 'from-red-50 to-pink-50',
             borderColor: 'border-red-100',

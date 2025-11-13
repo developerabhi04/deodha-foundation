@@ -73,7 +73,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'स्वास्थ्य और स्वच्छता' : 'Health & Hygiene',
             titleHindi: 'स्वास्थ्य',
             icon: '🏥',
-            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061620/Image00001dss-1_afdlmp.jpg',
             description: language === 'hi'
                 ? 'व्यापक स्वास्थ्य सेवा पहुंच, स्वच्छता जागरूकता अभियान, निवारक स्वास्थ्य उपाय, और मातृ-बाल स्वास्थ्य कार्यक्रम।'
                 : 'Comprehensive healthcare access, hygiene awareness campaigns, preventive health measures, and maternal-child health programs.',
@@ -90,7 +90,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'महिला सशक्तिकरण' : 'Women Empowerment',
             titleHindi: 'महिला सशक्तिकरण',
             icon: '👩‍🏫',
-            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061889/tailoring2_s9x8hw.jpg',
             description: language === 'hi'
                 ? 'व्यापक कौशल विकास, सुरक्षा पहल, स्वयं सहायता समूह गठन, और समावेशी भागीदारी के लिए मंच बनाना।'
                 : 'Comprehensive skill development, safety initiatives, self-help group formation, and creating platforms for inclusive participation.',
@@ -107,7 +107,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'कृषि' : 'Agriculture',
             titleHindi: 'कृषि',
             icon: '🌾',
-            image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763040932/IMG_2791_pkxkqz.jpg',
             description: language === 'hi'
                 ? 'आधुनिक खेती तकनीक, टिकाऊ कृषि प्रथाएं, फसल विविधीकरण मार्गदर्शन, और किसान सहायता नेटवर्क।'
                 : 'Modern farming techniques, sustainable agricultural practices, crop diversification guidance, and farmer support networks.',
@@ -201,7 +201,7 @@ const AboutSection = () => {
                                             धेवधा विकास समिति ग्रामीण बिहार में <strong className="text-gray-900">आशा की किरण</strong> के रूप में खड़ी है, जो <strong className="text-green-600">2 अगस्त 2025</strong> से जीवन को बदल रही है। समर्पित अप्रवासी ग्रामवासियों द्वारा स्थापित, हम पारदर्शी, समुदाय-संचालित पहलों के माध्यम से समग्र गांव विकास के लिए प्रतिबद्ध हैं।
                                         </p>
                                         <p>
-                                            आधिकारिक रूप से एक <strong className="text-gray-900">अपंजीकृत गैर-लाभकारी संगठन</strong> के रूप में मान्यता प्राप्त, हम धेवधा और आसपास के गांवों में शिक्षा, स्वास्थ्य, स्वच्छता, रोजगार और सामाजिक सद्भाव को बढ़ावा देने के लिए अथक प्रयास कर रहे हैं, जो <strong className="text-gray-900">पकड़ी बरवां ब्लॉक, नवादा जिला</strong> में स्थित हैं।
+                                            आधिकारिक रूप से एक <strong className="text-gray-900">अपंजीकृत गैर-लाभकारी संगठन</strong> के रूप में मान्यता प्राप्त, हम धेवधा और आसपास के गांवों में शिक्षा, स्वास्थ्य, स्वच्छता, रोजगार और सामाजिक सद्भाव को बढ़ावा देने के लिए अथक प्रयास कर रहे हैं, जो <strong className="text-gray-900">पकरीबरामा ब्लॉक, नवादा जिला</strong> में स्थित हैं।
                                         </p>
                                     </>
                                 ) : (
@@ -210,7 +210,7 @@ const AboutSection = () => {
                                             Dheodha Vikas Samiti stands as a <strong className="text-gray-900">beacon of hope in rural Bihar</strong>, transforming lives since its establishment on <strong className="text-green-600">August 2, 2025</strong>. Founded by dedicated non-resident villagers (अप्रवासी ग्रामवासी), we are committed to holistic village development through transparent, community-driven initiatives.
                                         </p>
                                         <p>
-                                            Officially recognized as an <strong className="text-gray-900">unregistered non-profit organization</strong>, we work tirelessly to promote education, health, cleanliness, employment, and social harmony across Dheodha and surrounding villages in <strong className="text-gray-900">Pakri Barawan Block, Nawada District</strong>.
+                                            Officially recognized as an <strong className="text-gray-900">unregistered non-profit organization</strong>, we work tirelessly to promote education, health, cleanliness, employment, and social harmony across Dheodha and surrounding villages in <strong className="text-gray-900">Pakribarawan Block, Nawada District</strong>.
                                         </p>
                                     </>
                                 )}

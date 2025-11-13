@@ -133,7 +133,7 @@ const AboutHero = () => {
                   {language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village'}
                 </div>
                 <div className="text-sm text-gray-400">
-                  {language === 'hi' ? 'पकड़ी बरवां, नवादा, बिहार' : 'Pakri Barawan, Nawada, Bihar'}
+                  {language === 'hi' ? 'पकरीबरामा, नवादा, बिहार' : 'Pakribarawan, Nawada, Bihar'}
                 </div>
               </div>
             </div>

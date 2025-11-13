@@ -10,7 +10,7 @@ const AboutPlaces = () => {
 
     const importantPlaces = [
         {
-            name: language === 'hi' ? 'कृषक महाविद्यालय, पकड़ी बारवां' : 'Agriculture College, Pakri Barawan',
+            name: language === 'hi' ? 'कृषक महाविद्यालय, पकड़ीबारवां' : 'Agriculture College, Pakribarawan',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913595/Colleage5_ut0pxi.jpg',
             link: '/places/agriculture-college'
         },

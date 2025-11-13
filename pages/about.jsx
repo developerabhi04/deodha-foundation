@@ -9,6 +9,7 @@ import AboutFeatures from '../components/about/AboutFeatures';
 import AboutStructure from '../components/about/AboutStructure';
 import AboutCTA from '../components/about/AboutCTA';
 
+
 const About = () => {
   const { language } = useLanguage();
   const [activeTab, setActiveTab] = useState('story');

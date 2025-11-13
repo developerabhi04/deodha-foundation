@@ -84,7 +84,7 @@ export default function Contact() {
                           <>
                             Dheodha Vikas Samiti<br />
                             Village: Dheodha<br />
-                            Block: Pakri Barawan<br />
+                            Block: Pakribarawan<br />
                             Post: Pakaribarwan<br />
                             District: Nawada, Bihar - 805124
                           </>
