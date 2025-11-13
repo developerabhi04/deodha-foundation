@@ -76,8 +76,8 @@ export default function Contact() {
                           <>
                             धेवधा विकास समिति<br />
                             गांव: धेवधा<br />
-                            ब्लॉक: पकड़ी बरवां<br />
-                            डाकघर: पकड़ी बरवां<br />
+                            ब्लॉक: पकरीबरामा<br />
+                            डाकघर: पकरीबरामा<br />
                             जिला: नवादा, बिहार - 805124
                           </>
                         ) : (
@@ -101,7 +101,7 @@ export default function Contact() {
                       <h3 className="font-semibold text-gray-900 mb-1">
                         {language === 'hi' ? 'फोन' : 'Phone'}
                       </h3>
-                      <p className="text-gray-600">+91 1234567890</p>
+                      <p className="text-gray-600">+91 9971358384</p>
                     </div>
                   </div>
 
