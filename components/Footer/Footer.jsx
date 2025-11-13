@@ -57,8 +57,8 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-semibold mb-4">{t.footer.getInvolved}</h3>
                         <ul className="space-y-2 text-sm">
-                            <li><Link href="/donate" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.donate || (language === 'hi' ? 'दान करें' : 'Donate')}</Link></li>
-                            <li><Link href="/volunteer" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.volunteer}</Link></li>
+                            {/* <li><Link href="/donate" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.donate || (language === 'hi' ? 'दान करें' : 'Donate')}</Link></li> */}
+                            {/* <li><Link href="/volunteer" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.volunteer}</Link></li> */}
                             <li><Link href="/team" className="hover:text-brand-green transition-colors focus-ring rounded">{language === 'hi' ? 'हमारी टीम' : 'Our Team'}</Link></li>
                             <li><Link href="/contact" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.contactUs}</Link></li>
                         </ul>
