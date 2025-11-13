@@ -73,8 +73,8 @@ export default function Footer() {
                                 <span>
                                     {language === 'hi' ? 'धेवधा विकास समिति' : 'Dheodha Vikas Samiti'}<br />
                                     {language === 'hi' ? 'गांव: धेवधा' : 'Village: Dheodha'}<br />
-                                    {language === 'hi' ? 'ब्लॉक: पकड़ीबारावां' : 'Block: Pakribarawan'}<br />
-                                    {language === 'hi' ? 'डाकघर: पकड़ीबारवां' : 'Post: Pakaribarwan'}<br />
+                                    {language === 'hi' ? 'ब्लॉक: पकरीबरामा' : 'Block: Pakribarawan'}<br />
+                                    {language === 'hi' ? 'डाकघर: पकरीबरामा' : 'Post: Pakaribarwan'}<br />
                                     {language === 'hi' ? 'जिला: नवादा, बिहार - 805124' : 'District: Nawada, Bihar - 805124'}
                                 </span>
                             </li>

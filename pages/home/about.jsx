@@ -124,7 +124,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'डिजिटलीकरण' : 'Digitalization',
             titleHindi: 'डिजिटलीकरण',
             icon: '💻',
-            image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763063869/istockphoto-1395727646-612x612_hw5y7v.jpg',
             description: language === 'hi'
                 ? 'डिजिटल बुनियादी ढांचा निर्माण, पारदर्शी ई-गवर्नेंस सुनिश्चित करना, ऑनलाइन सामुदायिक मंच, और डिजिटल विभाजन को पाटना।'
                 : 'Building digital infrastructure, ensuring transparent e-governance, online community platforms, and bridging the digital divide.',
@@ -141,7 +141,7 @@ const AboutSection = () => {
             title: language === 'hi' ? 'सांस्कृतिक पुनरुत्थान' : 'Cultural Revival',
             titleHindi: 'सांस्कृतिक पुनरुत्थान',
             icon: '🎭',
-            image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/45409174_2402526893097762_5143301432350343168_n_g8x7zd.jpg',
             description: language === 'hi'
                 ? 'पारंपरिक लोक कलाओं का संरक्षण, राष्ट्रीय नाट्य कला परिषद का पुनरुद्धार, सांस्कृतिक त्योहारों का आयोजन, और युवाओं को विरासत कलाओं में प्रशिक्षण।'
                 : 'Preserving traditional folk arts, reviving Rastriya Natya Kala Parishad, organizing cultural festivals, and training youth in heritage arts.',
