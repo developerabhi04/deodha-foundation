@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Users } from 'lucide-react';
+import { MoreVertical, PinIcon, Users } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 
 export default function HeroSlider() {
@@ -25,7 +25,7 @@ export default function HeroSlider() {
         {
             id: 1,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DP_2015_3_v1njsg.jpg',
-            overlayColor: 'from-green 100/70 to-emerald-300/30',
+            overlayColor: 'from-green-100/70 to-emerald-300/30',
             // DESKTOP CONTENT
             desktop: {
                 title: {
@@ -37,22 +37,22 @@ export default function HeroSlider() {
                     hi: `धेवधा विकास समिति का उद्देश्य है बदलाव की नई राह पर चलते हुए हर नागरिक को विकास की मुख्यधारा से जोड़ना।`
                 }
             },
-            // MOBILE CONTENT
+            // MOBILE CONTENT (Optimized: Shorter, centered)
             mobile: {
                 title: {
-                    en: ['Dheodha Development Committee', 'A New Path of Change'],
-                    hi: ['धेवधा विकास समिति', 'बदलाव की नई राह']
+                    en: ['Dheodha Development', 'New Path of Change'],
+                    hi: ['धेवधा विकास', 'नई राह']
                 },
                 subtitle: {
-                    en: `Connecting every citizen to the path of progress through unity, education, and development.`,
-                    hi: `हर नागरिक को शिक्षा, एकजुटता और विकास की मुख्यधारा से जोड़ना।`
+                    en: `Connecting citizens to progress through unity and development.`,
+                    hi: `नागरिकों को एकता और विकास से जोड़ना।`
                 }
             }
         },
         {
             id: 2,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/571371887_1228595669303899_1530027951067959863_n_qewddt.jpg',
-            overlayColor: 'from-blue 100/70 to-cyan-300/30',
+            overlayColor: 'from-blue-100/70 to-cyan-300/30',
             desktop: {
                 title: {
                     en: ['Dheodha’s Pride,', 'Our Responsibility'],
@@ -65,19 +65,19 @@ export default function HeroSlider() {
             },
             mobile: {
                 title: {
-                    en: ['Dheodha’s Pride,', 'Our Responsibility'],
+                    en: ['Dheodha’s Pride', 'Our Duty'],
                     hi: ['धेवधा का', 'गौरव']
                 },
                 subtitle: {
-                    en: 'Together towards a brighter, stronger Dheodha.',
-                    hi: 'साथ मिलकर एक सशक्त धेवधा की ओर।'
+                    en: 'Together building a model of progress.',
+                    hi: 'साथ मिलकर प्रगति का निर्माण।'
                 }
             }
         },
         {
             id: 3,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
-            overlayColor: 'from-orange 100/70 to-red-300/30',
+            overlayColor: 'from-orange-100/70 to-red-300/30',
             desktop: {
                 title: {
                     en: ['Village Development,', 'Everyone’s Effort'],
@@ -90,19 +90,19 @@ export default function HeroSlider() {
             },
             mobile: {
                 title: {
-                    en: ['Village Development,', 'Everyone’s Effort'],
+                    en: ['Village Development', 'Collective Effort'],
                     hi: ['गाँव का', 'विकास']
                 },
                 subtitle: {
-                    en: 'Unity and progress through education and culture.',
-                    hi: 'शिक्षा और संस्कृति के माध्यम से एकजुटता और प्रगति।'
+                    en: 'Unity through education and culture.',
+                    hi: 'शिक्षा और संस्कृति से एकता।'
                 }
             }
         },
         {
-            id: 3,
+            id: 4,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
-            overlayColor: 'from-orange 100/70 to-red-300/30',
+            overlayColor: 'from-purple-100/70 to-pink-300/30',
             desktop: {
                 title: {
                     en: ['Cultural Heritage,', 'Village Pride'],
@@ -119,15 +119,15 @@ export default function HeroSlider() {
                     hi: ['संस्कृति की', 'धरोहर']
                 },
                 subtitle: {
-                    en: 'Celebrating unity and tradition.',
-                    hi: 'एकता और परंपरा का उत्सव।'
+                    en: 'Preserving traditions that unite us.',
+                    hi: 'एकजुट करने वाली परंपराएँ।'
                 }
             }
         },
         {
-            id: 4,
+            id: 5,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762976460/Gram_Nigrani_Samiti_Baithak_gulzmv.jpg',
-            overlayColor: 'from-orange 100/70 to-red-300/30',
+            overlayColor: 'from-amber-100/70 to-orange-300/30',
             desktop: {
                 title: {
                     en: ['Village Monitoring', 'Committee Meeting'],
@@ -144,14 +144,12 @@ export default function HeroSlider() {
                     hi: ['ग्राम निगरानी', 'समिति']
                 },
                 subtitle: {
-                    en: 'Promoting transparency and public participation.',
-                    hi: 'पारदर्शिता और जनभागीदारी को बढ़ावा देना।'
+                    en: 'Ensuring transparency in development.',
+                    hi: 'विकास में पारदर्शिता।'
                 }
             }
         }
-
     ];
-
 
     useEffect(() => {
         const imagePromises = slides.map((slide) => {
@@ -233,10 +231,10 @@ export default function HeroSlider() {
                         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
                     </div>
 
-                    {/* Content - Responsive Layout */}
-                    <div className={`relative h-full flex items-center ${isMobile ? 'justify-start' : 'justify-center'} pt-20 lg:pt-0`}>
+                    {/* Content - Responsive Layout (Centered on All Devices) */}
+                    <div className="relative h-full flex items-center justify-center pt-16 lg:pt-0"> {/* Centered for both */}
                         <div className="container mx-auto px-4">
-                            <div className={`${isMobile ? 'max-w-sm' : 'max-w-3xl mx-auto'} ${isMobile ? 'text-left' : 'text-center'}`}>
+                            <div className={`${isMobile ? 'max-w-md mx-auto' : 'max-w-3xl mx-auto'} text-center`}> {/* Centered text, smaller max-w on mobile */}
                                 {/* Title */}
                                 <div className="mb-4">
                                     {currentContent.title[language].map((line, index) => (
@@ -247,13 +245,13 @@ export default function HeroSlider() {
                                             transition={{ delay: 0.3 + (index * 0.15), duration: 0.6 }}
                                             className={`
                                                 ${isMobile
-                                                    ? 'text-3xl sm:text-4xl'
+                                                    ? 'text-2xl sm:text-3xl' // Smaller on mobile
                                                     : 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl'
                                                 } 
                                                 font-black leading-tight 
                                                 ${index === 0
                                                     ? 'text-white mb-2'
-                                                    : 'text-transparent p-2 text-[100px] bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500'
+                                                    : 'text-transparent p-2 text-[60px] sm:text-[80px] md:text-[100px] bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500'
                                                 }
                                             `}
                                         >
@@ -269,11 +267,11 @@ export default function HeroSlider() {
                                     transition={{ delay: 0.6, duration: 0.6 }}
                                     className={`
                                         ${isMobile
-                                            ? 'text-sm'
+                                            ? 'text-xs sm:text-sm' // Smaller on mobile
                                             : 'text-xs sm:text-sm md:text-base'
                                         } 
                                         text-gray-200 mb-6 
-                                        ${isMobile ? 'max-w-xs' : 'max-w-2xl mx-auto'} 
+                                        ${isMobile ? 'max-w-sm mx-auto' : 'max-w-2xl mx-auto'} 
                                         leading-relaxed
                                     `}
                                 >
@@ -285,7 +283,7 @@ export default function HeroSlider() {
                                     initial={{ y: 30, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: 1, duration: 0.5 }}
-                                    className={`flex ${isMobile ? 'justify-start' : 'justify-center'}`}
+                                    className="flex justify-center" // Centered for both
                                 >
                                     <Link
                                         href="/about"
@@ -293,9 +291,9 @@ export default function HeroSlider() {
                                             group inline-flex items-center justify-center gap-2 
                                             bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600
                                             text-white 
-                                            ${isMobile ? 'px-10 py-4' : 'px-8 py-4'} 
+                                            ${isMobile ? 'px-6 py-3' : 'px-8 py-4'}  // Reduced padding on mobile
                                             rounded-full font-black 
-                                            ${isMobile ? 'text-base' : 'text-sm md:text-base'} 
+                                            ${isMobile ? 'text-sm' : 'text-sm md:text-base'} 
                                             uppercase shadow-2xl 
                                             hover:shadow-green-500/50 hover:scale-105 
                                             transition-all duration-300
@@ -303,8 +301,8 @@ export default function HeroSlider() {
                                         `}
                                     >
                                         <span className="relative z-10 flex items-center gap-2">
-                                            <Users size={isMobile ? 22 : 20} />
-                                            {language === 'hi' ? 'हमसे जुड़ें' : 'Join Us'}
+                                            {/* <PinIcon size={isMobile ? 18 : 20} /> */}
+                                            {language === 'hi' ? 'और ज्यादा खोजें' : 'Explore More'}
                                         </span>
                                         <span className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                         <span className="w-2 h-2 rounded-full bg-white animate-pulse ml-1"></span>
@@ -316,9 +314,9 @@ export default function HeroSlider() {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Slide Indicators */}
+            {/* Slide Indicators - Centered on All Devices */}
             {imagesLoaded && (
-                <div className={`absolute ${isMobile ? 'bottom-24 left-4' : 'bottom-8 left-1/2 -translate-x-1/2'} z-10 flex gap-2`}>
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2"> {/* Centered for both */}
                     {slides.map((_, index) => (
                         <button
                             key={index}
@@ -329,7 +327,7 @@ export default function HeroSlider() {
                             <div className={`transition-all duration-300 rounded-full ${index === currentSlide
                                 ? 'w-8 h-2 bg-gradient-to-r from-yellow-400 to-green-500'
                                 : 'w-2 h-2 bg-white/40 group-hover:bg-white/60'
-                                }`}></div>
+                            }`}></div>
                         </button>
                     ))}
                 </div>

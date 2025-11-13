@@ -47,7 +47,7 @@ const ProgramsSection = () => {
             title: language === 'hi' ? 'शैक्षिक कार्यक्रम' : 'Education Programs',
             titleHindi: 'शैक्षिक कार्यक्रम',
             icon: '📚',
-            image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80',
+            image: 'https://savioursfoundation.org/wp-content/uploads/2021/03/teach-for-india-1024x576.jpg',
             gradient: 'from-blue-500 to-indigo-600',
             bgGradient: 'from-blue-50 to-indigo-50',
             borderColor: 'border-blue-100',

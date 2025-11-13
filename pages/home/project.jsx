@@ -79,7 +79,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'समुदाय द्वारा वित्त पोषित' : 'Community funded',
             completionDate: '2025',
             impact: language === 'hi' ? 'सुधरी हुई गांव की स्वच्छता' : 'Improved village hygiene',
-            image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
         },
     ];
 
@@ -93,7 +93,7 @@ const ProjectsSection = () => {
             budget: '₹5 lakh',
             startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
         },
         {
             id: 2,
@@ -104,7 +104,7 @@ const ProjectsSection = () => {
             budget: '₹3 lakh',
             startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763068920/330207172_529598739266971_2580032597949579545_n_ibhdce.jpg',
         },
         {
             id: 3,
@@ -115,7 +115,7 @@ const ProjectsSection = () => {
             budget: '₹4 lakh',
             startDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1509391111737-a6f1241a85d4?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
         },
     ];
 

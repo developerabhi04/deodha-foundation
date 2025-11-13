@@ -15,7 +15,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'गुणवत्तापूर्ण शिक्षा और डिजिटल साक्षरता के माध्यम से युवाओं का भविष्य उज्ज्वल बनाना'
         : 'Brightening the future of youth through quality education and digital literacy',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
+      image: 'https://savioursfoundation.org/wp-content/uploads/2021/03/teach-for-india-1024x576.jpg',
       icon: <BookOpen className="w-8 h-8" />,
       color: 'from-blue-500 to-blue-700',
       beneficiaries: language === 'hi' ? '500+ छात्र' : '500+ students',
@@ -39,7 +39,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'निःशुल्क स्वास्थ्य शिविर और जागरूकता अभियान के माध्यम से समुदाय को स्वस्थ रखना'
         : 'Keeping the community healthy through free health camps and awareness campaigns',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061620/Image00001dss-1_afdlmp.jpg',
       icon: <Heart className="w-8 h-8" />,
       color: 'from-red-500 to-pink-600',
       beneficiaries: language === 'hi' ? '1000+ ग्रामवासी' : '1000+ villagers',
@@ -63,7 +63,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'स्वयं सहायता समूहों और कौशल विकास के माध्यम से महिलाओं को आत्मनिर्भर बनाना'
         : 'Making women self-reliant through self-help groups and skill development',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061889/tailoring2_s9x8hw.jpg',
       icon: <Users className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-600',
       beneficiaries: language === 'hi' ? '150+ महिलाएं' : '150+ women',
@@ -87,7 +87,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'कौशल विकास और व्यावसायिक प्रशिक्षण के माध्यम से युवाओं को रोजगार के अवसर प्रदान करना'
         : 'Providing employment opportunities to youth through skill development and vocational training',
-      image: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=800&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067508/533305-how-urban-job-guarantee-schemes-can-provide-livelihood-equal-opportunity-to-women_t2n4d2.jpg',
       icon: <Briefcase className="w-8 h-8" />,
       color: 'from-green-500 to-teal-600',
       beneficiaries: language === 'hi' ? '200+ युवा' : '200+ youth',
@@ -111,7 +111,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'सड़क, नाली, और सार्वजनिक सुविधाओं का निर्माण और रखरखाव'
         : 'Construction and maintenance of roads, drains, and public facilities',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067692/0_Sv-Rwnqd-L9eIp0j_kdnn2e.jpg',
       icon: <Award className="w-8 h-8" />,
       color: 'from-orange-500 to-red-600',
       beneficiaries: language === 'hi' ? 'संपूर्ण गांव' : 'Entire village',
@@ -135,7 +135,7 @@ export default function Programs() {
       description: language === 'hi'
         ? 'वृक्षारोपण और स्वच्छता अभियान के माध्यम से पर्यावरण की रक्षा'
         : 'Protecting the environment through tree plantation and cleanliness campaigns',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067810/A6300-Sustainability-and-Indian-Villages-Image-1_b8pxsb.jpg',
       icon: <TreePine className="w-8 h-8" />,
       color: 'from-green-600 to-emerald-700',
       beneficiaries: language === 'hi' ? 'पूरा समुदाय' : 'Entire community',

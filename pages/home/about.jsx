@@ -55,7 +55,6 @@ const AboutSection = () => {
             id: 'education',
             title: language === 'hi' ? 'शिक्षा' : 'Education',
             titleHindi: 'शिक्षा',
-            icon: '📚',
             image: 'https://savioursfoundation.org/wp-content/uploads/2021/03/teach-for-india-1024x576.jpg',
             description: language === 'hi'
                 ? 'गुणवत्ता सुधार, डिजिटल शिक्षण संसाधन, स्कूल के बाद ट्यूशन सहायता, और छात्र भागीदारी कार्यक्रमों के माध्यम से शिक्षा में परिवर्तन।'
@@ -72,7 +71,6 @@ const AboutSection = () => {
             id: 'health',
             title: language === 'hi' ? 'स्वास्थ्य और स्वच्छता' : 'Health & Hygiene',
             titleHindi: 'स्वास्थ्य',
-            icon: '🏥',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061620/Image00001dss-1_afdlmp.jpg',
             description: language === 'hi'
                 ? 'व्यापक स्वास्थ्य सेवा पहुंच, स्वच्छता जागरूकता अभियान, निवारक स्वास्थ्य उपाय, और मातृ-बाल स्वास्थ्य कार्यक्रम।'
@@ -89,7 +87,6 @@ const AboutSection = () => {
             id: 'women',
             title: language === 'hi' ? 'महिला सशक्तिकरण' : 'Women Empowerment',
             titleHindi: 'महिला सशक्तिकरण',
-            icon: '👩‍🏫',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763061889/tailoring2_s9x8hw.jpg',
             description: language === 'hi'
                 ? 'व्यापक कौशल विकास, सुरक्षा पहल, स्वयं सहायता समूह गठन, और समावेशी भागीदारी के लिए मंच बनाना।'
@@ -106,7 +103,6 @@ const AboutSection = () => {
             id: 'agriculture',
             title: language === 'hi' ? 'कृषि' : 'Agriculture',
             titleHindi: 'कृषि',
-            icon: '🌾',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763040932/IMG_2791_pkxkqz.jpg',
             description: language === 'hi'
                 ? 'आधुनिक खेती तकनीक, टिकाऊ कृषि प्रथाएं, फसल विविधीकरण मार्गदर्शन, और किसान सहायता नेटवर्क।'
@@ -123,7 +119,6 @@ const AboutSection = () => {
             id: 'digital',
             title: language === 'hi' ? 'डिजिटलीकरण' : 'Digitalization',
             titleHindi: 'डिजिटलीकरण',
-            icon: '💻',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763063869/istockphoto-1395727646-612x612_hw5y7v.jpg',
             description: language === 'hi'
                 ? 'डिजिटल बुनियादी ढांचा निर्माण, पारदर्शी ई-गवर्नेंस सुनिश्चित करना, ऑनलाइन सामुदायिक मंच, और डिजिटल विभाजन को पाटना।'
@@ -140,7 +135,7 @@ const AboutSection = () => {
             id: 'culture',
             title: language === 'hi' ? 'सांस्कृतिक पुनरुत्थान' : 'Cultural Revival',
             titleHindi: 'सांस्कृतिक पुनरुत्थान',
-            icon: '🎭',
+            
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/45409174_2402526893097762_5143301432350343168_n_g8x7zd.jpg',
             description: language === 'hi'
                 ? 'पारंपरिक लोक कलाओं का संरक्षण, राष्ट्रीय नाट्य कला परिषद का पुनरुद्धार, सांस्कृतिक त्योहारों का आयोजन, और युवाओं को विरासत कलाओं में प्रशिक्षण।'
@@ -409,13 +404,13 @@ const AboutSection = () => {
                                                     alt={area.title}
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                                 />
-                                                <div className={`absolute inset-0 bg-gradient-to-t ${area.bgColor} opacity-60 group-hover:opacity-80 transition-opacity`}></div>
+                                                <div className={`absolute inset-0 bg-gradient-to-t ${area.bgColor} opacity-40 group-hover:opacity-80 transition-opacity`}></div>
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
                                                 {/* Icon Badge */}
-                                                <div className={`absolute top-6 right-6 w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center text-3xl shadow-2xl border-4 border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all`}>
+                                                {/* <div className={`absolute top-6 right-6 w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center text-3xl shadow-2xl border-4 border-white/30 group-hover:scale-110 group-hover:rotate-12 transition-all`}>
                                                     {area.icon}
-                                                </div>
+                                                </div> */}
 
                                                 {/* Title Overlay */}
                                                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -486,13 +481,13 @@ const AboutSection = () => {
                             transition={{ duration: 0.6, delay: 0.7 }}
                             className="text-center mt-16"
                         >
-                            <a
+                            <Link
                                 href="/programs"
                                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all"
                             >
                                 <span>{language === 'hi' ? 'सभी कार्यक्रम देखें' : 'Explore All Programs'}</span>
                                 <ArrowRight className="w-6 h-6" />
-                            </a>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>

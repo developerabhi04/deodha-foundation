@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@cyntler/react-doc-viewer": "^1.17.1",
+    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.290.0",
     "mammoth": "^1.11.0",

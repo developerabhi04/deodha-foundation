@@ -131,7 +131,7 @@ const Project = () => {
                 'Health awareness',
                 'Increased community participation'
             ],
-            image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
             category: language === 'hi' ? 'स्वास्थ्य' : 'Health'
         },
     ];
@@ -147,7 +147,7 @@ const Project = () => {
             budget: '₹5 lakh',
             startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
             icon: '💡',
         },
         {
@@ -211,7 +211,7 @@ const Project = () => {
                 {/* Impact Stats */}
                 <section className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                             {impactStats.map((stat, index) => (
                                 <div
                                     key={index}
