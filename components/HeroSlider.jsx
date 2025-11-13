@@ -25,7 +25,7 @@ export default function HeroSlider() {
         {
             id: 1,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DP_2015_3_v1njsg.jpg',
-            overlayColor: 'from-green-300/70 to-emerald-200/30',
+            overlayColor: 'from-green 100/70 to-emerald-300/30',
             // DESKTOP CONTENT
             desktop: {
                 title: {
@@ -52,7 +52,7 @@ export default function HeroSlider() {
         {
             id: 2,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/571371887_1228595669303899_1530027951067959863_n_qewddt.jpg',
-            overlayColor: 'from-blue-300/70 to-cyan-300/30',
+            overlayColor: 'from-blue 100/70 to-cyan-300/30',
             desktop: {
                 title: {
                     en: ['Dheodha’s Pride,', 'Our Responsibility'],
@@ -77,7 +77,7 @@ export default function HeroSlider() {
         {
             id: 3,
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
-            overlayColor: 'from-orange-300/70 to-red-300/30',
+            overlayColor: 'from-orange 100/70 to-red-300/30',
             desktop: {
                 title: {
                     en: ['Village Development,', 'Everyone’s Effort'],
@@ -98,7 +98,58 @@ export default function HeroSlider() {
                     hi: 'शिक्षा और संस्कृति के माध्यम से एकजुटता और प्रगति।'
                 }
             }
+        },
+        {
+            id: 3,
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
+            overlayColor: 'from-orange 100/70 to-red-300/30',
+            desktop: {
+                title: {
+                    en: ['Cultural Heritage,', 'Village Pride'],
+                    hi: ['संस्कृति की धरोहर,', 'गाँव का गौरव']
+                },
+                subtitle: {
+                    en: 'Preserving traditions and memories that unite the community — celebrating togetherness and identity.',
+                    hi: 'परंपराओं और यादों को संजोए रखना जो समाज को जोड़ती हैं – एकजुटता और अपनी पहचान का उत्सव।'
+                }
+            },
+            mobile: {
+                title: {
+                    en: ['Cultural', 'Heritage'],
+                    hi: ['संस्कृति की', 'धरोहर']
+                },
+                subtitle: {
+                    en: 'Celebrating unity and tradition.',
+                    hi: 'एकता और परंपरा का उत्सव।'
+                }
+            }
+        },
+        {
+            id: 4,
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762976460/Gram_Nigrani_Samiti_Baithak_gulzmv.jpg',
+            overlayColor: 'from-orange 100/70 to-red-300/30',
+            desktop: {
+                title: {
+                    en: ['Village Monitoring', 'Committee Meeting'],
+                    hi: ['ग्राम निगरानी', 'समिति बैठक']
+                },
+                subtitle: {
+                    en: 'Strengthening transparency and participation — ensuring accountability in every village development activity.',
+                    hi: 'पारदर्शिता और भागीदारी को सशक्त बनाते हुए – प्रत्येक विकास कार्य में जवाबदेही सुनिश्चित करना।'
+                }
+            },
+            mobile: {
+                title: {
+                    en: ['Village Monitoring', 'Committee'],
+                    hi: ['ग्राम निगरानी', 'समिति']
+                },
+                subtitle: {
+                    en: 'Promoting transparency and public participation.',
+                    hi: 'पारदर्शिता और जनभागीदारी को बढ़ावा देना।'
+                }
+            }
         }
+
     ];
 
 

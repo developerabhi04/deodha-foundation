@@ -86,7 +86,7 @@ const AboutCTA = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <Link
+            {/* <Link
               href="/donate"
               className="group relative bg-white text-green-600 px-10 py-5 rounded-2xl font-bold text-lg overflow-hidden transition-all hover:shadow-2xl hover:scale-105"
             >
@@ -96,15 +96,15 @@ const AboutCTA = () => {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </Link>
+            </Link> */}
 
-            <Link
+            {/* <Link
               href="/volunteer"
               className="group bg-white/10 backdrop-blur-xl border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition-all inline-flex items-center space-x-3"
             >
               <Users className="w-6 h-6" />
               <span>{language === 'hi' ? 'स्वयंसेवक बनें' : 'Become a Volunteer'}</span>
-            </Link>
+            </Link> */}
 
             <Link
               href="/contact"
@@ -118,17 +118,17 @@ const AboutCTA = () => {
           {/* Stats */}
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { 
-                value: '₹3.93L', 
-                label: language === 'hi' ? 'कुल निवेश' : 'Total Investment' 
+              {
+                value: '₹3.93L',
+                label: language === 'hi' ? 'कुल निवेश' : 'Total Investment'
               },
-              { 
-                value: '10K+', 
-                label: language === 'hi' ? 'प्रभावित जीवन' : 'Lives Impacted' 
+              {
+                value: '10K+',
+                label: language === 'hi' ? 'प्रभावित जीवन' : 'Lives Impacted'
               },
-              { 
-                value: '5', 
-                label: language === 'hi' ? 'सक्रिय परियोजनाएं' : 'Active Projects' 
+              {
+                value: '5',
+                label: language === 'hi' ? 'सक्रिय परियोजनाएं' : 'Active Projects'
               }
             ].map((stat, index) => (
               <motion.div

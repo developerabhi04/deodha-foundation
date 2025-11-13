@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import NewsSection from '../pages/home/news';
 import { Calendar, Users, MapPin, TrendingUp, Heart, Award } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
+import ProjectsSection from './home/project';
 
 const News = () => {
     const { language } = useLanguage();
@@ -161,13 +162,10 @@ const News = () => {
 
     const impactStats = [
         {
-            number: '₹3.93L',
+            number: '₹4.22L',
             label: language === 'hi' ? 'कुल फंड संग्रहित' : 'Total Funds Raised'
         },
-        {
-            number: '₹2.15L',
-            label: language === 'hi' ? 'फंड उपयोग' : 'Funds Utilized'
-        },
+        
         {
             number: '5+',
             label: language === 'hi' ? 'परियोजनाएं पूर्ण' : 'Projects Completed'
@@ -208,70 +206,7 @@ const News = () => {
                             </p>
                         </div>
 
-                        <div className="space-y-8">
-                            {newsUpdates.map((news, index) => (
-                                <div
-                                    key={news.id}
-                                    className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100"
-                                >
-                                    <div className="grid md:grid-cols-2 gap-6">
-                                        {/* Image Section */}
-                                        <div className="relative h-64 md:h-auto">
-                                            <img
-                                                src={news.image}
-                                                alt={news.title}
-                                                className="w-full h-full object-cover"
-                                            />
-                                            <div className="absolute top-4 left-4">
-                                                <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold border ${getStatusColor(news.status)}`}>
-                                                    {news.status}
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        {/* Content Section */}
-                                        <div className="p-8">
-                                            <div className="flex items-center gap-3 mb-4">
-                                                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
-                                                    {news.icon}
-                                                </div>
-                                                <div>
-                                                    <span className="text-sm font-semibold text-green-600 uppercase tracking-wide">
-                                                        {news.category}
-                                                    </span>
-                                                    <div className="flex items-center text-sm text-gray-500 mt-1">
-                                                        <Calendar className="w-4 h-4 mr-1" />
-                                                        {news.date}
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                                                {news.title}
-                                            </h3>
-
-                                            <p className="text-gray-600 mb-4 leading-relaxed">
-                                                {news.description}
-                                            </p>
-
-                                            <div className="bg-gray-50 rounded-xl p-4">
-                                                <h4 className="font-semibold text-gray-900 mb-3">
-                                                    {language === 'hi' ? 'मुख्य विशेषताएं:' : 'Key Highlights:'}
-                                                </h4>
-                                                <ul className="space-y-2">
-                                                    {news.details.map((detail, idx) => (
-                                                        <li key={idx} className="flex items-start text-sm text-gray-700">
-                                                            <span className="text-green-600 mr-2 mt-1">✓</span>
-                                                            <span>{detail}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        
                     </div>
                 </section>
 
@@ -326,7 +261,7 @@ const News = () => {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-4 gap-8">
+                            <div className="grid md:grid-cols-3 gap-8">
                                 {impactStats.map((stat, index) => (
                                     <div key={index} className="text-center">
                                         <div className="text-5xl font-black mb-2">{stat.number}</div>
@@ -358,12 +293,12 @@ const News = () => {
                                 <Users className="w-5 h-5 mr-2" />
                                 {language === 'hi' ? 'WhatsApp समूह में शामिल हों' : 'Join WhatsApp Group'}
                             </a>
-                            <a
+                            {/* <a
                                 href="/volunteer"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-green-600 font-bold rounded-xl hover:bg-gray-50 transition-colors shadow-lg border-2 border-green-600"
                             >
                                 {language === 'hi' ? 'स्वयंसेवक बनें' : 'Become a Volunteer'}
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </section>

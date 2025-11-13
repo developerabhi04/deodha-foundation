@@ -31,8 +31,8 @@ const AboutStructure = () => {
           icon: Users,
           color: 'from-green-600 to-emerald-600',
           responsibilities: language === 'hi'
-            ? 'कृषि और विकास कार्यक्रम'
-            : 'Agriculture and development programs'
+            ? 'ग्राम विकास योजना का क्रियान्वयन'
+            : 'Implementation of the Village Development Plan'
         },
         {
           title: language === 'hi' ? 'सचिव' : 'Secretary',
@@ -63,8 +63,8 @@ const AboutStructure = () => {
           icon: Shield,
           color: 'from-orange-600 to-amber-600',
           responsibilities: language === 'hi'
-            ? 'शिक्षा और युवा कार्यक्रम'
-            : 'Education and youth programs'
+            ? 'ग्राम विकास योजना का क्रियान्वयन'
+            : 'Implementation of the Village Development Plan'
         }
       ]
     }

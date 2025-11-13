@@ -21,8 +21,8 @@ const AboutPlaces = () => {
         },
         {
             name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
-            image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&q=80',
-            link: '/places/dharamshala'
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
+            link: '/places/dharamshala-dheodha'
         },
         {
             name: language === 'hi' ? 'दुर्गा स्थान' : 'Durga Sthan',
@@ -57,7 +57,7 @@ const AboutPlaces = () => {
         {
             name: language === 'hi' ? 'आंगनवाड़ी केंद्र' : 'Anganwadi Center',
             image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80',
-            link: '/places/anganwadi'
+            link: '/places/anganwadi-center'
         },
         {
             name: language === 'hi' ? 'सामुदायिक स्वास्थ्य केंद्र' : 'Community Health Center',
@@ -74,11 +74,11 @@ const AboutPlaces = () => {
             image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=80',
             link: '/places/post-office'
         },
-        {
-            name: language === 'hi' ? 'बैंक शाखा' : 'Bank Branch',
-            image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&q=80',
-            link: '/places/bank-branch'
-        },
+        // {
+        //     name: language === 'hi' ? 'बैंक शाखा' : 'Bank Branch',
+        //     image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&q=80',
+        //     link: '/places/bank-branch'
+        // },
         {
             name: language === 'hi' ? 'ग्राम पुस्तकालय' : 'Village Library',
             image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=80',
@@ -121,7 +121,7 @@ const AboutPlaces = () => {
         },
         {
             name: language === 'hi' ? 'मुख्य द्वार (स्वागत द्वार)' : 'Main Gate (Welcome Gate)',
-            image: 'https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=400&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg',
             link: '/places/main-gate'
         }
     ];

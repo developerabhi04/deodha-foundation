@@ -380,18 +380,18 @@ export default function Programs() {
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              {/* <a
                 href="/volunteer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-green-600 font-bold rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
               >
                 {language === 'hi' ? 'स्वयंसेवक बनें' : 'Become a Volunteer'}
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="/donate"
                 className="inline-flex items-center justify-center px-8 py-4 bg-green-800 text-white font-bold rounded-xl hover:bg-green-900 transition-colors shadow-lg"
               >
                 {language === 'hi' ? 'दान करें' : 'Donate Now'}
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

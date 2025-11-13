@@ -74,9 +74,7 @@ const AboutStory = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 धेवधा विकास समिति की स्थापना <strong className="text-green-600">2 अगस्त 2025</strong> को हुई, जब गांव के अप्रवासी युवाओं और स्थानीय निवासियों ने मिलकर अपने गांव के विकास के लिए एक <strong>गैर-राजनीतिक, सामाजिक संगठन</strong> बनाने का निर्णय लिया।
               </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                प्रारंभ में <strong>6 संस्थापक सदस्यों</strong> (राजेश कुमार, चंदन कुमार, मितेंद्र कुमार, देवकांत मिश्रा, ब्रजेश कुमार, और सुमित कुमार) ने <strong>₹65,500</strong> का प्रारंभिक योगदान दिया। बाद में अतिरिक्त ₹3.28 लाख की राशि एकत्र की गई, जिससे कुल निवेश <strong>₹3.93 लाख</strong> हो गया।
-              </p>
+
               <p className="text-gray-700 leading-relaxed mb-6">
                 हमारी पहली बड़ी परियोजना गांव की <strong>मुख्य सड़क की मरम्मत और नाली की सफाई</strong> थी, जिस पर ₹1.51 लाख खर्च किए गए। इससे गांव में जलभराव की समस्या का समाधान हुआ और 500+ परिवारों को लाभ हुआ।
               </p>
@@ -88,9 +86,6 @@ const AboutStory = () => {
             <>
               <p className="text-gray-700 leading-relaxed mb-6">
                 Dheodha Vikas Samiti was established on <strong className="text-green-600">August 2, 2025</strong>, when migrant youth and local residents of the village came together to create a <strong>non-political, social organization</strong> for village development.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Initially, <strong>6 founding members</strong> (Rajesh Kumar, Chandan Kumar, Mitendra Kumar, Devkant Mishra, Brajesh Kumar, and Sumit Kumar) contributed an initial amount of <strong>₹65,500</strong>. Later, an additional ₹3.28 lakh was raised, bringing the total investment to <strong>₹3.93 lakh</strong>.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 Our first major project was the <strong>repair of the village main road and drainage cleaning</strong>, which cost ₹1.51 lakh. This solved the waterlogging problem in the village and benefited 500+ families.

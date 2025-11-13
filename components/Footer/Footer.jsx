@@ -47,7 +47,7 @@ export default function Footer() {
                             <li><Link href="/about" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.aboutUs}</Link></li>
                             <li><Link href="/programs" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.ourPrograms}</Link></li>
                             <li><Link href="/project" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.projects || (language === 'hi' ? 'परियोजनाएं' : 'Projects')}</Link></li>
-                            <li><Link href="/blog" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.blog}</Link></li>
+                            {/* <li><Link href="/blog" className="hover:text-brand-green transition-colors focus-ring rounded">{t.footer.blog}</Link></li> */}
                             <li><Link href="/gallery" className="hover:text-brand-green transition-colors focus-ring rounded">{language === 'hi' ? 'गैलरी' : 'Gallery'}</Link></li>
                             <li><Link href="/faq" className="hover:text-brand-green transition-colors focus-ring rounded">{language === 'hi' ? 'FAQ' : 'FAQ'}</Link></li>
                         </ul>

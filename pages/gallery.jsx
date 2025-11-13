@@ -8,6 +8,8 @@ import Lightbox from '../components/Lightbox';
 import { gallery } from '../lib/data';
 import { useLanguage } from '../lib/LanguageContext';
 
+
+
 export default function GalleryPage() {
     const { language } = useLanguage();
     const [lightboxOpen, setLightboxOpen] = useState(false);

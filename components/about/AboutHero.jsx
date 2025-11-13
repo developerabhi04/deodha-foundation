@@ -10,13 +10,13 @@ const AboutHero = () => {
 
   const stats = [
     { 
-      value: '6', 
+      value: '140+', 
       label: language === 'hi' ? 'संस्थापक सदस्य' : 'Founding Members',
       icon: Users, 
       color: 'from-blue-600 to-indigo-600' 
     },
     { 
-      value: '₹3.93L', 
+      value: '₹4.22L', 
       label: language === 'hi' ? 'सामुदायिक निवेश' : 'Community Investment',
       icon: Award, 
       color: 'from-green-600 to-emerald-600' 
@@ -94,11 +94,11 @@ const AboutHero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight">
+            <h1 className="text-5xl lg:text-7xl font-black text-white  leading-tight tracking-tight">
               {language === 'hi' ? (
                 <>
                   हम कौन हैं?
-                  <span className="block bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mt-3 text-4xl lg:text-6xl">
+                  <span className="block bg-gradient-to-r from-green-400 via-emerald-400 py-3  to-teal-400 bg-clip-text text-transparent mt-3 text-4xl lg:text-6xl">
                     धेवधा की सेवा में
                   </span>
                 </>

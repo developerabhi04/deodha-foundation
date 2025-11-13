@@ -204,30 +204,30 @@ const Places = () => {
       distance: '0.4 km',
       established: '1995'
     },
-    {
-      id: 'post-office',
-      name: language === 'hi' ? 'डाकघर' : 'Post Office',
-      category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80',
-      description: language === 'hi'
-        ? 'डाक और बैंकिंग सेवाएं'
-        : 'Postal and banking services',
-      location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
-      distance: '0.3 km',
-      established: '1980'
-    },
-    {
-      id: 'bank-branch',
-      name: language === 'hi' ? 'बैंक शाखा' : 'Bank Branch',
-      category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=80',
-      description: language === 'hi'
-        ? 'बैंकिंग और वित्तीय सेवाएं'
-        : 'Banking and financial services',
-      location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
-      distance: '0.2 km',
-      established: '2010'
-    },
+    // {
+    //   id: 'post-office',
+    //   name: language === 'hi' ? 'डाकघर' : 'Post Office',
+    //   category: 'infrastructure',
+    //   image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80',
+    //   description: language === 'hi'
+    //     ? 'डाक और बैंकिंग सेवाएं'
+    //     : 'Postal and banking services',
+    //   location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
+    //   distance: '0.3 km',
+    //   established: '1980'
+    // },
+    // {
+    //   id: 'bank-branch',
+    //   name: language === 'hi' ? 'बैंक शाखा' : 'Bank Branch',
+    //   category: 'infrastructure',
+    //   image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=80',
+    //   description: language === 'hi'
+    //     ? 'बैंकिंग और वित्तीय सेवाएं'
+    //     : 'Banking and financial services',
+    //   location: language === 'hi' ? 'धेवधा गांव' : 'Dheodha Village',
+    //   distance: '0.2 km',
+    //   established: '2010'
+    // },
     {
       id: 'village-library',
       name: language === 'hi' ? 'ग्राम पुस्तकालय' : 'Village Library',
@@ -252,18 +252,18 @@ const Places = () => {
       distance: '0.5 km',
       established: '2000'
     },
-    {
-      id: 'gandhi-chowk',
-      name: language === 'hi' ? 'गांधी चौक' : 'Gandhi Chowk',
-      category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1533586662937-4c2d2676bcd7?w=600&q=80',
-      description: language === 'hi'
-        ? 'गांव का मुख्य चौराहा और सभा स्थल'
-        : 'Main square and gathering place of village',
-      location: language === 'hi' ? 'धेवधा गांव केंद्र' : 'Dheodha Village Center',
-      distance: '0.1 km',
-      established: '1985'
-    },
+    // {
+    //   id: 'gandhi-chowk',
+    //   name: language === 'hi' ? 'गांधी चौक' : 'Gandhi Chowk',
+    //   category: 'infrastructure',
+    //   image: 'https://images.unsplash.com/photo-1533586662937-4c2d2676bcd7?w=600&q=80',
+    //   description: language === 'hi'
+    //     ? 'गांव का मुख्य चौराहा और सभा स्थल'
+    //     : 'Main square and gathering place of village',
+    //   location: language === 'hi' ? 'धेवधा गांव केंद्र' : 'Dheodha Village Center',
+    //   distance: '0.1 km',
+    //   established: '1985'
+    // },
     {
       id: 'community-pond',
       name: language === 'hi' ? 'सामुदायिक तालाब' : 'Community Pond',
@@ -292,7 +292,7 @@ const Places = () => {
       id: 'main-gate',
       name: language === 'hi' ? 'मुख्य द्वार (स्वागत द्वार)' : 'Main Gate (Welcome Gate)',
       category: 'infrastructure',
-      image: 'https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=600&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg',
       description: language === 'hi'
         ? 'गांव का भव्य प्रवेश द्वार (निर्माणाधीन)'
         : 'Grand entrance gate of village (under construction)',
