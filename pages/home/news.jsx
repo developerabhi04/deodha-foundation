@@ -425,7 +425,7 @@ const NewsSection = () => {
                                         <span>{language === 'hi' ? 'आंकड़े' : 'STATS'}</span>
                                     </h3>
                                     <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 mb-1.5 text-center">
-                                        <div className="text-lg font-bold">₹4.22L</div>
+                                        <div className="text-lg font-bold">₹5.22L</div>
                                         <div className="text-xs">{language === 'hi' ? 'कुल बजट' : 'Budget'}</div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-1.5">
