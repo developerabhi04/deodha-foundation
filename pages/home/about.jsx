@@ -163,7 +163,7 @@ const AboutSection = () => {
                                 </span>
                             </div>
 
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                            <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-6xl font-bold text-gray-900 leading-tight">
                                 {language === 'hi' ? (
                                     <>
                                         धेवधा पंचायत में
