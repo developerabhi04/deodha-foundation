@@ -125,11 +125,11 @@ export default function MobileMenu({ isOpen, onClose, navLinks }) {
                             {/* Contact Info */}
                             <div className="bg-gray-50 rounded-xl p-4 space-y-2">
                                 <a
-                                    href="tel:+918800864076"
+                                    href="tel:+919971358384"
                                     className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
                                 >
                                     <Phone size={16} />
-                                    <span className="text-sm font-semibold">+91 8800864076</span>
+                                    <span className="text-sm font-semibold">+91 9971358384</span>
                                 </a>
                                 <a
                                     href="mailto:dhewadhavikassamiti@gmail.com"
