@@ -93,13 +93,13 @@ export default function Footer() {
                 <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
                     <p>
                         &copy; {currentYear} {language === 'hi' ? 'धेवधा विकास समिति' : 'Dheodha Vikas Samiti'}. {t.footer.copyright} |
-                        <Link href="/privacy" className="hover:text-brand-green transition-colors mx-1">
+                        {/* <Link href="/privacy" className="hover:text-brand-green transition-colors mx-1">
                             {t.footer.privacyPolicy}
                         </Link>
                         |
                         <Link href="/terms" className="hover:text-brand-green transition-colors mx-1">
                             {t.footer.termsOfService}
-                        </Link>
+                        </Link> */}
                         <br />
                         {t.footer.developedBy}{" "}
                         <Link
