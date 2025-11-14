@@ -80,18 +80,18 @@ const AboutStructure = () => {
       color: 'from-blue-600 to-indigo-600'
     },
     {
-      name: language === 'hi' ? 'परियोजना समिति' : 'Project Committee',
+      name: language === 'hi' ? 'ग्राम संवाद सह निगरानी समिति' : 'Village Dialogue and Monitoring Committee',
       desc: language === 'hi'
-        ? 'परियोजनाओं की योजना और कार्यान्वयन'
-        : 'Project planning and implementation',
+        ? '35 सदस्य'
+        : '35 Members',
       icon: Briefcase,
       color: 'from-green-600 to-emerald-600'
     },
     {
-      name: language === 'hi' ? 'वित्त समिति' : 'Finance Committee',
+      name: language === 'hi' ? 'धेवधा शिक्षा समिति' : 'Dheodha Education Committee',
       desc: language === 'hi'
-        ? 'बजट और वित्तीय निगरानी'
-        : 'Budget and financial monitoring',
+        ? '11 सदस्य'
+        : '11 Members',
       icon: Shield,
       color: 'from-purple-600 to-violet-600'
     },

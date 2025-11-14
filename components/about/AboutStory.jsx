@@ -12,8 +12,8 @@ const AboutStory = () => {
       date: language === 'hi' ? '2 अगस्त 2025' : 'August 2, 2025',
       title: language === 'hi' ? 'धेवधा विकास समिति की स्थापना' : 'Founding of Dheodha Vikas Samiti',
       description: language === 'hi'
-        ? '6 संस्थापक सदस्यों द्वारा ₹65,500 के प्रारंभिक योगदान के साथ समिति का गठन।'
-        : 'Formation of the committee by 6 founding members with an initial contribution of ₹65,500.',
+        ? 'गांव के अप्रवासी युवाओं और स्थानीय निवासियों ने मिलकर अपने गांव के विकास के लिए एक गैर-राजनीतिक, सामाजिक संगठन बनाने का निर्णय लिया।'
+        : 'The migrant youth and local residents of the village together decided to form a non-political, social organization for the development of their village.',
       icon: Users,
       color: 'from-blue-600 to-indigo-600'
     },

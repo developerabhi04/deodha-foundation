@@ -17,7 +17,7 @@ const AboutHero = () => {
       color: 'from-blue-600 to-indigo-600' 
     },
     { 
-      value: '₹4.22L', 
+      value: '₹5.22L', 
       label: language === 'hi' ? 'सामुदायिक निवेश' : 'Community Investment',
       icon: Award, 
       color: 'from-green-600 to-emerald-600' 

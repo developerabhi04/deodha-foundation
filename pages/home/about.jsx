@@ -166,7 +166,7 @@ const AboutSection = () => {
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                                 {language === 'hi' ? (
                                     <>
-                                        ग्रामीण बिहार में
+                                        धेवधा पंचायत में
                                         <span className="relative inline-block ml-2 sm:ml-3">
                                             <span className="relative z-10 text-green-600">सामुदायिक कार्रवाई</span>
                                             <svg className="absolute bottom-0 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,7 +177,7 @@ const AboutSection = () => {
                                     </>
                                 ) : (
                                     <>
-                                        Transforming Rural Bihar Through
+                                        Transforming Dheodha Panchayat Through
                                         <span className="relative inline-block ml-2 sm:ml-3">
                                             <span className="relative z-10 text-green-600">Community Action</span>
                                             <svg className="absolute bottom-0 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +292,7 @@ const AboutSection = () => {
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">₹4.22L</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">₹5.22L</div>
                                         <div className="text-xs text-gray-600">
                                             {language === 'hi' ? 'निवेश' : 'Investment'}
                                         </div>

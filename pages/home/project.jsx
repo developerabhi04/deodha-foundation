@@ -36,10 +36,10 @@ const ProjectsSection = () => {
         },
         {
             id: 2,
-            title: language === 'hi' ? 'शैक्षिक गुणवत्ता सुधार' : 'Educational Quality Improvement',
+            title: language === 'hi' ? 'पंचायत भवन, धेवधा पुस्तकालय' : 'Panchayat Bhawan, Dheodha Library',
             description: language === 'hi'
-                ? 'डिजिटल लाइब्रेरी सेटअप, शिक्षक प्रशिक्षण, और स्कूल के बाद ट्यूशन कार्यक्रम।'
-                : 'Digital library setup, teacher training, and after-school tuition programs.',
+                ? 'पंचायत भवन में स्थित पुस्तकालय का संचालन अब नियमित रूप से शुरू हो रहा है। यहाँ आपको पाठ्यक्रम की किताबें, प्रतियोगी परीक्षा सामग्री और सामान्य ज्ञान की पुस्तकें उपलब्ध होंगी।'
+                : 'The library located in the Panchayat Bhawan is now operating regularly. Here you will find course books, competitive exam materials, and general knowledge books.',
             budget: language === 'hi' ? 'बहु-चरण' : 'Multi-phase',
             progress: 35,
             status: language === 'hi' ? 'योजना' : 'Planning',

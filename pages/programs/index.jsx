@@ -181,27 +181,27 @@ export default function Programs() {
   const successStories = [
     {
       icon: '🎓',
-      title: language === 'hi' ? 'डिजिटल साक्षरता' : 'Digital Literacy',
+      title: language === 'hi' ? '' : '',
       quote: language === 'hi'
-        ? '"पुस्तकालय में कंप्यूटर सीखकर मैं अब ऑनलाइन फॉर्म भर सकता हूं और नौकरी की तैयारी कर रहा हूं।"'
-        : '"After learning computers in the library, I can now fill online forms and am preparing for jobs."',
-      author: language === 'hi' ? 'राहुल कुमार, युवा' : 'Rahul Kumar, Youth'
+        ? '"धेवधा विकास समिति ने गांव में सड़क और नाली की सफाई का जो कार्य किया है, वह अभूतपूर्व है। पहली बार हमें लगा कि हमारी आवाज़ सुनी जा रही है।"'
+        : '"The work done by the Dheodha Development Committee to clean the roads and drains in the village is unprecedented. For the first time, we felt our voices were being heard."',
+      author: language === 'hi' ? 'श्री कृष्ण देव नारायण सिंह (वरिष्ठ नागरिक)' : 'Shri Krishna Dev Narayan Singh (Senior Citizen)'
     },
     {
       icon: '👩',
-      title: language === 'hi' ? 'महिला सशक्तिकरण' : 'Women Empowerment',
+      title: language === 'hi' ? '' : '',
       quote: language === 'hi'
-        ? '"स्वयं सहायता समूह से जुड़कर मैंने सिलाई का काम शुरू किया। अब मैं आत्मनिर्भर हूं।"'
-        : '"By joining the self-help group, I started tailoring work. Now I am self-reliant."',
-      author: language === 'hi' ? 'सुनीता देवी, SHG सदस्य' : 'Sunita Devi, SHG Member'
+        ? '"समिति ने शिक्षा और सांस्कृतिक गतिविधियों को बढ़ावा देने के लिए जो प्रयास किए हैं, उससे गांव के बच्चों में पढ़ाई के प्रति उत्साह बढ़ा है।"'
+        : '"The efforts made by the committee to promote education and cultural activities have increased the enthusiasm for studies among the village children."',
+      author: language === 'hi' ? 'ससाकेत कुमार शर्मा (युवा प्रतिनिधि)' : 'Saket Kumar Sharma (Youth Representative)'
     },
     {
       icon: '🏥',
-      title: language === 'hi' ? 'स्वास्थ्य सेवाएं' : 'Health Services',
+      title: language === 'hi' ? '' : '',
       quote: language === 'hi'
-        ? '"निःशुल्क स्वास्थ्य शिविर में समय पर जांच से मेरी माँ की बीमारी पकड़ में आई। बहुत आभारी हूं।"'
-        : '"Timely check-up at the free health camp detected my mother\'s illness. Very grateful."',
-      author: language === 'hi' ? 'विनय सिंह, ग्रामवासी' : 'Vinay Singh, Villager'
+        ? '"महिलाओं को जागरूक करने और बच्चों की सुरक्षा पर समिति का ध्यान सराहनीय है। हमें लगता है कि यह समिति गांव के लिए एक नई उम्मीद है।"'
+        : '"The committee focus on raising awareness among women and protecting children is commendable. We believe this committee offers a new hope for the village."',
+      author: language === 'hi' ? 'श्रीमती रंजना मिश्रा' : 'Mrs. Ranjana Mishra'
     }
   ];
 
@@ -356,7 +356,7 @@ export default function Programs() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-8 shadow-lg"
               >
-                <div className="text-5xl mb-4">{story.icon}</div>
+                {/* <div className="text-5xl mb-4">{story.icon}</div> */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{story.title}</h3>
                 <p className="text-gray-600 mb-4">{story.quote}</p>
                 <p className="text-sm font-semibold text-green-600">{story.author}</p>
