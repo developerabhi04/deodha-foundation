@@ -52,7 +52,7 @@ const Places = () => {
       id: 'dharamshala',
       name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
       category: 'community',
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
       description: language === 'hi'
         ? 'यात्रियों और आगंतुकों के लिए आवास सुविधा'
         : 'Accommodation facility for travelers and visitors',
