@@ -24,7 +24,7 @@ export default function HeroSlider() {
     const slides = [
         {
             id: 1,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DP_2015_3_v1njsg.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763123047/IMG_3559_jlrpqt.jpg',
             overlayColor: 'from-green-100/70 to-emerald-300/30',
             // DESKTOP CONTENT
             desktop: {
@@ -51,7 +51,7 @@ export default function HeroSlider() {
         },
         {
             id: 2,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/571371887_1228595669303899_1530027951067959863_n_qewddt.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763123047/IMG_3560_ca5m0q.jpg',
             overlayColor: 'from-blue-100/70 to-cyan-300/30',
             desktop: {
                 title: {
@@ -76,7 +76,7 @@ export default function HeroSlider() {
         },
         {
             id: 3,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763123047/IMG_3558_uiv9gp.jpg',
             overlayColor: 'from-orange-100/70 to-red-300/30',
             desktop: {
                 title: {
@@ -99,56 +99,7 @@ export default function HeroSlider() {
                 }
             }
         },
-        {
-            id: 4,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913596/DhajaAngnaMemory1_j99e2b.jpg',
-            overlayColor: 'from-purple-100/70 to-pink-300/30',
-            desktop: {
-                title: {
-                    en: ['Cultural Heritage,', 'Village Pride'],
-                    hi: ['संस्कृति की धरोहर,', 'गाँव का गौरव']
-                },
-                subtitle: {
-                    en: 'Preserving traditions and memories that unite the community — celebrating togetherness and identity.',
-                    hi: 'परंपराओं और यादों को संजोए रखना जो समाज को जोड़ती हैं – एकजुटता और अपनी पहचान का उत्सव।'
-                }
-            },
-            mobile: {
-                title: {
-                    en: ['Cultural', 'Heritage'],
-                    hi: ['संस्कृति की', 'धरोहर']
-                },
-                subtitle: {
-                    en: 'Preserving traditions that unite us.',
-                    hi: 'एकजुट करने वाली परंपराएँ।'
-                }
-            }
-        },
-        {
-            id: 5,
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762976460/Gram_Nigrani_Samiti_Baithak_gulzmv.jpg',
-            overlayColor: 'from-amber-100/70 to-orange-300/30',
-            desktop: {
-                title: {
-                    en: ['Village Monitoring', 'Committee Meeting'],
-                    hi: ['ग्राम निगरानी', 'समिति बैठक']
-                },
-                subtitle: {
-                    en: 'Strengthening transparency and participation — ensuring accountability in every village development activity.',
-                    hi: 'पारदर्शिता और भागीदारी को सशक्त बनाते हुए – प्रत्येक विकास कार्य में जवाबदेही सुनिश्चित करना।'
-                }
-            },
-            mobile: {
-                title: {
-                    en: ['Village Monitoring', 'Committee'],
-                    hi: ['ग्राम निगरानी', 'समिति']
-                },
-                subtitle: {
-                    en: 'Ensuring transparency in development.',
-                    hi: 'विकास में पारदर्शिता।'
-                }
-            }
-        }
+        
     ];
 
     useEffect(() => {
