@@ -9,122 +9,117 @@ const AboutPlaces = () => {
     const { language } = useLanguage();
 
     const importantPlaces = [
-        {
-            name: language === 'hi' ? 'कृषक महाविद्यालय, पकरीबरामा' : 'Agriculture College, Pakribarawan',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913595/Colleage5_ut0pxi.jpg',
-            link: '/places/agriculture-college'
-        },
-        {
-            name: language === 'hi' ? 'श्री राम जानकी ठाकुरवाड़ी' : 'Shri Ram Janaki Thakurwadi',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/Thakurwadi1_qpgfnq.jpg',
-            link: '/places/ram-janaki-temple'
-        },
-        {
-            name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
-            link: '/places/dharamshala-dheodha'
-        },
-        {
-            name: language === 'hi' ? 'दुर्गा स्थान' : 'Durga Sthan',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/DP_2015_1_npc6vw.jpg',
-            link: '/places/durga-sthan'
-        },
-        {
-            name: language === 'hi' ? 'देवस्थान, शियूरिया महारानी' : 'Devsthan Shiyuria Maharani',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913594/DeviSthan2_uo34qi.jpg',
-            link: '/places/devsthan-shiyuria'
-        },
-        {
-            name: language === 'hi' ? 'महारानी स्थान' : 'Maharani Sthan',
-            image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
-            link: '/places/maharani-sthan'
-        },
-        {
-            name: language === 'hi' ? 'मध्य विद्यालय, धेवधा' : 'Middle School, Dheodha',
-            image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&q=80',
-            link: '/places/middle-school'
-        },
-        {
-            name: language === 'hi' ? 'उत्कर्मित हाई विद्यालय (10+2)' : 'Upgraded High School (10+2)',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913599/Highschool_tyycra.jpg',
-            link: '/places/high-school'
-        },
-        {
-            name: language === 'hi' ? 'प्राथमिक विद्यालय' : 'Primary School',
-            image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&q=80',
-            link: '/places/primary-school'
-        },
-        {
-            name: language === 'hi' ? 'आंगनवाड़ी केंद्र' : 'Anganwadi Center',
-            image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80',
-            link: '/places/anganwadi-center'
-        },
-        {
-            name: language === 'hi' ? 'सामुदायिक स्वास्थ्य केंद्र' : 'Community Health Center',
-            image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=80',
-            link: '/places/health-center'
-        },
-        {
-            name: language === 'hi' ? 'पंचायत भवन' : 'Panchayat Bhawan',
-            image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80',
-            link: '/places/panchayat-bhawan'
-        },
-        {
-            name: language === 'hi' ? 'डाकघर' : 'Post Office',
-            image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=80',
-            link: '/places/post-office'
-        },
-        // {
-        //     name: language === 'hi' ? 'बैंक शाखा' : 'Bank Branch',
-        //     image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&q=80',
-        //     link: '/places/bank-branch'
-        // },
-        {
-            name: language === 'hi' ? 'ग्राम पुस्तकालय' : 'Village Library',
-            image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=80',
-            link: '/places/village-library'
-        },
-        {
-            name: language === 'hi' ? 'खेल मैदान' : 'Sports Ground',
-            image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&q=80',
-            link: '/places/sports-ground'
-        },
-        {
-            name: language === 'hi' ? 'सामुदायिक हॉल' : 'Community Hall',
-            image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&q=80',
-            link: '/places/community-hall'
-        },
-        {
-            name: language === 'hi' ? 'हनुमान मंदिर' : 'Hanuman Mandir',
-            image: 'https://images.unsplash.com/photo-1582632909121-4971e332f0ff?w=400&q=80',
-            link: '/places/hanuman-mandir'
-        },
-        {
-            name: language === 'hi' ? 'शिव मंदिर' : 'Shiv Mandir',
-            image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80',
-            link: '/places/shiv-mandir'
-        },
-        {
-            name: language === 'hi' ? 'गांधी चौक' : 'Gandhi Chowk',
-            image: 'https://images.unsplash.com/photo-1533586662937-4c2d2676bcd7?w=400&q=80',
-            link: '/places/gandhi-chowk'
-        },
-        {
-            name: language === 'hi' ? 'सामुदायिक तालाब' : 'Community Pond',
-            image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80',
-            link: '/places/community-pond'
-        },
-        {
-            name: language === 'hi' ? 'कृषि बाजार' : 'Agriculture Market',
-            image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400&q=80',
-            link: '/places/agriculture-market'
-        },
-        {
-            name: language === 'hi' ? 'मुख्य द्वार (स्वागत द्वार)' : 'Main Gate (Welcome Gate)',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg',
-            link: '/places/main-gate'
-        }
-    ];
+    {
+        name: language === 'hi' ? 'कृषक कॉलेज, धेवधा' : 'Krishak College, Dheodha',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913595/Colleage5_ut0pxi.jpg',
+        link: '/places/agriculture-college'
+    },
+    {
+        name: language === 'hi' ? 'श्री राम जानकी ठाकुरवाड़ी' : 'Shri Ram Janaki Thakurwadi',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/Thakurwadi1_qpgfnq.jpg',
+        link: '/places/ram-janaki-thakurwadi'
+    },
+    {
+        name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
+        link: '/places/dharamshala'
+    },
+    {
+        name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/nayka-babaji'
+    },
+    {
+        name: language === 'hi' ? 'पंचायत भवन सह पुस्तकालय' : 'Panchayat Bhawan-cum-Library',
+        image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=80',
+        link: '/places/panchayat-library'
+    },
+    {
+        name: language === 'hi' ? 'संगत स्थल' : 'Sangat Sthal',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80',
+        link: '/places/sangat-sthal'
+    },
+    {
+        name: language === 'hi' ? 'दुर्गा स्थान' : 'Durga Sthan',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/DP_2015_1_npc6vw.jpg',
+        link: '/places/durga-sthan'
+    },
+    {
+        name: language === 'hi' ? 'दरगाह' : 'Dargah',
+        image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80',
+        link: '/places/dargah'
+    },
+    {
+        name: language === 'hi' ? 'इमामगढ़ा' : 'Imamgadha',
+        image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80',
+        link: '/places/imamgadha'
+    },
+    {
+        name: language === 'hi' ? 'देवस्थान, शियूरिया महारानी' : 'Devsthan Shiyuria Maharani',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913594/DeviSthan2_uo34qi.jpg',
+        link: '/places/devsthan-shiyuria'
+    },
+    {
+        name: language === 'hi' ? 'महारानी स्थान' : 'Maharani Sthan',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/maharani-sthan'
+    },
+    {
+        name: language === 'hi' ? 'बैंक ऑफ बड़ौदा' : 'Bank of Baroda',
+        image: 'https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=400&q=80',
+        link: '/places/bank-of-baroda'
+    },
+    {
+        name: language === 'hi' ? 'पोस्ट ऑफ़िस' : 'Post Office',
+        image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&q=80',
+        link: '/places/post-office'
+    },
+    {
+        name: language === 'hi' ? 'मध्य विद्यालय' : 'Middle School',
+        image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&q=80',
+        link: '/places/middle-school'
+    },
+    {
+        name: language === 'hi' ? 'जय बाबा डिहवाल' : 'Jai Baba Dhiwal',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/jai-baba-dhiwal'
+    },
+    {
+        name: language === 'hi' ? 'उत्कर्मित हाई विद्यालय (10+2)' : 'Upgraded High School (10+2)',
+        image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913599/Highschool_tyycra.jpg',
+        link: '/places/high-school'
+    },
+    {
+        name: language === 'hi' ? 'शिवालय' : 'Shivalaya',
+        image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80',
+        link: '/places/shivalaya'
+    },
+    {
+        name: language === 'hi' ? 'पोखर' : 'Pond (Pokhar)',
+        image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80',
+        link: '/places/pokhar'
+    },
+    {
+        name: language === 'hi' ? 'सिद्धमणि थान' : 'Siddhamani Than',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/siddhamani-than'
+    },
+    {
+        name: language === 'hi' ? 'ब्रह्मपिचास स्थान' : 'Brahmapichash Sthan',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/brahmapichash-sthan'
+    },
+    {
+        name: language === 'hi' ? 'निंगुरिया स्थान' : 'Ninguriya Sthan',
+        image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+        link: '/places/ninguriya-sthan'
+    },
+    {
+        name: language === 'hi' ? 'अहरा' : 'Ahara',
+        image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80',
+        link: '/places/ahara'
+    }
+];
 
 
     return (

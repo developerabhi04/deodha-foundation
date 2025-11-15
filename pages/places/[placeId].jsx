@@ -6,7 +6,7 @@ import {
     ArrowLeft, MapPin, Calendar, Clock, Star, Heart,
     Share2, Camera, Users, Sparkles, Info,
     Navigation, Phone, Mail, Globe, ChevronRight,
-    ArrowRight
+    ArrowRight, Droplet, Leaf, BookOpen
 } from 'lucide-react';
 import Hero from '@/components/Hero';
 import { placesData } from '@/lib/placeData';
@@ -56,6 +56,22 @@ const PlaceDetailPage = () => {
         prominentPlace: language === 'hi' ? 'धेवधा गांव का प्रमुख स्थान' : 'A prominent place in Dheodha Village'
     };
 
+    // Icon mapping - FIXED to include all icons
+    const iconComponents = {
+        Clock,
+        Calendar,
+        Users,
+        Star,
+        BookOpen,
+        Droplet,
+        Sprout: Leaf,  // Map Sprout to Leaf
+        Leaf,
+        Phone,
+        Mail,
+        Globe,
+        Navigation
+    };
+
     // Show loading while router is loading
     if (!router.isReady) {
         return (
@@ -97,13 +113,22 @@ const PlaceDetailPage = () => {
         return obj;
     };
 
-    const iconComponents = { Clock, Calendar, Users, Star };
-
     // Helper function to check if place is educational
     const isEducational = placeId && (placeId.includes('school') || placeId.includes('college'));
 
     // Helper function to check if place is religious
-    const isReligious = placeId && (placeId.includes('temple') || placeId.includes('sthan') || placeId.includes('mandir'));
+    const isReligious = placeId && (
+        placeId.includes('temple') || 
+        placeId.includes('sthan') || 
+        placeId.includes('mandir') || 
+        placeId.includes('thakurwadi') || 
+        placeId.includes('durga') ||
+        placeId.includes('dargah') ||
+        placeId.includes('imamgadha') ||
+        placeId.includes('shivalaya') ||
+        placeId.includes('devsthan') ||
+        placeId.includes('maharani')
+    );
 
     return (
         <>
@@ -146,7 +171,7 @@ const PlaceDetailPage = () => {
                                     {[
                                         { id: 'about', label: t.details, icon: Info },
                                         { id: 'gallery', label: t.gallery, icon: Camera },
-                                        { id: 'programs', label: place.programs ? (isEducational ? t.programs : t.festivals) : t.festivals, icon: Sparkles }
+                                        { id: 'programs', label: place.programs && place.programs.length > 0 ? (isEducational ? t.programs : t.festivals) : t.festivals, icon: Sparkles }
                                     ].map((tab) => (
                                         <button
                                             key={tab.id}
@@ -212,12 +237,16 @@ const PlaceDetailPage = () => {
 
                                             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">{t.facilities}</h3>
                                             <div className="grid md:grid-cols-2 gap-4">
-                                                {place.facilities.map((facility, idx) => (
-                                                    <div key={idx} className="flex items-center space-x-3 bg-green-50 rounded-lg p-4">
-                                                        <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                                                        <span className="text-gray-700 font-medium">{getLangValue(facility)}</span>
-                                                    </div>
-                                                ))}
+                                                {place.facilities && place.facilities.length > 0 ? (
+                                                    place.facilities.map((facility, idx) => (
+                                                        <div key={idx} className="flex items-center space-x-3 bg-green-50 rounded-lg p-4">
+                                                            <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                                                            <span className="text-gray-700 font-medium">{getLangValue(facility)}</span>
+                                                        </div>
+                                                    ))
+                                                ) : (
+                                                    <p className="text-gray-600 col-span-2">No facilities listed</p>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -227,65 +256,73 @@ const PlaceDetailPage = () => {
                                     <div className="space-y-6">
                                         <h2 className="text-3xl font-black text-gray-900 mb-6">{t.photoGallery}</h2>
                                         <div className="grid md:grid-cols-2 gap-6">
-                                            {place.galleryImages.map((image, idx) => (
-                                                <motion.div
-                                                    key={idx}
-                                                    initial={{ opacity: 0, scale: 0.9 }}
-                                                    animate={{ opacity: 1, scale: 1 }}
-                                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
-                                                    className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer"
-                                                >
-                                                    <img
-                                                        src={image.url}
-                                                        alt={getLangValue(image.caption)}
-                                                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                                                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                                                            <p className="text-white font-semibold text-lg">{getLangValue(image.caption)}</p>
+                                            {place.galleryImages && place.galleryImages.length > 0 ? (
+                                                place.galleryImages.map((image, idx) => (
+                                                    <motion.div
+                                                        key={idx}
+                                                        initial={{ opacity: 0, scale: 0.9 }}
+                                                        animate={{ opacity: 1, scale: 1 }}
+                                                        transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                                        className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer"
+                                                    >
+                                                        <img
+                                                            src={image.url}
+                                                            alt={getLangValue(image.caption)}
+                                                            className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                                                                <p className="text-white font-semibold text-lg">{getLangValue(image.caption)}</p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                                        <Camera className="w-5 h-5 text-green-600" />
-                                                    </div>
-                                                </motion.div>
-                                            ))}
+                                                        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                            <Camera className="w-5 h-5 text-green-600" />
+                                                        </div>
+                                                    </motion.div>
+                                                ))
+                                            ) : (
+                                                <p className="text-gray-600 col-span-2">No gallery images available</p>
+                                            )}
                                         </div>
                                     </div>
                                 )}
 
-                                {activeTab === 'programs' && place.programs && (
+                                {activeTab === 'programs' && (
                                     <div className="space-y-6">
                                         <h2 className="text-3xl font-black text-gray-900 mb-6">
                                             {isEducational ? t.programsAndCourses : t.festivalsCelebrations}
                                         </h2>
-                                        <div className="space-y-4">
-                                            {place.programs.map((program, idx) => (
-                                                <motion.div
-                                                    key={idx}
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    animate={{ opacity: 1, x: 0 }}
-                                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
-                                                    className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
-                                                >
-                                                    <div className="flex items-start justify-between">
-                                                        <div className="flex-1">
-                                                            <h3 className="text-xl font-bold text-gray-900 mb-2">{getLangValue(program.name)}</h3>
-                                                            <p className="text-gray-600 mb-3">{getLangValue(program.desc)}</p>
-                                                            <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
-                                                                <Calendar className="w-4 h-4" />
-                                                                <span>{getLangValue(program.duration)}</span>
+                                        {place.programs && place.programs.length > 0 ? (
+                                            <div className="space-y-4">
+                                                {place.programs.map((program, idx) => (
+                                                    <motion.div
+                                                        key={idx}
+                                                        initial={{ opacity: 0, x: -20 }}
+                                                        animate={{ opacity: 1, x: 0 }}
+                                                        transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                                        className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
+                                                    >
+                                                        <div className="flex items-start justify-between">
+                                                            <div className="flex-1">
+                                                                <h3 className="text-xl font-bold text-gray-900 mb-2">{getLangValue(program.name)}</h3>
+                                                                <p className="text-gray-600 mb-3">{getLangValue(program.desc)}</p>
+                                                                <div className="inline-flex items-center space-x-2 bg-green-50 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+                                                                    <Calendar className="w-4 h-4" />
+                                                                    <span>{getLangValue(program.duration)}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div className="ml-4">
+                                                                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg">
+                                                                    {isEducational ? '📚' : '🎉'}
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div className="ml-4">
-                                                            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg">
-                                                                {isEducational ? '📚' : '🎉'}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </motion.div>
-                                            ))}
-                                        </div>
+                                                    </motion.div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <p className="text-gray-600">No programs or festivals listed</p>
+                                        )}
                                     </div>
                                 )}
                             </motion.div>
@@ -297,59 +334,26 @@ const PlaceDetailPage = () => {
                             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
                                 <h3 className="text-xl font-bold text-gray-900 mb-6">{t.quickInfo}</h3>
                                 <div className="space-y-4">
-                                    {place.features.map((feature, idx) => {
-                                        const IconComponent = iconComponents[feature.icon];
-                                        return (
-                                            <div key={idx} className="flex items-start space-x-4">
-                                                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                                                    <IconComponent className="w-6 h-6 text-white" />
+                                    {place.features && place.features.length > 0 ? (
+                                        place.features.map((feature, idx) => {
+                                            const IconComponent = iconComponents[feature.icon] || Star;
+                                            return (
+                                                <div key={idx} className="flex items-start space-x-4">
+                                                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                                                        <IconComponent className="w-6 h-6 text-white" />
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-bold text-gray-900">{getLangValue(feature.title)}</h4>
+                                                        <p className="text-sm text-gray-600">{getLangValue(feature.desc)}</p>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <h4 className="font-bold text-gray-900">{getLangValue(feature.title)}</h4>
-                                                    <p className="text-sm text-gray-600">{getLangValue(feature.desc)}</p>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
+                                            );
+                                        })
+                                    ) : (
+                                        <p className="text-gray-600">No features available</p>
+                                    )}
                                 </div>
                             </div>
-
-                            {/* Location Card */}
-                            {/* <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{t.locationDirection}</h3>
-                                <div className="space-y-4">
-                                    <div className="flex items-start space-x-3">
-                                        <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                                        <div>
-                                            <p className="font-semibold text-gray-900">{getLangValue(place.name)}</p>
-                                            <p className="text-sm text-gray-600">{getLangValue(place.location)}</p>
-                                        </div>
-                                    </div>
-                                    <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center space-x-2">
-                                        <Navigation className="w-5 h-5" />
-                                        <span>{t.showRoute}</span>
-                                    </button>
-                                </div>
-                            </div> */}
-
-                            {/* Contact Card */}
-                            {/* <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                                <h3 className="text-xl font-bold text-gray-900 mb-4">{t.contactUs}</h3>
-                                <div className="space-y-3">
-                                    <a href="tel:+919876543210" className="flex items-center space-x-3 text-gray-700 hover:text-green-600 transition-colors">
-                                        <Phone className="w-5 h-5" />
-                                        <span className="text-sm font-medium">+91 98765 43210</span>
-                                    </a>
-                                    <a href="mailto:info@dheodhavikassamiti.org" className="flex items-center space-x-3 text-gray-700 hover:text-green-600 transition-colors">
-                                        <Mail className="w-5 h-5" />
-                                        <span className="text-sm font-medium">{t.contactUs}</span>
-                                    </a>
-                                    <a href="/about" className="flex items-center space-x-3 text-gray-700 hover:text-green-600 transition-colors">
-                                        <Globe className="w-5 h-5" />
-                                        <span className="text-sm font-medium">{t.viewOtherPlaces}</span>
-                                    </a>
-                                </div>
-                            </div> */}
 
                             {/* Guidelines */}
                             <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200">
