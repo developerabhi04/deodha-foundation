@@ -193,7 +193,7 @@ export default function Programs() {
       quote: language === 'hi'
         ? '"समिति ने शिक्षा और सांस्कृतिक गतिविधियों को बढ़ावा देने के लिए जो प्रयास किए हैं, उससे गांव के बच्चों में पढ़ाई के प्रति उत्साह बढ़ा है।"'
         : '"The efforts made by the committee to promote education and cultural activities have increased the enthusiasm for studies among the village children."',
-      author: language === 'hi' ? 'ससाकेत कुमार शर्मा (युवा प्रतिनिधि)' : 'Saket Kumar Sharma (Youth Representative)'
+      author: language === 'hi' ? 'साकेत कुमार शर्मा (युवा प्रतिनिधि)' : 'Saket Kumar Sharma (Youth Representative)'
     },
     {
       icon: '🏥',
