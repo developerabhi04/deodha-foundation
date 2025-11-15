@@ -45,7 +45,7 @@ const AboutSection = () => {
         {
             name: language === 'hi' ? 'ब्रजेश कुमार' : 'Brajesh Kumar',
             role: language === 'hi' ? 'उप-सचिव' : 'Vice-Secretary',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761914290/BrajeshPhoto_zyqivv.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763231704/IMG-20251115-WA0006-Picsart-AiImageEnhancer_la6ecw.jpg',
             color: 'from-orange-500 to-amber-600',
         }
     ];

@@ -74,7 +74,7 @@ const TeamPage = () => {
             name: 'Brajesh Kumar',
             role: 'Vice Secretary',
             category: 'leadership',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761914290/BrajeshPhoto_zyqivv.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763231704/IMG-20251115-WA0006-Picsart-AiImageEnhancer_la6ecw.jpg',
             gradient: 'from-orange-600 via-amber-500 to-yellow-600',
             bgColor: 'bg-orange-500',
             location: 'Dheodha, Bihar',

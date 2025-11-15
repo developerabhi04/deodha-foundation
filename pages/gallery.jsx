@@ -53,7 +53,7 @@ export default function GalleryPage() {
                 backgroundImage="https://res.cloudinary.com/dusalynec/image/upload/v1762001895/IMG_2626_jrqyt0.jpg"
             />
 
-            <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+            <section className="py-16 bg-green-200">
                 <div className="container mx-auto px-4">
                     {/* Introduction */}
                     <motion.div
