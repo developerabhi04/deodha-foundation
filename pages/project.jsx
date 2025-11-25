@@ -1,7 +1,7 @@
-// pages/Project.jsx - FULLY CORRECTED
+// pages/Project.jsx - WITH VISION 2030 PROJECTS INTEGRATED
 import Hero from '@/components/Hero';
 import React from 'react';
-import { CheckCircle, Clock, TrendingUp, Users, Calendar, ArrowRight, Target, Award, Heart as HeartIcon, UserPlus } from 'lucide-react';
+import { CheckCircle, Clock, TrendingUp, Users, Calendar, ArrowRight, Target, Award, Heart as HeartIcon, UserPlus, Building2, TreePine, GraduationCap, Hospital, Dumbbell, Palette } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 
 const Project = () => {
@@ -13,6 +13,231 @@ const Project = () => {
         { label: language === 'hi' ? 'सशक्त महिलाएं' : 'Women Empowered', value: 200, suffix: '+', icon: HeartIcon, color: 'bg-pink-500' },
         { label: language === 'hi' ? 'ग्रामीण तक पहुंच' : 'Villagers Reached', value: 1000, suffix: '+', icon: Users, color: 'bg-green-500' },
         { label: language === 'hi' ? 'सक्रिय स्वयंसेवक' : 'Active Volunteers', value: 100, suffix: '+', icon: UserPlus, color: 'bg-purple-500' },
+    ];
+
+    // Vision 2030 Projects - All 17 Projects
+    const vision2030Projects = [
+        {
+            id: 1,
+            title: language === 'hi' ? 'प्राइमरी, मिडिल और हाई स्कूल की शिक्षा की गुणवत्ता बढ़ाना' : 'Improving quality of Primary, Middle and High School education',
+            description: language === 'hi'
+                ? 'गुणवत्तापूर्ण शिक्षा के लिए स्कूलों में बुनियादी सुविधाओं का विकास, शिक्षक प्रशिक्षण और शैक्षिक संसाधनों में सुधार।'
+                : 'Development of basic facilities in schools, teacher training and improvement of educational resources for quality education.',
+            budget: '₹8-10 lakh',
+            category: language === 'hi' ? 'शिक्षा' : 'Education',
+            icon: '📚',
+            timeline: language === 'hi' ? '12 महीने' : '12 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 2,
+            title: language === 'hi' ? 'महारानी स्थान मंदिर पर गुम्बज़ लगवाना' : 'Installing dome at Maharani Sthan temple',
+            description: language === 'hi'
+                ? 'प्राचीन महारानी स्थान मंदिर के संरक्षण और सौंदर्यीकरण के लिए पारंपरिक वास्तुकला के साथ गुम्बज़ का निर्माण।'
+                : 'Construction of dome with traditional architecture for preservation and beautification of ancient Maharani Sthan temple.',
+            budget: '₹5-7 lakh',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Sites',
+            icon: '🕌',
+            timeline: language === 'hi' ? '6 महीने' : '6 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 3,
+            title: language === 'hi' ? 'महादेव स्थान में अशोक का पेड़ लगाना' : 'Planting Ashoka tree at Mahadev Sthan',
+            description: language === 'hi'
+                ? 'पर्यावरण संरक्षण और धार्मिक महत्व को ध्यान में रखते हुए महादेव स्थान में अशोक वृक्षारोपण अभियान।'
+                : 'Ashoka tree plantation campaign at Mahadev Sthan keeping in mind environmental protection and religious significance.',
+            budget: '₹50,000',
+            category: language === 'hi' ? 'पर्यावरण' : 'Environment',
+            icon: '🌳',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 4,
+            title: language === 'hi' ? 'छठ घाट के चबूतरे और सीढ़ियों की रंगाई' : 'Painting of Chhath Ghat platform and stairs',
+            description: language === 'hi'
+                ? 'छठ पूजा के लिए घाट का सौंदर्यीकरण और सुरक्षा सुनिश्चित करने के लिए चबूतरे व सीढ़ियों की रंगाई और मरम्मत।'
+                : 'Painting and repair of platform and stairs to beautify the ghat for Chhath Puja and ensure safety.',
+            budget: '₹2 lakh',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            icon: '🎨',
+            timeline: language === 'hi' ? '1 महीना' : '1 month',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 5,
+            title: language === 'hi' ? 'धेवधा मुख्य द्वार से महादेव स्थान तक स्ट्रीट लाइटिंग' : 'Street lighting from Dheodha main gate to Mahadev Sthan',
+            description: language === 'hi'
+                ? 'रात्रि में सुरक्षित आवागमन के लिए मुख्य मार्ग पर ऊर्जा-कुशल LED स्ट्रीट लाइट्स की स्थापना।'
+                : 'Installation of energy-efficient LED street lights on main route for safe movement at night.',
+            budget: '₹4-5 lakh',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            icon: '💡',
+            timeline: language === 'hi' ? '3 महीने' : '3 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 6,
+            title: language === 'hi' ? 'वॉलीबॉल मैदान का निर्माण' : 'Construction of volleyball ground',
+            description: language === 'hi'
+                ? 'युवाओं के शारीरिक विकास और खेल प्रतिभा को बढ़ावा देने के लिए मानक वॉलीबॉल कोर्ट का निर्माण।'
+                : 'Construction of standard volleyball court to promote physical development and sports talent of youth.',
+            budget: '₹3 lakh',
+            category: language === 'hi' ? 'खेल' : 'Sports',
+            icon: '🏐',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 7,
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी और ऑनलाइन क्लासेस' : 'Digital library and online classes',
+            description: language === 'hi'
+                ? 'छात्रों को शहरों जैसी शिक्षा उपलब्ध कराने के लिए कंप्यूटर, इंटरनेट और ई-लर्निंग संसाधनों से युक्त डिजिटल लाइब्रेरी।'
+                : 'Digital library equipped with computers, internet and e-learning resources to provide city-like education to students.',
+            budget: '₹5-6 lakh',
+            category: language === 'hi' ? 'शिक्षा' : 'Education',
+            icon: '💻',
+            timeline: language === 'hi' ? '4 महीने' : '4 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 8,
+            title: language === 'hi' ? 'बाबा ब्रह्मपिचास स्थान को राज्य-स्तर देव स्थल के रूप में विकसित करना' : 'Developing Baba Brahmpicha Sthan as state-level religious site',
+            description: language === 'hi'
+                ? 'ऐतिहासिक और धार्मिक महत्व के बाबा ब्रह्मपिचास स्थान का राज्य-स्तरीय तीर्थ स्थल के रूप में व्यापक विकास।'
+                : 'Comprehensive development of historically and religiously significant Baba Brahmpicha Sthan as state-level pilgrimage site.',
+            budget: '₹10-12 lakh',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Sites',
+            icon: '⛰️',
+            timeline: language === 'hi' ? '8 महीने' : '8 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 9,
+            title: language === 'hi' ? 'सिउररया महारानी को राज्य-स्तर देव स्थल के रूप में विकसित करना' : 'Developing Siurriya Maharani as state-level religious site',
+            description: language === 'hi'
+                ? 'सिउररया महारानी मंदिर परिसर का आधुनिक सुविधाओं के साथ राज्य-स्तरीय धार्मिक केंद्र के रूप में विकास।'
+                : 'Development of Siurriya Maharani temple complex as state-level religious center with modern facilities.',
+            budget: '₹10-12 lakh',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Sites',
+            icon: '🛕',
+            timeline: language === 'hi' ? '8 महीने' : '8 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 10,
+            title: language === 'hi' ? 'अतिरिक्त प्राथमिक स्वास्थ्य केंद्र (APHC) को सुचारू रूप से चालू करना' : 'Smooth operation of Additional Primary Health Center (APHC)',
+            description: language === 'hi'
+                ? 'APHC में डॉक्टर, दवाइयां और आवश्यक चिकित्सा उपकरणों की व्यवस्था करके 24/7 स्वास्थ्य सेवा सुनिश्चित करना।'
+                : 'Ensuring 24/7 health services by arranging doctors, medicines and essential medical equipment at APHC.',
+            budget: '₹15-20 lakh',
+            category: language === 'hi' ? 'स्वास्थ्य' : 'Health',
+            icon: '🏥',
+            timeline: language === 'hi' ? '6 महीने' : '6 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 11,
+            title: language === 'hi' ? '24/7 एम्बुलेंस उपलब्ध कराना' : 'Providing 24/7 ambulance service',
+            description: language === 'hi'
+                ? 'आपातकालीन चिकित्सा सेवा के लिए पूर्णकालिक सुसज्जित एम्बुलेंस और प्रशिक्षित चालक की व्यवस्था।'
+                : 'Arrangement of fully equipped ambulance and trained driver for emergency medical services.',
+            budget: '₹8-10 lakh',
+            category: language === 'hi' ? 'स्वास्थ्य' : 'Health',
+            icon: '🚑',
+            timeline: language === 'hi' ? '3 महीने' : '3 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 12,
+            title: language === 'hi' ? 'सड़क और नाली पर अतिक्रमण रोकना' : 'Preventing encroachment on roads and drains',
+            description: language === 'hi'
+                ? 'सामाजिक सहमति और प्रशासनिक सहयोग से सड़क व नाली पर अतिक्रमण हटाकर सार्वजनिक स्थान मुक्त कराना।'
+                : 'Freeing public spaces by removing encroachment on roads and drains through social consensus and administrative cooperation.',
+            budget: language === 'hi' ? 'CSR/समुदाय' : 'CSR/Community',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            icon: '🚧',
+            timeline: language === 'hi' ? 'सतत' : 'Ongoing',
+            status: language === 'hi' ? 'सक्रिय' : 'Active',
+            priority: 'high'
+        },
+        {
+            id: 13,
+            title: language === 'hi' ? 'सिद्धमनी स्थान के चारों ओर बाउंड्री' : 'Boundary around Siddhmani Sthan',
+            description: language === 'hi'
+                ? 'सिद्धमनी स्थान की सुरक्षा और संरक्षण के लिए मजबूत बाउंड्री वाल का निर्माण।'
+                : 'Construction of strong boundary wall for security and preservation of Siddhmani Sthan.',
+            budget: '₹3 lakh',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Sites',
+            icon: '🧱',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 14,
+            title: language === 'hi' ? 'बुढ़वा महादेव के चारों ओर बाउंड्री' : 'Boundary around Budhwa Mahadev',
+            description: language === 'hi'
+                ? 'प्राचीन बुढ़वा महादेव मंदिर परिसर की सुरक्षा के लिए बाउंड्री निर्माण।'
+                : 'Boundary construction for security of ancient Budhwa Mahadev temple complex.',
+            budget: '₹3 lakh',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Sites',
+            icon: '🧱',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 15,
+            title: language === 'hi' ? 'गाँव और बाध में खुले और लटके तारों को हटाकर सुरक्षित केबलिंग' : 'Safe cabling by removing open and hanging wires',
+            description: language === 'hi'
+                ? 'बिजली से होने वाली दुर्घटनाओं को रोकने के लिए सभी खुले तारों को हटाकर सुरक्षित अंडरग्राउंड/प्रोटेक्टेड केबलिंग।'
+                : 'Safe underground/protected cabling by removing all open wires to prevent electrical accidents.',
+            budget: '₹6-8 lakh',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            icon: '⚡',
+            timeline: language === 'hi' ? '4 महीने' : '4 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'high'
+        },
+        {
+            id: 16,
+            title: language === 'hi' ? 'कला मंच का निर्माण' : 'Construction of art platform',
+            description: language === 'hi'
+                ? 'नाट्य कला, सांस्कृतिक कार्यक्रमों और सामुदायिक आयोजनों के लिए आधुनिक सुविधाओं से युक्त कला मंच का निर्माण।'
+                : 'Construction of art platform equipped with modern facilities for theater arts, cultural programs and community events.',
+            budget: '₹4-5 lakh',
+            category: language === 'hi' ? 'संस्कृति' : 'Culture',
+            icon: '🎭',
+            timeline: language === 'hi' ? '3 महीने' : '3 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        },
+        {
+            id: 17,
+            title: language === 'hi' ? 'ओपन जिम या फिटनेस सेंटर की व्यवस्था' : 'Arrangement of open gym or fitness center',
+            description: language === 'hi'
+                ? 'युवाओं और ग्रामवासियों के स्वास्थ्य के लिए व्यायाम उपकरणों से युक्त ओपन जिम की स्थापना।'
+                : 'Establishment of open gym equipped with exercise equipment for health of youth and villagers.',
+            budget: '₹5-6 lakh',
+            category: language === 'hi' ? 'खेल' : 'Sports',
+            icon: '💪',
+            timeline: language === 'hi' ? '3 महीने' : '3 months',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            priority: 'medium'
+        }
     ];
 
     // Ongoing Projects Data
@@ -136,46 +361,6 @@ const Project = () => {
         },
     ];
 
-    // Upcoming Projects Data
-    const upcomingProjects = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'डिजिटल लाइब्रेरी उद्घाटन' : 'Digital Library Inauguration',
-            description: language === 'hi'
-                ? 'ई-लर्निंग संसाधनों और कंप्यूटर प्रशिक्षण केंद्र के साथ नई डिजिटल लाइब्रेरी का शुभारंभ।'
-                : 'Launch of new digital library with e-learning resources and computer training center.',
-            budget: '₹5 lakh',
-            startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
-            icon: '💡',
-        },
-        {
-            id: 2,
-            title: language === 'hi' ? 'महिला सशक्तिकरण केंद्र' : 'Women Empowerment Center',
-            description: language === 'hi'
-                ? 'गांव की महिलाओं के लिए कौशल विकास और व्यावसायिक प्रशिक्षण केंद्र।'
-                : 'Skill development and vocational training center for village women.',
-            budget: '₹3 lakh',
-            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
-            icon: '🏛️',
-        },
-        {
-            id: 3,
-            title: language === 'hi' ? 'सोलर स्ट्रीट लाइटिंग परियोजना' : 'Solar Street Lighting Project',
-            description: language === 'hi'
-                ? 'मुख्य गांव की सड़कों पर सोलर-संचालित स्ट्रीट लाइट्स स्थापित करना।'
-                : 'Installing solar-powered street lights across main village roads.',
-            budget: '₹4 lakh',
-            startDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://images.unsplash.com/photo-1509391111737-a6f1241a85d4?w=600&q=80',
-            icon: '🌳',
-        },
-    ];
-
     // Impact Stats
     const impactStats = [
         {
@@ -183,9 +368,8 @@ const Project = () => {
             label: language === 'hi' ? 'कुल फंड संग्रहित' : 'Total Funds Raised',
             icon: '💰'
         },
-
         {
-            number: `${ongoingProjects.length + completedProjects.length + upcomingProjects.length}+`,
+            number: `${ongoingProjects.length + completedProjects.length + vision2030Projects.length}+`,
             label: language === 'hi' ? 'परियोजनाएं' : 'Projects',
             icon: '🎯'
         },
@@ -195,6 +379,39 @@ const Project = () => {
             icon: '👥'
         }
     ];
+
+    // Get category color
+    const getCategoryColor = (category) => {
+        const colorMap = {
+            'शिक्षा': 'bg-blue-100 text-blue-700',
+            'Education': 'bg-blue-100 text-blue-700',
+            'धार्मिक स्थल': 'bg-purple-100 text-purple-700',
+            'Religious Sites': 'bg-purple-100 text-purple-700',
+            'पर्यावरण': 'bg-green-100 text-green-700',
+            'Environment': 'bg-green-100 text-green-700',
+            'बुनियादी ढांचा': 'bg-orange-100 text-orange-700',
+            'Infrastructure': 'bg-orange-100 text-orange-700',
+            'खेल': 'bg-teal-100 text-teal-700',
+            'Sports': 'bg-teal-100 text-teal-700',
+            'स्वास्थ्य': 'bg-pink-100 text-pink-700',
+            'Health': 'bg-pink-100 text-pink-700',
+            'संस्कृति': 'bg-indigo-100 text-indigo-700',
+            'Culture': 'bg-indigo-100 text-indigo-700'
+        };
+        return colorMap[category] || 'bg-gray-100 text-gray-700';
+    };
+
+    // Get priority badge
+    const getPriorityBadge = (priority) => {
+        if (priority === 'high') {
+            return (
+                <span className="px-2 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded-full">
+                    {language === 'hi' ? 'उच्च प्राथमिकता' : 'High Priority'}
+                </span>
+            );
+        }
+        return null;
+    };
 
     return (
         <>
@@ -415,45 +632,98 @@ const Project = () => {
                     </div>
                 </section>
 
-                {/* Upcoming Projects */}
-                <section className="py-16">
+                {/* Vision 2030 Projects - All 17 Projects */}
+                <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-4">
-                                <TrendingUp className="w-5 h-5" />
+                                <Target className="w-5 h-5" />
                                 <span className="font-semibold">
-                                    {language === 'hi' ? 'आगामी परियोजनाएं' : 'Upcoming Projects'}
+                                    {language === 'hi' ? 'धेवधा Vision 2030' : 'Dheodha Vision 2030'}
                                 </span>
                             </div>
                             <h2 className="text-4xl font-black text-gray-900 mb-4">
-                                {language === 'hi' ? 'भविष्य की योजनाएं' : 'Future Plans'}
+                                {language === 'hi' ? '17 प्रमुख परियोजनाएं (2026–2030)' : '17 Key Projects (2026–2030)'}
                             </h2>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                                 {language === 'hi'
-                                    ? 'धेवधा के समग्र विकास के लिए नई पहल'
-                                    : 'New initiatives for overall development of Dheodha'
+                                    ? 'धेवधा को आदर्श गांव बनाने की व्यापक योजना'
+                                    : 'Comprehensive plan to make Dheodha a model village'
                                 }
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-6">
-                            {upcomingProjects.map((project, index) => (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {vision2030Projects.map((project) => (
                                 <div
-                                    key={index}
-                                    className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
+                                    key={project.id}
+                                    className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-purple-300"
                                 >
-                                    <div className="text-5xl mb-4">{project.icon}</div>
-                                    <div className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                                        {project.status}
+                                    <div className="flex items-start justify-between mb-4">
+                                        <div className="text-5xl">{project.icon}</div>
+                                        {getPriorityBadge(project.priority)}
                                     </div>
-                                    <h3 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h3>
-                                    <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-                                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                                        <Calendar className="w-4 h-4" />
-                                        <span>{language === 'hi' ? 'अपेक्षित:' : 'Expected:'} {project.startDate}</span>
+
+                                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${getCategoryColor(project.category)}`}>
+                                        {project.category}
+                                    </div>
+
+                                    <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
+                                        {project.title}
+                                    </h3>
+
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="grid grid-cols-2 gap-3 mb-3">
+                                        <div className="bg-gray-50 rounded-lg p-2">
+                                            <div className="text-xs text-gray-500 mb-1">
+                                                {language === 'hi' ? 'बजट' : 'Budget'}
+                                            </div>
+                                            <div className="font-bold text-gray-900 text-sm">{project.budget}</div>
+                                        </div>
+                                        <div className="bg-gray-50 rounded-lg p-2">
+                                            <div className="text-xs text-gray-500 mb-1">
+                                                {language === 'hi' ? 'अवधि' : 'Timeline'}
+                                            </div>
+                                            <div className="font-bold text-gray-900 text-sm">{project.timeline}</div>
+                                        </div>
+                                    </div>
+
+                                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${project.status === 'सक्रिय' || project.status === 'Active'
+                                            ? 'bg-green-100 text-green-700'
+                                            : 'bg-gray-100 text-gray-700'
+                                        }`}>
+                                        {project.status}
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Vision 2030 CTA */}
+                        <div className="mt-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 text-white text-center">
+                            <h3 className="text-2xl font-bold mb-4">
+                                {language === 'hi'
+                                    ? 'इन परियोजनाओं को साकार करने में हमारी मदद करें'
+                                    : 'Help Us Realize These Projects'
+                                }
+                            </h3>
+                            <p className="text-lg opacity-90 mb-6">
+                                {language === 'hi'
+                                    ? 'CSR साझेदारी, सामुदायिक भागीदारी और आपके योगदान से ये सपने हकीकत बन सकते हैं।'
+                                    : 'Through CSR partnership, community participation and your contribution, these dreams can become reality.'
+                                }
+                            </p>
+                            <div className="flex flex-wrap gap-4 justify-center">
+                                <a
+                                    href="/about"
+                                    className="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
+                                >
+                                    {language === 'hi' ? 'विस्तार से जानें' : 'Learn More'}
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -472,15 +742,6 @@ const Project = () => {
                                     : 'Your contribution helps make our projects successful. Join today and become a partner in village development.'
                                 }
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                {/* <a
-                                    href="/volunteer"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-white text-green-600 font-bold rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
-                                >
-                                    <Users className="w-5 h-5 mr-2" />
-                                    {language === 'hi' ? 'स्वयंसेवक बनें' : 'Become a Volunteer'}
-                                </a> */}
-                            </div>
                         </div>
                     </div>
                 </section>
