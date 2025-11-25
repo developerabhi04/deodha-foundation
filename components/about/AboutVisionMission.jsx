@@ -1,4 +1,4 @@
-// components/about/AboutVisionMission.jsx
+// components/about/AboutVisionMission.jsx - UPDATED WITH 3 NEW PROJECTS
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, Target, Building2, BookOpen, Heart, Crown, Users, Lightbulb, TreePine, Shield, Dumbbell } from 'lucide-react';
@@ -84,13 +84,17 @@ const AboutVisionMission = () => {
                 'बाबा ब्रह्मपिचास स्थान को राज्य-स्तर देव स्थल के रूप में विकसित करना',
                 'सिउररया महारानी को राज्य-स्तर देव स्थल के रूप में विकसित करना',
                 'सिद्धमनी स्थान के चारों ओर बाउंड्री',
-                'बुढ़वा महादेव के चारों ओर बाउंड्री'
+                'बुढ़वा महादेव के चारों ओर बाउंड्री',
+                'ब्रह्मपिचास स्थान परिसर के अंदर फ्लोरिंग',
+                'पार्वती मंदिर, महादेव स्थान - केवल शंकर भगवान की ही प्रतिमा है। शिवालय के सामने ही माँ पार्वती की भी प्रतिमा'
             ] : [
                 'Installing dome at Maharani Sthan temple',
                 'Developing Baba Brahmpicha Sthan as a state-level religious site',
                 'Developing Siurriya Maharani as a state-level religious site',
                 'Boundary around Siddhmani Sthan',
-                'Boundary around Budhwa Mahadev'
+                'Boundary around Budhwa Mahadev',
+                'Flooring inside Brahmpicha Sthan complex',
+                'Parvati temple at Mahadev Sthan - Installing Maa Parvati\'s idol in front of the Shivalaya'
             ]
         },
         {
@@ -132,9 +136,11 @@ const AboutVisionMission = () => {
         {
             category: language === 'hi' ? 'पर्यावरण' : 'Environment',
             items: language === 'hi' ? [
-                'महादेव स्थान में अशोक का पेड़ लगाना'
+                'महादेव स्थान में अशोक का पेड़ लगाना',
+                'पोखर के दोनों तरफ अशोक का पेड़ – सौंदर्यीकरण'
             ] : [
-                'Planting Ashoka tree at Mahadev Sthan'
+                'Planting Ashoka tree at Mahadev Sthan',
+                'Ashoka trees on both sides of pond – beautification'
             ]
         }
     ];
@@ -217,7 +223,7 @@ const AboutVisionMission = () => {
 
                     <div className="bg-blue-100 border-l-4 border-blue-600 p-4 rounded-r-lg mt-4">
                         <p className="text-gray-800 font-semibold">
-                            {language === 'hi'
+                            {language === 'hi' 
                                 ? 'यह प्रस्ताव धेवधा ग्राम के 2030 विज़न को कॉर्पोरेट सामाजिक उत्तरदायित्व (CSR) साझेदारी के माध्यम से कार्यान्वित करने हेतु प्रस्तुत है।'
                                 : 'This proposal is presented to implement Dheodha village\'s 2030 vision through Corporate Social Responsibility (CSR) partnership.'
                             }
@@ -262,10 +268,10 @@ const AboutVisionMission = () => {
                 </div>
             </div>
 
-            {/* 15 Key Projects Section */}
+            {/* 20 Key Projects Section - UPDATED WITH 3 NEW PROJECTS */}
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 border-2 border-orange-200">
                 <h2 className="text-3xl font-bold text-gray-900 mb-2 text-center">
-                    {language === 'hi' ? '15 प्रमुख परियोजनाएं (2026–2030)' : '15 Key Projects (2026–2030)'}
+                    {language === 'hi' ? '20 प्रमुख परियोजनाएं (2026–2030)' : '20 Key Projects (2026–2030)'}
                 </h2>
                 <p className="text-center text-orange-600 font-semibold mb-8">
                     {language === 'hi' ? 'सतत विकास की ओर' : 'Towards Sustainable Development'}
