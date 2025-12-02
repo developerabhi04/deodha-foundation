@@ -28,9 +28,9 @@ export default function Contact() {
 
   // EmailJS Configuration - Replace with your actual credentials
   const EMAILJS_CONFIG = {
-    serviceId: 'YOUR_SERVICE_ID', // e.g., 'service_abc123'
-    templateId: 'YOUR_TEMPLATE_ID', // e.g., 'template_def456'
-    publicKey: 'YOUR_PUBLIC_KEY' // e.g., 'user_ghi789'
+    serviceId: 'service_f61lk6q', // e.g., 'service_abc123'
+    templateId: 'service_f61lk6q', // e.g., 'template_def456'
+    publicKey: 'KfkAHAOJ1vVFUqPAD' // e.g., 'user_ghi789'
   };
 
   // Handle input change
@@ -320,8 +320,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className={`w-full p-3 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${errors.name
-                          ? 'border-red-300 focus:ring-red-500'
-                          : 'border-gray-300 focus:ring-brand-green'
+                        ? 'border-red-300 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-brand-green'
                         }`}
                       placeholder={language === 'hi' ? 'आपका नाम' : 'John Doe'}
                       aria-describedby={errors.name ? 'name-error' : undefined}
@@ -347,8 +347,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className={`w-full p-3 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${errors.email
-                          ? 'border-red-300 focus:ring-red-500'
-                          : 'border-gray-300 focus:ring-brand-green'
+                        ? 'border-red-300 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-brand-green'
                         }`}
                       placeholder={language === 'hi' ? 'आपका ईमेल' : 'john@example.com'}
                       aria-describedby={errors.email ? 'email-error' : undefined}
@@ -373,8 +373,8 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full p-3 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${errors.phone
-                          ? 'border-red-300 focus:ring-red-500'
-                          : 'border-gray-300 focus:ring-brand-green'
+                        ? 'border-red-300 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-brand-green'
                         }`}
                       placeholder={language === 'hi' ? '+91 1234567890' : '+91 1234567890'}
                       aria-describedby={errors.phone ? 'phone-error' : undefined}
@@ -400,8 +400,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className={`w-full p-3 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${errors.subject
-                          ? 'border-red-300 focus:ring-red-500'
-                          : 'border-gray-300 focus:ring-brand-green'
+                        ? 'border-red-300 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-brand-green'
                         }`}
                       placeholder={language === 'hi' ? 'हम आपकी कैसे मदद कर सकते हैं?' : 'How can we help?'}
                       aria-describedby={errors.subject ? 'subject-error' : undefined}
@@ -427,8 +427,8 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className={`w-full p-3 border rounded-lg focus:ring-2 focus:border-transparent transition-colors ${errors.message
-                          ? 'border-red-300 focus:ring-red-500'
-                          : 'border-gray-300 focus:ring-brand-green'
+                        ? 'border-red-300 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-brand-green'
                         }`}
                       placeholder={language === 'hi' ? 'अपना संदेश यहां लिखें...' : 'Write your message here...'}
                       aria-describedby={errors.message ? 'message-error' : undefined}
@@ -446,8 +446,8 @@ export default function Contact() {
                     type="submit"
                     disabled={isSubmitting}
                     className={`w-full py-3 rounded-lg font-semibold transition-colors focus:ring-2 focus:ring-offset-2 ${isSubmitting
-                        ? 'bg-gray-400 cursor-not-allowed focus:ring-gray-400'
-                        : 'bg-brand-green hover:bg-brand-green-dark focus:ring-brand-green'
+                      ? 'bg-gray-400 cursor-not-allowed focus:ring-gray-400'
+                      : 'bg-brand-green hover:bg-brand-green-dark focus:ring-brand-green'
                       } text-white`}
                   >
                     {isSubmitting ? (
