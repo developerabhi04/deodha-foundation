@@ -130,9 +130,6 @@ export default function Contact() {
         message: ''
       });
 
-      console.log("email testing", data);
-
-
       // Auto-hide success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
 
