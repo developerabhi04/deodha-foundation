@@ -29,7 +29,7 @@ export default function Contact() {
   // EmailJS Configuration - Replace with your actual credentials
   const EMAILJS_CONFIG = {
     serviceId: 'service_f61lk6q', // e.g., 'service_abc123'
-    templateId: 'template_1jws2j7', // e.g., 'template_def456'
+    templateId: 'template_7cqm7ym', // e.g., 'template_def456'
     publicKey: 'KfkAHAOJ1vVFUqPAD' // e.g., 'user_ghi789'
   };
 
