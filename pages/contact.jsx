@@ -28,9 +28,9 @@ export default function Contact() {
 
   // EmailJS Configuration - Replace with your actual credentials
   const EMAILJS_CONFIG = {
-    serviceId: 'service_f61lk6q', // e.g., 'service_abc123'
-    templateId: 'template_7cqm7ym', // e.g., 'template_def456'
-    publicKey: 'KfkAHAOJ1vVFUqPAD' // e.g., 'user_ghi789'
+    serviceId: 'service_66fdw6f', // e.g., 'service_abc123'
+    templateId: 'template_qxmquo3', // e.g., 'template_def456'
+    publicKey: 'QRyLjNaHYK6cOaICI' // e.g., 'user_ghi789'
   };
 
   // Handle input change
