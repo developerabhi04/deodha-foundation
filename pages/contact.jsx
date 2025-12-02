@@ -29,7 +29,7 @@ export default function Contact() {
   // EmailJS Configuration - Replace with your actual credentials
   const EMAILJS_CONFIG = {
     serviceId: 'service_f61lk6q', // e.g., 'service_abc123'
-    templateId: 'service_f61lk6q', // e.g., 'template_def456'
+    templateId: 'template_1jws2j7', // e.g., 'template_def456'
     publicKey: 'KfkAHAOJ1vVFUqPAD' // e.g., 'user_ghi789'
   };
 
@@ -122,13 +122,16 @@ export default function Contact() {
 
       // Success
       setSubmitStatus('success');
-      setFormData({
+      const data = setFormData({
         name: '',
         email: '',
         phone: '',
         subject: '',
         message: ''
       });
+
+      console.log("email testing", data);
+
 
       // Auto-hide success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
