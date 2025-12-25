@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg', caption: language === 'hi' ? 'धेवधा गांव का दृश्य' : 'Dheodha village landscape' },
+            { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659396/IMG_3747_pq5vy5.jpg', caption: language === 'hi' ? 'धेवधा गांव का दृश्य' : 'Dheodha village landscape' },
             { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761988428/Screenshot_2025-11-01_143140_qtujbz.png', caption: language === 'hi' ? 'शिक्षा पहल' : 'Education initiatives' },
             { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943478/535406181_1167017038795096_2461049160579214706_n_zw0cey.jpg', caption: language === 'hi' ? 'सड़क मरम्मत परियोजना' : 'Road repair project' },
             { url: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/45409174_2402526893097762_5143301432350343168_n_g8x7zd.jpg', caption: language === 'hi' ? 'सांस्कृतिक कार्यक्रम' : 'Cultural programs' },

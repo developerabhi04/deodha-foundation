@@ -58,6 +58,7 @@ const NewsSection = () => {
         }
     ];
 
+
     const announcements = [
         {
             id: 1,
