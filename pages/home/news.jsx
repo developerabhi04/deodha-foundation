@@ -187,6 +187,15 @@ const NewsSection = () => {
             fileType: 'pdf',
             icon: '📜',
             size: '320 KB',
+        },
+        {
+            id: 2,
+            title: language === 'hi' ? 'व्यय रिपोर्ट-1' : 'Expenditure Report – 1',
+            titleOriginal: 'व्यय रिपोर्ट-1.pdf',
+            filePath: '/documents/व्यय रिपोर्ट-1.pdf',
+            fileType: 'pdf',
+            icon: '📜',
+            size: '445 KB',
         }
     ];
 
@@ -370,7 +379,7 @@ const NewsSection = () => {
                             {/* Sidebar */}
                             <div className="md:col-span-2 bg-gradient-to-b from-gray-50 to-white p-2.5 space-y-5">
                                 {/* Documents */}
-                                
+
                                 <div className="bg-white rounded-lg border-2 border-indigo-200 overflow-hidden shadow-sm">
                                     <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 py-1.5">
                                         <h3 className="font-bold text-xs flex items-center space-x-1">
