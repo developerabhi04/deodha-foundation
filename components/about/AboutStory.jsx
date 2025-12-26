@@ -26,15 +26,15 @@ const AboutStory = () => {
       icon: MapPin,
       color: 'from-green-600 to-emerald-600'
     },
-    {
-      date: language === 'hi' ? 'अक्टूबर 2025' : 'October 2025',
-      title: language === 'hi' ? 'मुख्य द्वार निर्माण शुरू' : 'Main Gate Construction Started',
-      description: language === 'hi'
-        ? '₹2.42 लाख के बजट के साथ गांव के भव्य स्वागत द्वार का निर्माण शुरू।'
-        : 'Construction of grand village welcome gate started with a budget of ₹2.42 lakh.',
-      icon: Award,
-      color: 'from-purple-600 to-violet-600'
-    },
+    // {
+    //   date: language === 'hi' ? 'अक्टूबर 2025' : 'October 2025',
+    //   title: language === 'hi' ? 'मुख्य द्वार निर्माण शुरू' : 'Main Gate Construction Started',
+    //   description: language === 'hi'
+    //     ? '₹2.42 लाख के बजट के साथ गांव के भव्य स्वागत द्वार का निर्माण शुरू।'
+    //     : 'Construction of grand village welcome gate started with a budget of ₹2.42 lakh.',
+    //   icon: Award,
+    //   color: 'from-purple-600 to-violet-600'
+    // },
     {
       date: language === 'hi' ? 'भविष्य' : 'Future',
       title: language === 'hi' ? 'डिजिटल लाइब्रेरी योजना' : 'Digital Library Plan',
@@ -78,9 +78,9 @@ const AboutStory = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 हमारी पहली बड़ी परियोजना गांव की <strong>मुख्य सड़क की मरम्मत और नाली की सफाई</strong> थी, जिस पर ₹1.51 लाख खर्च किए गए। इससे गांव में जलभराव की समस्या का समाधान हुआ और 500+ परिवारों को लाभ हुआ।
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              {/* <p className="text-gray-700 leading-relaxed">
                 वर्तमान में हम गांव के भव्य <strong>मुख्य द्वार (स्वागत द्वार)</strong> के निर्माण में लगे हैं, जो ₹2.42 लाख की परियोजना है और 60% पूर्ण हो चुकी है। हमारा लक्ष्य है धेवधा को एक <strong>स्वच्छ, शिक्षित, सशक्त और सांस्कृतिक रूप से समृद्ध</strong> गांव बनाना।
-              </p>
+              </p> */}
             </>
           ) : (
             <>
@@ -90,9 +90,9 @@ const AboutStory = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 Our first major project was the <strong>repair of the village main road and drainage cleaning</strong>, which cost ₹1.51 lakh. This solved the waterlogging problem in the village and benefited 500+ families.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              {/* <p className="text-gray-700 leading-relaxed">
                 Currently, we are working on the construction of the grand <strong>village main gate (welcome gate)</strong>, which is a ₹2.42 lakh project and is 60% complete. Our goal is to make Dheodha a <strong>clean, educated, empowered, and culturally enriched</strong> village.
-              </p>
+              </p> */}
             </>
           )}
         </div>

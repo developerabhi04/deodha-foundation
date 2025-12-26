@@ -11,7 +11,7 @@ const AboutPlaces = () => {
     const importantPlaces = [
         {
             name: language === 'hi' ? 'इमामगढ़' : 'Imamgadha',
-            image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80',
+            image: '',
             link: '/places/imamgadha'
         },
         {
@@ -46,12 +46,12 @@ const AboutPlaces = () => {
         },
         {
             name: language === 'hi' ? 'निंगोरिया स्थान' : 'Ninguriya Sthan',
-            image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=400&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766667694/IMG_20251205_150057375_2_ttws9b.jpg',
             link: '/places/ninguriya-sthan'
         },
         {
             name: language === 'hi' ? 'अहरा' : 'Ahara',
-            image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766666688/IMG_20251205_144239346_1_ng9bgg.jpg',
             link: '/places/ahara'
         }
     ];

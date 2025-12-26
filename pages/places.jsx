@@ -24,273 +24,273 @@ const Places = () => {
 
   // All Places Data
   const allPlaces = [
-  // Education
-  {
-    id: 'agriculture-college',
-    name: language === 'hi' ? 'कृषक कॉलेज, धेवधा' : 'Krishak College, Dheodha',
-    category: 'education',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913595/Colleage5_ut0pxi.jpg',
-    website: 'https://krishakcollege.ac.in/',
-    description: language === 'hi'
-      ? 'पकड़ी बारवां का प्रमुख कृषि महाविद्यालय, 1978 से शिक्षा प्रदान कर रहा है'
-      : 'Premier agriculture college of Pakri Barawan, providing education since 1978',
-    location: language === 'hi' ? 'धेवधा, पकड़ी बारवां' : 'Dheodha, Pakri Barawan',
-    distance: '2 km',
-    established: '1978'
-  },
-  {
-    id: 'high-school',
-    name: language === 'hi' ? 'उत्कर्मित हाई विद्यालय (10+2)' : 'Upgraded High School (10+2)',
-    category: 'education',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913599/Highschool_tyycra.jpg',
-    description: language === 'hi'
-      ? 'कक्षा 10+2 तक की शिक्षा प्रदान करने वाला विद्यालय'
-      : 'School providing education up to class 10+2',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.2 km',
-    established: '1985'
-  },
-  {
-    id: 'middle-school',
-    name: language === 'hi' ? 'मध्य विद्यालय' : 'Middle School',
-    category: 'education',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943439/83870336_3305898712760571_5537012631879024640_n_uitcqu.jpg',
-    description: language === 'hi'
-      ? 'कक्षा 6-8 के लिए मध्य विद्यालय'
-      : 'Middle school for classes 6-8',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.4 km'
-  },
+    // Education
+    {
+      id: 'agriculture-college',
+      name: language === 'hi' ? 'कृषक कॉलेज, धेवधा' : 'Krishak College, Dheodha',
+      category: 'education',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913595/Colleage5_ut0pxi.jpg',
+      website: 'https://krishakcollege.ac.in/',
+      description: language === 'hi'
+        ? 'पकड़ी बारवां का प्रमुख कृषि महाविद्यालय, 1978 से शिक्षा प्रदान कर रहा है'
+        : 'Premier agriculture college of Pakri Barawan, providing education since 1978',
+      location: language === 'hi' ? 'धेवधा, पकड़ी बारवां' : 'Dheodha, Pakri Barawan',
+      distance: '2 km',
+      established: '1978'
+    },
+    {
+      id: 'high-school',
+      name: language === 'hi' ? 'उत्कर्मित हाई विद्यालय (10+2)' : 'Upgraded High School (10+2)',
+      category: 'education',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913599/Highschool_tyycra.jpg',
+      description: language === 'hi'
+        ? 'कक्षा 10+2 तक की शिक्षा प्रदान करने वाला विद्यालय'
+        : 'School providing education up to class 10+2',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.2 km',
+      established: '1985'
+    },
+    {
+      id: 'middle-school',
+      name: language === 'hi' ? 'मध्य विद्यालय' : 'Middle School',
+      category: 'education',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943439/83870336_3305898712760571_5537012631879024640_n_uitcqu.jpg',
+      description: language === 'hi'
+        ? 'कक्षा 6-8 के लिए मध्य विद्यालय'
+        : 'Middle school for classes 6-8',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.4 km'
+    },
 
-  // Religious Places
-  {
-    id: 'ram-janaki-thakurwadi',
-    name: language === 'hi' ? 'श्री राम जानकी ठाकुरवाड़ी' : 'Shri Ram Janaki Thakurwadi',
-    category: 'religious',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/Thakurwadi1_qpgfnq.jpg',
-    description: language === 'hi'
-      ? 'गाँव का प्रमुख धार्मिक और सांस्कृतिक केंद्र'
-      : 'Main religious and cultural center of the village',
-    location: language === 'hi' ? 'धेवधा गाँव केंद्र' : 'Dheodha Village Center',
-    distance: '0 km',
-    established: '1960'
-  },
-  {
-    id: 'durga-sthan',
-    name: language === 'hi' ? 'दुर्गा स्थान' : 'Durga Sthan',
-    category: 'religious',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/DP_2015_1_npc6vw.jpg',
-    description: language === 'hi'
-      ? 'माँ दुर्गा का पवित्र मंदिर, वार्षिक दुर्गा पूजा का मुख्य स्थल'
-      : 'Sacred temple of Maa Durga, main venue for annual Durga Puja',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.3 km',
-    established: '1950'
-  },
-  {
-    id: 'devsthan-shiyuria',
-    name: language === 'hi' ? 'देवस्थान, शियूरिया महारानी' : 'Devsthan Shiyuria Maharani',
-    category: 'religious',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913594/DeviSthan2_uo34qi.jpg',
-    description: language === 'hi'
-      ? 'शियूरिया महारानी का प्रसिद्ध देवस्थान'
-      : 'Famous shrine of Shiyuria Maharani',
-    location: language === 'hi' ? 'धेवधा के पास' : 'Near Dheodha',
-    distance: '1.5 km',
-    established: '1940'
-  },
-  {
-    id: 'maharani-sthan',
-    name: language === 'hi' ? 'महारानी स्थान' : 'Maharani Sthan',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
-    description: language === 'hi'
-      ? 'महारानी का पूजा स्थल'
-      : 'Worship place of Maharani',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.8 km',
-    established: '1935'
-  },
-  {
-    id: 'shivalaya',
-    name: language === 'hi' ? 'शिवालय' : 'Shivalaya',
-    category: 'religious',
-    image: 'https://kutri.in/wp-content/uploads/2024/08/Kutri-village-37-1-768x1024.jpeg',
-    description: language === 'hi'
-      ? 'भगवान शिव का प्राचीन मंदिर'
-      : 'Ancient temple of Lord Shiva',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.7 km',
-    established: '1945'
-  },
-  {
-    id: 'nayka-babaji',
-    name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
-    description: language === 'hi'
-      ? 'स्थानीय धार्मिक स्थल'
-      : 'Local religious place',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.5 km'
-  },
-  {
-    id: 'jai-baba-dhiwal',
-    name: language === 'hi' ? 'जय बाबा डिहवाल' : 'Jai Baba Dhiwal',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
-    description: language === 'hi'
-      ? 'बाबा डिहवाल का धार्मिक स्थल'
-      : 'Religious place of Baba Dhiwal',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.6 km'
-  },
-  {
-    id: 'siddhamani-than',
-    name: language === 'hi' ? 'सिद्धमणि थान' : 'Siddhamani Than',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
-    description: language === 'hi'
-      ? 'सिद्धमणि जी का पवित्र स्थान'
-      : 'Sacred place of Siddhamani Ji',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.9 km'
-  },
-  {
-    id: 'brahmapichash-sthan',
-    name: language === 'hi' ? 'ब्रह्मपिचास स्थान' : 'Brahmapichash Sthan',
-    category: 'religious',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/BrahPichas1_nyjbm5.jpg',
-    description: language === 'hi'
-      ? 'पौराणिक धार्मिक स्थल'
-      : 'Mythological religious site',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '1.0 km'
-  },
-  {
-    id: 'ninguriya-sthan',
-    name: language === 'hi' ? 'निंगुरिया स्थान' : 'Ninguriya Sthan',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
-    description: language === 'hi'
-      ? 'निंगुरिया देवी का स्थान'
-      : 'Place of Ninguriya Devi',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '1.2 km'
-  },
-  {
-    id: 'dargah',
-    name: language === 'hi' ? 'दरगाह' : 'Dargah',
-    category: 'religious',
-    image: 'https://media.telanganatoday.com/wp-content/uploads/2023/05/Dargah.jpg',
-    description: language === 'hi'
-      ? 'स्थानीय इस्लामिक पूजा स्थल'
-      : 'Local Islamic place of worship',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.4 km'
-  },
-  {
-    id: 'imamgadha',
-    name: language === 'hi' ? 'इमामगढ़ा' : 'Imamgadha',
-    category: 'religious',
-    image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=600&q=80',
-    description: language === 'hi'
-      ? 'शिया मुस्लिम समुदाय का महत्वपूर्ण स्थल'
-      : 'Important place for Shia Muslim community',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.5 km'
-  },
+    // Religious Places
+    {
+      id: 'ram-janaki-thakurwadi',
+      name: language === 'hi' ? 'श्री राम जानकी ठाकुरवाड़ी' : 'Shri Ram Janaki Thakurwadi',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/Thakurwadi1_qpgfnq.jpg',
+      description: language === 'hi'
+        ? 'गाँव का प्रमुख धार्मिक और सांस्कृतिक केंद्र'
+        : 'Main religious and cultural center of the village',
+      location: language === 'hi' ? 'धेवधा गाँव केंद्र' : 'Dheodha Village Center',
+      distance: '0 km',
+      established: '1960'
+    },
+    {
+      id: 'durga-sthan',
+      name: language === 'hi' ? 'दुर्गा स्थान' : 'Durga Sthan',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/DP_2015_1_npc6vw.jpg',
+      description: language === 'hi'
+        ? 'माँ दुर्गा का पवित्र मंदिर, वार्षिक दुर्गा पूजा का मुख्य स्थल'
+        : 'Sacred temple of Maa Durga, main venue for annual Durga Puja',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.3 km',
+      established: '1950'
+    },
+    {
+      id: 'devsthan-shiyuria',
+      name: language === 'hi' ? 'देवस्थान, शियूरिया महारानी' : 'Devsthan Shiyuria Maharani',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913594/DeviSthan2_uo34qi.jpg',
+      description: language === 'hi'
+        ? 'शियूरिया महारानी का प्रसिद्ध देवस्थान'
+        : 'Famous shrine of Shiyuria Maharani',
+      location: language === 'hi' ? 'धेवधा के पास' : 'Near Dheodha',
+      distance: '1.5 km',
+      established: '1940'
+    },
+    {
+      id: 'maharani-sthan',
+      name: language === 'hi' ? 'महारानी स्थान' : 'Maharani Sthan',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766517456/IMG_20251206_111911865_hn461n.jpg',
+      description: language === 'hi'
+        ? 'महारानी का पूजा स्थल'
+        : 'Worship place of Maharani',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.8 km',
+      established: '1935'
+    },
+    {
+      id: 'shivalaya',
+      name: language === 'hi' ? 'शिवालय' : 'Shivalaya',
+      category: 'religious',
+      image: 'https://kutri.in/wp-content/uploads/2024/08/Kutri-village-37-1-768x1024.jpeg',
+      description: language === 'hi'
+        ? 'भगवान शिव का प्राचीन मंदिर'
+        : 'Ancient temple of Lord Shiva',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.7 km',
+      established: '1945'
+    },
+    {
+      id: 'nayka-babaji',
+      name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
+      category: 'religious',
+      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
+      description: language === 'hi'
+        ? 'स्थानीय धार्मिक स्थल'
+        : 'Local religious place',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.5 km'
+    },
+    {
+      id: 'jai-baba-dhiwal',
+      name: language === 'hi' ? 'जय बाबा डिहवाल' : 'Jai Baba Dhiwal',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766756951/IMG_20251206_160236799_1_cnhowb.jpg',
+      description: language === 'hi'
+        ? 'बाबा डिहवाल का धार्मिक स्थल'
+        : 'Religious place of Baba Dhiwal',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.6 km'
+    },
+    {
+      id: 'siddhamani-than',
+      name: language === 'hi' ? 'सिद्धमणि थान' : 'Siddhamani Than',
+      category: 'religious',
+      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
+      description: language === 'hi'
+        ? 'सिद्धमणि जी का पवित्र स्थान'
+        : 'Sacred place of Siddhamani Ji',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.9 km'
+    },
+    {
+      id: 'brahmapichash-sthan',
+      name: language === 'hi' ? 'ब्रह्मपिचास स्थान' : 'Brahmapichash Sthan',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/BrahPichas1_nyjbm5.jpg',
+      description: language === 'hi'
+        ? 'पौराणिक धार्मिक स्थल'
+        : 'Mythological religious site',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '1.0 km'
+    },
+    {
+      id: 'ninguriya-sthan',
+      name: language === 'hi' ? 'निंगुरिया स्थान' : 'Ninguriya Sthan',
+      category: 'religious',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766667694/IMG_20251205_150057375_2_ttws9b.jpg',
+      description: language === 'hi'
+        ? 'निंगुरिया देवी का स्थान'
+        : 'Place of Ninguriya Devi',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '1.2 km'
+    },
+    {
+      id: 'dargah',
+      name: language === 'hi' ? 'दरगाह' : 'Dargah',
+      category: 'religious',
+      image: 'https://media.telanganatoday.com/wp-content/uploads/2023/05/Dargah.jpg',
+      description: language === 'hi'
+        ? 'स्थानीय इस्लामिक पूजा स्थल'
+        : 'Local Islamic place of worship',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.4 km'
+    },
+    {
+      id: 'imamgadha',
+      name: language === 'hi' ? 'इमामगढ़ा' : 'Imamgadha',
+      category: 'religious',
+      image: '',
+      description: language === 'hi'
+        ? 'शिया मुस्लिम समुदाय का महत्वपूर्ण स्थल'
+        : 'Important place for Shia Muslim community',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.5 km'
+    },
 
-  // Community & Infrastructure
-  {
-    id: 'dharamshala',
-    name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
-    category: 'community',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
-    description: language === 'hi'
-      ? 'यात्रियों और आगंतुकों के लिए आवास सुविधा'
-      : 'Accommodation facility for travelers and visitors',
-    location: language === 'hi' ? 'ठाकुरवाड़ी के पास' : 'Near Thakurwadi',
-    distance: '0.1 km',
-    established: '1965'
-  },
-  {
-    id: 'panchayat-library',
-    name: language === 'hi' ? 'पंचायत भवन सह पुस्तकालय' : 'Panchayat Bhawan-cum-Library',
-    category: 'infrastructure',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
-    description: language === 'hi'
-      ? 'ग्राम पंचायत का प्रशासनिक केंद्र और पुस्तकालय'
-      : 'Administrative center of village panchayat and library',
-    location: language === 'hi' ? 'धेवधा गाँव केंद्र' : 'Dheodha Village Center',
-    distance: '0.2 km',
-    established: '1990'
-  },
-  {
-    id: 'sangat-sthal',
-    name: language === 'hi' ? 'संगत स्थल' : 'Sangat Sthal',
-    category: 'community',
-    image: '',
-    description: language === 'hi'
-      ? 'सामुदायिक सभा और धार्मिक कार्यक्रमों का स्थल'
-      : 'Place for community gatherings and religious events',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.3 km'
-  },
-  {
-    id: 'bank-of-baroda',
-    name: language === 'hi' ? 'बैंक ऑफ बड़ौदा' : 'Bank of Baroda',
-    category: 'infrastructure',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195455/156703-untitled-design-2023-10-11t152935012_bh4c0c.avif',
-    description: language === 'hi'
-      ? 'बैंकिंग और वित्तीय सेवाएं'
-      : 'Banking and financial services',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.2 km',
-    established: '2010'
-  },
-  {
-    id: 'post-office',
-    name: language === 'hi' ? 'पोस्ट ऑफ़िस' : 'Post Office',
-    category: 'infrastructure',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195248/post-office-nandapur-koraput-government-organisations-mbttc7uv57_q38v2k.avif',
-    description: language === 'hi'
-      ? 'डाक और बैंकिंग सेवाएं'
-      : 'Postal and banking services',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.3 km',
-    established: '1980'
-  },
-  {
-    id: 'pokhar',
-    name: language === 'hi' ? 'पोखर' : 'Pond (Pokhar)',
-    category: 'infrastructure',
-    image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/Image2_z836i5.jpg',
-    description: language === 'hi'
-      ? 'जल संचयन और मछली पालन के लिए तालाब'
-      : 'Pond for water conservation and fish farming',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.6 km',
-    established: '1960'
-  },
-  {
-    id: 'ahara',
-    name: language === 'hi' ? 'अहरा' : 'Ahara',
-    category: 'infrastructure',
-    image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80',
-    description: language === 'hi'
-      ? 'पारंपरिक जल संग्रहण प्रणाली'
-      : 'Traditional water harvesting system',
-    location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-    distance: '0.8 km'
-  }
-];
+    // Community & Infrastructure
+    {
+      id: 'dharamshala',
+      name: language === 'hi' ? 'धर्मशाला' : 'Dharamshala',
+      category: 'community',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762977579/IMG_3520_1_imhgx3.jpg',
+      description: language === 'hi'
+        ? 'यात्रियों और आगंतुकों के लिए आवास सुविधा'
+        : 'Accommodation facility for travelers and visitors',
+      location: language === 'hi' ? 'ठाकुरवाड़ी के पास' : 'Near Thakurwadi',
+      distance: '0.1 km',
+      established: '1965'
+    },
+    {
+      id: 'panchayat-library',
+      name: language === 'hi' ? 'पंचायत भवन सह पुस्तकालय' : 'Panchayat Bhawan-cum-Library',
+      category: 'infrastructure',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
+      description: language === 'hi'
+        ? 'ग्राम पंचायत का प्रशासनिक केंद्र और पुस्तकालय'
+        : 'Administrative center of village panchayat and library',
+      location: language === 'hi' ? 'धेवधा गाँव केंद्र' : 'Dheodha Village Center',
+      distance: '0.2 km',
+      established: '1990'
+    },
+    {
+      id: 'sangat-sthal',
+      name: language === 'hi' ? 'संगत स्थल' : 'Sangat Sthal',
+      category: 'community',
+      image: '',
+      description: language === 'hi'
+        ? 'सामुदायिक सभा और धार्मिक कार्यक्रमों का स्थल'
+        : 'Place for community gatherings and religious events',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.3 km'
+    },
+    {
+      id: 'bank-of-baroda',
+      name: language === 'hi' ? 'बैंक ऑफ बड़ौदा' : 'Bank of Baroda',
+      category: 'infrastructure',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195455/156703-untitled-design-2023-10-11t152935012_bh4c0c.avif',
+      description: language === 'hi'
+        ? 'बैंकिंग और वित्तीय सेवाएं'
+        : 'Banking and financial services',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.2 km',
+      established: '2010'
+    },
+    {
+      id: 'post-office',
+      name: language === 'hi' ? 'पोस्ट ऑफ़िस' : 'Post Office',
+      category: 'infrastructure',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195248/post-office-nandapur-koraput-government-organisations-mbttc7uv57_q38v2k.avif',
+      description: language === 'hi'
+        ? 'डाक और बैंकिंग सेवाएं'
+        : 'Postal and banking services',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.3 km',
+      established: '1980'
+    },
+    {
+      id: 'pokhar',
+      name: language === 'hi' ? 'पोखर' : 'Pond (Pokhar)',
+      category: 'infrastructure',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/Image2_z836i5.jpg',
+      description: language === 'hi'
+        ? 'जल संचयन और मछली पालन के लिए तालाब'
+        : 'Pond for water conservation and fish farming',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.6 km',
+      established: '1960'
+    },
+    {
+      id: 'ahara',
+      name: language === 'hi' ? 'अहरा' : 'Ahara',
+      category: 'infrastructure',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766666688/IMG_20251205_144239346_1_ng9bgg.jpg',
+      description: language === 'hi'
+        ? 'पारंपरिक जल संग्रहण प्रणाली'
+        : 'Traditional water harvesting system',
+      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+      distance: '0.8 km'
+    }
+  ];
 
 
   // Filter places based on search and category
   const filteredPlaces = allPlaces.filter(place => {
     const matchesSearch = place.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         place.description.toLowerCase().includes(searchQuery.toLowerCase());
+      place.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || place.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -299,7 +299,7 @@ const Places = () => {
     <>
       <Hero
         title={language === 'hi' ? 'महत्वपूर्ण स्थान' : 'Important Places'}
-        subtitle={language === 'hi' 
+        subtitle={language === 'hi'
           ? 'धेवधा गांव के सभी महत्वपूर्ण स्थानों का विवरण'
           : 'Details of all important places in Dheodha village'
         }
@@ -329,21 +329,19 @@ const Places = () => {
               <div className="flex items-center space-x-3 bg-white rounded-xl p-2 border-2 border-gray-200">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-3 rounded-lg transition-all ${
-                    viewMode === 'grid' 
-                      ? 'bg-green-600 text-white' 
+                  className={`p-3 rounded-lg transition-all ${viewMode === 'grid'
+                      ? 'bg-green-600 text-white'
                       : 'text-gray-600 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-3 rounded-lg transition-all ${
-                    viewMode === 'list' 
-                      ? 'bg-green-600 text-white' 
+                  className={`p-3 rounded-lg transition-all ${viewMode === 'list'
+                      ? 'bg-green-600 text-white'
                       : 'text-gray-600 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -356,11 +354,10 @@ const Places = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                    selectedCategory === category.id
+                  className={`px-6 py-3 rounded-full font-semibold transition-all ${selectedCategory === category.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg scale-105'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md border-2 border-gray-200'
-                  }`}
+                    }`}
                 >
                   <span className="mr-2">{category.icon}</span>
                   {category.label}
@@ -371,7 +368,7 @@ const Places = () => {
 
           {/* Results Count */}
           <div className="mb-6 text-gray-600">
-            {language === 'hi' 
+            {language === 'hi'
               ? `${filteredPlaces.length} स्थान मिले`
               : `${filteredPlaces.length} places found`
             }
@@ -399,7 +396,7 @@ const Places = () => {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-800">
                         {categories.find(c => c.id === place.category)?.icon}
@@ -490,7 +487,7 @@ const Places = () => {
                 {language === 'hi' ? 'कोई स्थान नहीं मिला' : 'No places found'}
               </h3>
               <p className="text-gray-600">
-                {language === 'hi' 
+                {language === 'hi'
                   ? 'कृपया अपनी खोज या फ़िल्टर बदलने का प्रयास करें'
                   : 'Try changing your search or filter'
                 }

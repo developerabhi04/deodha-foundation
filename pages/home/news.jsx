@@ -1,7 +1,7 @@
-// components/home/news.jsx - PROFESSIONAL & COMPACT
+// components/home/news.jsx - WITH NEW/LATEST BLINKING BADGE
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Bell, Download, FileText, TrendingUp, MapPin, Clock, Calendar, ExternalLink, Eye } from 'lucide-react';
+import { Bell, Download, FileText, TrendingUp, MapPin, Clock, Calendar, ExternalLink, Eye, Sparkles } from 'lucide-react';
 import { useLanguage } from '../../lib/LanguageContext';
 import dynamic from 'next/dynamic';
 
@@ -57,7 +57,6 @@ const NewsSection = () => {
             link: 'https://www.facebook.com/share/p/1Gi4FQfyVw/'
         }
     ];
-
 
     const announcements = [
         {
@@ -179,6 +178,7 @@ const NewsSection = () => {
             fileType: 'docx',
             icon: '📁',
             size: '245 KB',
+            isNew: false,
         },
         {
             id: 2,
@@ -188,21 +188,33 @@ const NewsSection = () => {
             fileType: 'pdf',
             icon: '📜',
             size: '320 KB',
+            isNew: false,
         },
         {
-            id: 2,
+            id: 3,
             title: language === 'hi' ? 'व्यय रिपोर्ट-1' : 'Expenditure Report – 1',
             titleOriginal: 'व्यय रिपोर्ट-1.pdf',
             filePath: '/documents/व्यय रिपोर्ट-1.pdf',
             fileType: 'pdf',
             icon: '📜',
             size: '445 KB',
-        }
+            isNew: true,  // Mark as NEW
+        },
+        {
+            id: 4,
+            title: language === 'hi' ? 'बजट व्यय रिपोर्ट-1' : 'Budget & Expense Report – 1',
+            titleOriginal: 'sdk.pdf',
+            filePath: '/documents/sdk.pdf',
+            fileType: 'pdf',
+            icon: '📜',
+            size: '445 KB',
+            isNew: true,  // Mark as NEW
+        },
     ];
 
     const newsTickerItems = language === 'hi'
-        ? ['मुख्य द्वार: 60% पूर्ण', 'ऐतिहासिक उपलब्धि', 'छठ घाट सफाई पूर्ण', '5 परियोजनाएं पूर्ण']
-        : ['Main Gate: 60% Complete', 'Historic Achievement', 'Chhath Ghat Cleaned', '5 Projects Done'];
+        ? ['मुख्य द्वार: 100% पूर्ण किया गया', 'ऐतिहासिक उपलब्धि', 'छठ घाट सफाई पूर्ण', '5 परियोजनाएं पूर्ण']
+        : ['Main Gate: 100% Completed', 'Historic Achievement', 'Chhath Ghat Cleaned', '5 Projects Done'];
 
     return (
         <>
@@ -379,8 +391,7 @@ const NewsSection = () => {
 
                             {/* Sidebar */}
                             <div className="md:col-span-2 bg-gradient-to-b from-gray-50 to-white p-2.5 space-y-5">
-                                {/* Documents */}
-
+                                {/* Documents Section with NEW Badge */}
                                 <div className="bg-white rounded-lg border-2 border-indigo-200 overflow-hidden shadow-sm">
                                     <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 py-1.5">
                                         <h3 className="font-bold text-xs flex items-center space-x-1">
@@ -392,8 +403,23 @@ const NewsSection = () => {
                                         {referenceDocuments.map((doc) => (
                                             <div
                                                 key={doc.id}
-                                                className="border border-gray-200 rounded-lg p-2 hover:border-indigo-300 hover:bg-indigo-50 transition-all group"
+                                                className="relative border border-gray-200 rounded-lg p-2 hover:border-indigo-300 hover:bg-indigo-50 transition-all group"
                                             >
+                                                {/* NEW/LATEST Blinking Badge */}
+                                                {doc.isNew && (
+                                                    <div className="absolute -top-2 -right-2 z-10">
+                                                        <div className="relative">
+                                                            {/* Pulsing Ring */}
+                                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                                            {/* Badge */}
+                                                            <span className="relative inline-flex items-center space-x-1 bg-gradient-to-r from-red-600 to-pink-600 text-white px-2 py-0.5 rounded-full text-xs font-black shadow-lg animate-pulse">
+                                                                <Sparkles className="w-3 h-3" />
+                                                                <span>{language === 'hi' ? 'नया' : 'NEW'}</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                )}
+
                                                 <div className="flex items-center space-x-2 mb-2">
                                                     <span className="text-xl">{doc.icon}</span>
                                                     <div className="flex-1 min-w-0">
