@@ -89,9 +89,9 @@ const Places = () => {
     },
     {
       id: 'devsthan-shiyuria',
-      name: language === 'hi' ? 'देवस्थान, शियूरिया महारानी' : 'Devsthan Shiyuria Maharani',
+      name: language === 'hi' ? 'धाजा अंगना (शियूरिया महारानी)' : 'Dhaja Angana (Shiyuria Maharani)',
       category: 'religious',
-      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913594/DeviSthan2_uo34qi.jpg',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766671813/IMG_20251204_203903769_dfjtfr.jpg',
       description: language === 'hi'
         ? 'शियूरिया महारानी का प्रसिद्ध देवस्थान'
         : 'Famous shrine of Shiyuria Maharani',
