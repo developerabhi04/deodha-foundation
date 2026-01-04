@@ -208,7 +208,7 @@ const NewsSection = () => {
             fileType: 'docx',
             icon: '📁',
             size: '245 KB',
-            isNew: false,
+            isNew: true,
         },
     ];
 
