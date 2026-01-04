@@ -171,16 +171,6 @@ const NewsSection = () => {
 
     const referenceDocuments = [
         {
-            id: 1,
-            title: language === 'hi' ? 'परियोजनाएं' : 'Projects',
-            titleOriginal: 'Projects.docx',
-            filePath: '/documents/Projects.docx',
-            fileType: 'docx',
-            icon: '📁',
-            size: '245 KB',
-            isNew: false,
-        },
-        {
             id: 2,
             title: language === 'hi' ? 'विचारधारा' : 'Ideology',
             titleOriginal: 'thought.pdf',
@@ -209,6 +199,16 @@ const NewsSection = () => {
             icon: '📜',
             size: '445 KB',
             isNew: true,  // Mark as NEW
+        },
+        {
+            id: 5,
+            title: language === 'hi' ? 'परियोजनाएं' : 'Projects',
+            titleOriginal: 'Projects.docx',
+            filePath: '/documents/Projects.docx',
+            fileType: 'docx',
+            icon: '📁',
+            size: '245 KB',
+            isNew: false,
         },
     ];
 
