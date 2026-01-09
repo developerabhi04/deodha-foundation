@@ -127,7 +127,7 @@ const Places = () => {
       id: 'nayka-babaji',
       name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
       category: 'religious',
-      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
+      image: '',
       description: language === 'hi'
         ? 'स्थानीय धार्मिक स्थल'
         : 'Local religious place',
@@ -149,7 +149,7 @@ const Places = () => {
       id: 'siddhamani-than',
       name: language === 'hi' ? 'सिद्धमणि थान' : 'Siddhamani Than',
       category: 'religious',
-      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80',
+      image: '',
       description: language === 'hi'
         ? 'सिद्धमणि जी का पवित्र स्थान'
         : 'Sacred place of Siddhamani Ji',
@@ -330,8 +330,8 @@ const Places = () => {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-3 rounded-lg transition-all ${viewMode === 'grid'
-                      ? 'bg-green-600 text-white'
-                      : 'text-gray-600 hover:bg-gray-100'
+                    ? 'bg-green-600 text-white'
+                    : 'text-gray-600 hover:bg-gray-100'
                     }`}
                 >
                   <Grid className="w-5 h-5" />
@@ -339,8 +339,8 @@ const Places = () => {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-3 rounded-lg transition-all ${viewMode === 'list'
-                      ? 'bg-green-600 text-white'
-                      : 'text-gray-600 hover:bg-gray-100'
+                    ? 'bg-green-600 text-white'
+                    : 'text-gray-600 hover:bg-gray-100'
                     }`}
                 >
                   <List className="w-5 h-5" />
@@ -355,8 +355,8 @@ const Places = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all ${selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg scale-105'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md border-2 border-gray-200'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg scale-105'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md border-2 border-gray-200'
                     }`}
                 >
                   <span className="mr-2">{category.icon}</span>
