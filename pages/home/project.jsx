@@ -8,107 +8,189 @@ import {
 import Link from 'next/link';
 import { useLanguage } from '../../lib/LanguageContext';
 
+
 const ProjectsSection = () => {
     const { language } = useLanguage();
     const [activeTab, setActiveTab] = useState('ongoing');
 
+
     // Projects Data
     const ongoingProjects = [
         {
-            id: 2,
-            title: language === 'hi' ? 'पंचायत भवन, धेवधा पुस्तकालय' : 'Panchayat Bhawan Library',
+            id: 1,
+            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
             description: language === 'hi'
-                ? 'पंचायत भवन में स्थित पुस्तकालय का संचालन अब नियमित रूप से शुरू हो रहा है। यहाँ पाठ्यक्रम की किताबें, प्रतियोगी परीक्षा सामग्री और सामान्य ज्ञान की पुस्तकें उपलब्ध हैं।'
-                : 'The library in Panchayat Bhawan is now operating regularly with course books, competitive exam materials, and general knowledge books.',
-            budget: language === 'hi' ? 'बहु-चरण' : 'Multi-phase',
-            progress: 35,
-            status: language === 'hi' ? 'योजना चरण' : 'Planning',
+                ? 'आकर्षक सेल्फी पॉइंट का निर्माण कार्य प्रगति पर है। यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र बनेगा।'
+                : 'Construction of an attractive selfie point is in progress. This will become a new attraction for tourists and locals.',
+            budget: '₹30,000',
+            progress: 60,
+            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
         },
         {
-            id: 3,
-            title: language === 'hi' ? 'सांस्कृतिक पुनरुद्धार कार्यक्रम' : 'Cultural Revival Program',
+            id: 2,
+            title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
             description: language === 'hi'
-                ? 'राष्ट्रीय नाट्य कला परिषद और पारंपरिक लोक कलाओं का पुनरुद्धार। स्थानीय कलाकारों को प्रशिक्षण और मंच के अवसर।'
-                : 'Revival of Rastriya Natya Kala Parishad and traditional folk arts with training opportunities for local artists.',
-            budget: language === 'hi' ? 'सामुदायिक' : 'Community',
-            progress: 40,
-            status: language === 'hi' ? 'सक्रिय' : 'Active',
+                ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
+                : 'Beautification and durable flooring inside the premises. This will enhance the area\'s beauty and durability.',
+            budget: '₹1,50,000',
+            progress: 45,
+            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
         },
     ];
 
+
     const completedProjects = [
         {
             id: 1,
-            title: language === 'hi' ? 'सड़क मरम्मत और नाली सफाई' : 'Road Repair & Drainage',
+            title: language === 'hi' ? 'सड़क मरम्मत और नाली सफाई' : 'Road Repair & Drain Cleaning',
             description: language === 'hi'
-                ? 'जलभराव को खत्म करने वाली प्रमुख सामुदायिक बुनियादी ढांचा परियोजना। 2 किमी सड़क मरम्मत पूर्ण।'
-                : 'Major community infrastructure project eliminating waterlogging. 2 km road repair completed.',
-            budget: '₹1.51 lakh',
-            completionDate: language === 'hi' ? 'अगस्त 2024' : 'August 2024',
-            impact: language === 'hi' ? '500+ परिवार लाभान्वित' : '500+ families benefited',
+                ? 'जलभराव को खत्म करने वाली प्रमुख सामुदायिक बुनियादी ढांचा परियोजना। सड़क मरम्मत और नाली सफाई का कार्य सफलतापूर्वक पूर्ण।'
+                : 'Major community infrastructure project eliminating waterlogging. Road repair and drain cleaning work successfully completed.',
+            budget: '₹1,20,000',
+            completionDate: language === 'hi' ? 'अगस्त 2025' : 'August 2025',
+            impact: language === 'hi' ? '₹1,51,000 खर्च' : '₹1,51,000 spent',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761997126/abd97183-3e9b-41ad-ba51-05170a964670_csr2md.png',
         },
         {
             id: 2,
-            title: language === 'hi' ? 'स्वच्छता अभियान' : 'Sanitation Campaign',
+            title: language === 'hi' ? 'छठ पूजा घाट सामूहिक आरती' : 'Chhath Puja Ghat Collective Aarti',
             description: language === 'hi'
-                ? 'गांव भर में स्वच्छता अभियान और सामाजिक जागरूकता कार्यक्रम। 50+ ड्राइव सफलतापूर्वक संपन्न।'
-                : 'Village-wide cleanliness and awareness programs. 50+ drives successfully completed.',
-            budget: '₹75,000',
-            completionDate: language === 'hi' ? 'सितंबर 2024' : 'September 2024',
-            impact: language === 'hi' ? 'बेहतर स्वच्छता' : 'Improved hygiene',
+                ? 'छठ पूजा घाट पर भव्य सामूहिक आरती का आयोजन। सामुदायिक सद्भाव और धार्मिक उत्सव को बढ़ावा देने वाला कार्यक्रम।'
+                : 'Grand collective aarti organized at Chhath Puja Ghat. Program promoting community harmony and religious celebration.',
+            budget: '₹25,000',
+            completionDate: language === 'hi' ? 'नवंबर 2025' : 'November 2025',
+            impact: language === 'hi' ? '₹25,128 खर्च' : '₹25,128 spent',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
         },
         {
             id: 3,
+            title: language === 'hi' ? 'धेवधा लाइब्रेरी, पंचायत भवन' : 'Dhevdha Library, Panchayat Bhavan',
+            description: language === 'hi'
+                ? 'पंचायत भवन में पुस्तकालय का संचालन नियमित रूप से शुरू। शैक्षणिक, प्रतियोगी परीक्षा और सामान्य ज्ञान की पुस्तकें उपलब्ध।'
+                : 'Library operations started regularly with academic, competitive exam, and general knowledge books available.',
+            budget: '₹2,000',
+            completionDate: language === 'hi' ? 'सितंबर 2025' : 'September 2025',
+            impact: language === 'hi' ? 'शिक्षा सुविधा' : 'Education facility',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
+        },
+        {
+            id: 4,
             title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण' : 'Main Gate Beautification',
             description: language === 'hi'
-                ? 'गांव के गौरव का प्रतीक भव्य स्वागत द्वार। 30 फीट ऊंचा पारंपरिक डिजाइन।'
-                : 'Grand welcome gate symbolizing village pride. 30 feet tall traditional design.',
-            budget: '₹3.36 lakh',
-            completionDate: language === 'hi' ? 'दिसंबर 2024' : 'December 2024',
-            impact: language === 'hi' ? 'गांव की पहचान' : 'Village identity',
+                ? 'गांव के गौरव का प्रतीक भव्य स्वागत द्वार। मजबूत और आकर्षक बनाने के लिए गेट संरचना का पुनर्निर्माण।'
+                : 'Grand welcome gate symbolizing village pride. Gate structure redesigned to make it strong and attractive.',
+            budget: '₹2,42,500',
+            completionDate: language === 'hi' ? 'दिसंबर 2025' : 'December 2025',
+            impact: language === 'hi' ? '₹3,56,000 खर्च' : '₹3,56,000 spent',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659397/IMG_3746_fm9sza.jpg',
         },
     ];
 
+
     const upcomingProjects = [
         {
             id: 1,
-            title: language === 'hi' ? 'डिजिटल लाइब्रेरी' : 'Digital Library',
+            title: language === 'hi' ? 'बुद्धवा महादेव, महादेव स्थान' : 'Budhwa Mahadev, Mahadev Sthan',
             description: language === 'hi'
-                ? 'ई-लर्निंग संसाधन और कंप्यूटर प्रशिक्षण केंद्र। 20 कंप्यूटर और हाई-स्पीड इंटरनेट।'
-                : 'E-learning resources and computer training center with 20 computers and high-speed internet.',
-            budget: '₹5 lakh',
-            startDate: language === 'hi' ? 'जनवरी 2026' : 'Jan 2026',
+                ? 'बुद्धवा महादेव मंदिर में सीमा दीवार और सुरक्षा कार्य। मंदिर परिसर की सुरक्षा और सौंदर्यीकरण के लिए योजना।'
+                : 'Boundary wall and protection work at Budhwa Mahadev temple. Planning for temple premises security and beautification.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मार्च 2026' : 'Mar 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
         },
         {
             id: 2,
-            title: language === 'hi' ? 'महिला सशक्तिकरण केंद्र' : 'Women Empowerment Center',
+            title: language === 'hi' ? 'धार्मिक विरासत - छठ घाट सीढ़ियों की पेंटिंग' : 'Religious Heritage - Chhath Ghat Stairs Painting',
             description: language === 'hi'
-                ? 'कौशल विकास और व्यावसायिक प्रशिक्षण। सिलाई, कढ़ाई और हस्तशिल्प कार्यक्रम।'
-                : 'Skill development and vocational training including sewing, embroidery, and handicrafts.',
-            budget: '₹3 lakh',
-            startDate: language === 'hi' ? 'मार्च 2026' : 'Mar 2026',
+                ? 'छठ घाट की सीढ़ियों पर रंगीन पेंटिंग। पारंपरिक और आधुनिक कला का संगम, घाट को आकर्षक बनाने के लिए।'
+                : 'Colorful painting on Chhath Ghat stairs. Fusion of traditional and modern art to make the ghat attractive.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'अप्रैल 2026' : 'Apr 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
+        },
+        {
+            id: 3,
+            title: language === 'hi' ? 'पार्वती मंदिर, महादेव स्थान' : 'Parvati Temple, Mahadev Sthan',
+            description: language === 'hi'
+                ? 'शिव मंदिर के सामने माँ पार्वती की मूर्ति स्थापना का प्रस्ताव। धार्मिक स्थल की पूर्णता के लिए योजना।'
+                : 'Proposal to install Maa Parvati idol in front of Shiv temple. Planning for completeness of religious site.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763068920/330207172_529598739266971_2580032597949579545_n_ibhdce.jpg',
         },
         {
-            id: 3,
+            id: 4,
+            title: language === 'hi' ? 'वृक्षारोपण' : 'Tree Plantation',
+            description: language === 'hi'
+                ? 'तालाब के दोनों ओर वृक्षारोपण। पर्यावरण संरक्षण और हरित आवरण बढ़ाने के लिए सामुदायिक पहल।'
+                : 'Plantation on both sides of the pond. Community initiative to increase green cover and environmental protection.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जून 2026' : 'Jun 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
+        },
+        {
+            id: 5,
+            title: language === 'hi' ? 'महारानी स्थान मंदिर गुंबद' : 'Maharani Sthan Temple Dome',
+            description: language === 'hi'
+                ? 'मंदिर गुंबद का सौंदर्यीकरण या संरचनात्मक विस्तार। पारंपरिक वास्तुकला को संरक्षित करते हुए आधुनिकीकरण।'
+                : 'Beautification or structural expansion of temple dome. Modernization while preserving traditional architecture.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जुलाई 2026' : 'Jul 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
+        },
+        {
+            id: 6,
+            title: language === 'hi' ? 'सिद्धमणि स्थान' : 'Siddhmani Sthan',
+            description: language === 'hi'
+                ? 'सीमा दीवार और सुरक्षा कार्य। धार्मिक स्थल की सुरक्षा और रखरखाव के लिए व्यापक योजना।'
+                : 'Boundary wall and protection work. Comprehensive plan for security and maintenance of religious site.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'अगस्त 2026' : 'Aug 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
+        },
+        {
+            id: 7,
             title: language === 'hi' ? 'सोलर स्ट्रीट लाइट' : 'Solar Street Lights',
             description: language === 'hi'
-                ? 'मुख्य सड़कों पर 50 सोलर लाइट्स। पर्यावरण अनुकूल और ऊर्जा बचत।'
-                : 'Installing 50 solar lights on main roads. Eco-friendly and energy-saving solution.',
-            budget: '₹4 lakh',
+                ? 'मुख्य धेवधा रोड से शिवाला तक प्रत्येक खंभे पर सोलर/इलेक्ट्रिक लाइट। पर्यावरण अनुकूल और ऊर्जा बचत समाधान।'
+                : 'Solar/electric lights on each pole on main Dhevdha road to Shivala. Eco-friendly and energy-saving solution.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'फरवरी 2026' : 'Feb 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
         },
+        {
+            id: 8,
+            title: language === 'hi' ? 'सांस्कृतिक पुनरुद्धार कार्यक्रम' : 'Cultural Revival Program',
+            description: language === 'hi'
+                ? 'राष्ट्रीय नाट्य कला और पारंपरिक लोक कलाओं का पुनरुद्धार। स्थानीय कलाकारों को प्रशिक्षण और मंच के अवसर।'
+                : 'Revival of national drama arts and traditional folk arts. Training opportunities and platform for local artists.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जनवरी 2026' : 'Jan 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
+        },
+        {
+            id: 9,
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी' : 'Digital Library',
+            description: language === 'hi'
+                ? 'ई-लर्निंग संसाधन और कंप्यूटर प्रशिक्षण केंद्र। 20 कंप्यूटर और हाई-स्पीड इंटरनेट के साथ आधुनिक सुविधा।'
+                : 'E-learning resources and computer training center. Modern facility with 20 computers and high-speed internet.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मार्च 2026' : 'Mar 2026',
+            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
+        },
     ];
+
 
     const tabs = [
         {
@@ -118,7 +200,6 @@ const ProjectsSection = () => {
             gradient: 'from-yellow-500 to-orange-500',
             bgColor: 'bg-yellow-100',
             textColor: 'text-yellow-700',
-            // count: ongoingProjects.length 
             count: 2
         },
         {
@@ -128,7 +209,6 @@ const ProjectsSection = () => {
             gradient: 'from-green-500 to-emerald-500',
             bgColor: 'bg-green-100',
             textColor: 'text-green-700',
-            // count: completedProjects.length
             count: 4
         },
         {
@@ -138,10 +218,10 @@ const ProjectsSection = () => {
             gradient: 'from-blue-500 to-indigo-500',
             bgColor: 'bg-blue-100',
             textColor: 'text-blue-700',
-            // count: upcomingProjects.length
             count: 9
         }
     ];
+
 
     const getCurrentProjects = () => {
         switch (activeTab) {
@@ -152,6 +232,7 @@ const ProjectsSection = () => {
         }
     };
 
+
     return (
         <section id="projects" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
             {/* Background Decoration */}
@@ -160,6 +241,7 @@ const ProjectsSection = () => {
                 <div className="absolute top-0 right-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
                 <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
             </div>
+
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -184,6 +266,7 @@ const ProjectsSection = () => {
                         }
                     </p>
                 </motion.div>
+
 
                 {/* Tab Navigation */}
                 <motion.div
@@ -213,6 +296,7 @@ const ProjectsSection = () => {
                         </button>
                     ))}
                 </motion.div>
+
 
                 {/* Projects Grid */}
                 <AnimatePresence mode="wait">
@@ -280,6 +364,7 @@ const ProjectsSection = () => {
                             </div>
                         )}
 
+
                         {/* Completed Projects */}
                         {activeTab === 'completed' && (
                             <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -332,6 +417,7 @@ const ProjectsSection = () => {
                             </div>
                         )}
 
+
                         {/* Upcoming Projects */}
                         {activeTab === 'upcoming' && (
                             <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -381,6 +467,7 @@ const ProjectsSection = () => {
                     </motion.div>
                 </AnimatePresence>
 
+
                 {/* View All Button */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -401,5 +488,6 @@ const ProjectsSection = () => {
         </section>
     );
 };
+
 
 export default ProjectsSection;

@@ -12,75 +12,52 @@ import { useLanguage } from '../lib/LanguageContext';
 const Project = () => {
     const { language } = useLanguage();
 
-    // Projects Data (same as before)
+    // UPDATED Projects Data
     const ongoingProjects = [
-        // {
-        //     id: 1,
-        //     title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना' : 'Main Gate Beautification Project',
-        //     description: language === 'hi'
-        //         ? 'गांव के गौरव और पहचान का प्रतीक भव्य प्रवेश द्वार (स्वागत द्वार) का निर्माण।'
-        //         : 'Construction of grand entrance gate (Welcome Gate) symbolizing village pride and identity.',
-        //     budget: '₹2.42 lakh',
-        //     progress: 60,
-        //     status: language === 'hi' ? 'चल रहा' : 'Ongoing',
-        //     image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943477/539776090_1174414584722008_982293286693648098_n_eclulv.jpg',
-        //     category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
-        //     expectedCompletion: language === 'hi' ? 'दिसंबर 2025' : 'December 2025',
-        //     timeline: language === 'hi' ? '20-25 दिन' : '20-25 days',
-        //     features: language === 'hi' ? [
-        //         'आधुनिक डिज़ाइन और निर्माण',
-        //         'गांव का नाम और लोगो',
-        //         'LED लाइटिंग सिस्टम'
-        //     ] : [
-        //         'Modern design and construction',
-        //         'Village name and logo',
-        //         'LED lighting system'
-        //     ],
-        // },
         {
-            id: 2,
-            title: language === 'hi' ? 'शैक्षिक गुणवत्ता सुधार' : 'Educational Quality Improvement',
+            id: 1,
+            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
             description: language === 'hi'
-                ? 'डिजिटल लाइब्रेरी सेटअप, शिक्षक प्रशिक्षण, और स्कूल के बाद ट्यूशन कार्यक्रम।'
-                : 'Digital library setup, teacher training, and after-school tuition programs.',
-            budget: language === 'hi' ? 'बहु-चरण' : 'Multi-phase',
-            progress: 35,
-            status: language === 'hi' ? 'योजना' : 'Planning',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
-            category: language === 'hi' ? 'शिक्षा' : 'Education',
-            expectedCompletion: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
-            timeline: language === 'hi' ? '3 महीने' : '3 months',
+                ? 'आकर्षक सेल्फी पॉइंट का निर्माण कार्य प्रगति पर है। यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र बनेगा।'
+                : 'Construction of an attractive selfie point is in progress. This will become a new attraction for tourists and locals.',
+            budget: '₹30,000',
+            progress: 60,
+            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHsDCbl6aqaG4-_I-otj1xrnKqLAzApMreQ&s',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            expectedCompletion: language === 'hi' ? 'मार्च 2026' : 'March 2026',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
             features: language === 'hi' ? [
-                'डिजिटल लाइब्रेरी सेटअप',
-                'शिक्षक प्रशिक्षण कार्यक्रम',
-                'स्कूल के बाद ट्यूशन'
+                'आधुनिक डिज़ाइन और निर्माण',
+                'पर्यटकों के लिए आकर्षण',
+                'फोटोग्राफी के लिए विशेष स्थान'
             ] : [
-                'Digital library setup',
-                'Teacher training programs',
-                'After-school tuition'
+                'Modern design and construction',
+                'Tourist attraction spot',
+                'Special photography location'
             ],
         },
         {
-            id: 3,
-            title: language === 'hi' ? 'सांस्कृतिक पुनरुद्धार कार्यक्रम' : 'Cultural Revival Programs',
+            id: 2,
+            title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
             description: language === 'hi'
-                ? 'राष्ट्रीय नाट्य कला परिषद और पारंपरिक लोक कलाओं का पुनरुद्धार।'
-                : 'Revival of Rastriya Natya Kala Parishad and traditional folk arts.',
-            budget: language === 'hi' ? 'सामुदायिक' : 'Community',
-            progress: 40,
-            status: language === 'hi' ? 'सक्रिय' : 'Active',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
-            category: language === 'hi' ? 'संस्कृति' : 'Culture',
-            expectedCompletion: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
-            timeline: language === 'hi' ? '4 महीने' : '4 months',
+                ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
+                : 'Beautification and durable flooring inside the premises. This will enhance the area\'s beauty and durability.',
+            budget: '₹1,50,000',
+            progress: 45,
+            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913593/BrahmPichas2_faqb4s.jpg',
+            category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Site',
+            expectedCompletion: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
+            timeline: language === 'hi' ? '3 महीने' : '3 months',
             features: language === 'hi' ? [
-                'नाट्य कला प्रशिक्षण',
-                'पारंपरिक लोक कला',
-                'सांस्कृतिक कार्यक्रम'
+                'टिकाऊ फ्लोरिंग सामग्री',
+                'सुंदर डिजाइन पैटर्न',
+                'आसान रखरखाव'
             ] : [
-                'Drama art training',
-                'Traditional folk arts',
-                'Cultural events'
+                'Durable flooring material',
+                'Beautiful design pattern',
+                'Easy maintenance'
             ],
         },
     ];
@@ -88,66 +65,88 @@ const Project = () => {
     const completedProjects = [
         {
             id: 1,
-            title: language === 'hi' ? 'सड़क मरम्मत और नाली सफाई' : 'Road Repair & Drainage Cleaning',
+            title: language === 'hi' ? 'सड़क मरम्मत और नाली सफाई' : 'Road Repair & Drain Cleaning',
             description: language === 'hi'
-                ? '22 दिनों के समर्पित प्रयास से गांव की 2 किमी सड़क की मरम्मत और नाली सफाई का कार्य पूर्ण किया गया।'
-                : 'Completed 2 km road repair and drainage cleaning work through 22 days of dedicated effort.',
-            budget: '₹1.51 lakh',
+                ? 'सड़क मरम्मत और नाली सफाई का कार्य सफलतापूर्वक पूर्ण। जलभराव की समस्या समाप्त और बेहतर आवागमन।'
+                : 'Road repair and drain cleaning work successfully completed. Eliminated waterlogging and improved mobility.',
+            budget: '₹1,20,000',
             duration: language === 'hi' ? '22 दिन' : '22 days',
             beneficiaries: language === 'hi' ? 'संपूर्ण गांव' : 'Entire Village',
-            completionDate: language === 'hi' ? 'अगस्त 2024' : 'August 2024',
+            completionDate: language === 'hi' ? 'अगस्त 2025' : 'August 2025',
             impact: language === 'hi' ? [
-                'जल भराव और कीचड़ की समस्या समाप्त',
-                'मानसून के दौरान बेहतर आवागमन',
-                'स्वच्छता में सुधार'
+                'कुल खर्च ₹1,51,000',
+                'जल भराव की समस्या समाप्त',
+                'मानसून के दौरान बेहतर आवागमन'
             ] : [
+                'Total spent ₹1,51,000',
                 'Eliminated waterlogging problems',
-                'Better mobility during monsoon',
-                'Improved sanitation'
+                'Better mobility during monsoon'
             ],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761997126/abd97183-3e9b-41ad-ba51-05170a964670_csr2md.png',
             category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure'
         },
         {
             id: 2,
-            title: language === 'hi' ? 'स्वच्छता और जागरूकता अभियान' : 'Sanitation & Awareness Campaigns',
+            title: language === 'hi' ? 'छठ पूजा घाट सामूहिक आरती' : 'Chhath Puja Ghat Collective Aarti',
             description: language === 'hi'
-                ? 'गांव भर में स्वच्छता अभियान और सामाजिक जागरूकता कार्यक्रम का सफल आयोजन।'
-                : 'Successfully conducted village-wide cleanliness drives and social awareness programs.',
-            budget: language === 'hi' ? 'सामुदायिक' : 'Community',
-            duration: language === 'hi' ? '6 महीने' : '6 months',
-            beneficiaries: language === 'hi' ? '1000+ ग्रामवासी' : '1000+ villagers',
-            completionDate: language === 'hi' ? 'सितंबर 2024' : 'September 2024',
+                ? 'छठ पूजा घाट पर भव्य सामूहिक आरती का सफल आयोजन। सामुदायिक सद्भाव और धार्मिक उत्सव को बढ़ावा।'
+                : 'Successfully organized grand collective aarti at Chhath Puja Ghat. Promoted community harmony and religious celebration.',
+            budget: '₹25,000',
+            duration: language === 'hi' ? '3 दिन' : '3 days',
+            beneficiaries: language === 'hi' ? '1000+ श्रद्धालु' : '1000+ devotees',
+            completionDate: language === 'hi' ? 'नवंबर 2025' : 'November 2025',
             impact: language === 'hi' ? [
-                'गांव की स्वच्छता में सुधार',
-                'स्वास्थ्य जागरूकता',
-                'समुदाय की भागीदारी बढ़ी'
+                'कुल खर्च ₹25,128',
+                'सामुदायिक सद्भाव बढ़ा',
+                'धार्मिक उत्सव का आयोजन'
             ] : [
-                'Improved village hygiene',
-                'Health awareness',
-                'Increased participation'
+                'Total spent ₹25,128',
+                'Enhanced community harmony',
+                'Religious celebration organized'
             ],
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
-            category: language === 'hi' ? 'स्वास्थ्य' : 'Health'
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/571371887_1228595669303899_1530027951067959863_n_qewddt.jpg',
+            category: language === 'hi' ? 'धार्मिक' : 'Religious'
         },
         {
             id: 3,
-            title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण' : 'Main Gate Beautification',
+            title: language === 'hi' ? 'धेवधा लाइब्रेरी, पंचायत भवन' : 'Dhevdha Library, Panchayat Bhavan',
             description: language === 'hi'
-                ? 'गांव के गौरव का प्रतीक भव्य स्वागत द्वार। 30 फीट ऊंचा पारंपरिक डिजाइन।'
-                : 'Grand welcome gate symbolizing village pride. 30 feet tall traditional design.',
-            budget: '₹3.36 lakh',
+                ? 'पंचायत भवन में पुस्तकालय का संचालन नियमित रूप से शुरू। शैक्षणिक, प्रतियोगी परीक्षा और सामान्य ज्ञान की पुस्तकें उपलब्ध।'
+                : 'Library operations started regularly at Panchayat Bhavan with academic, competitive exam, and general knowledge books.',
+            budget: '₹2,000',
+            duration: language === 'hi' ? '1 महीना' : '1 month',
+            beneficiaries: language === 'hi' ? '500+ छात्र' : '500+ students',
+            completionDate: language === 'hi' ? 'सितंबर 2025' : 'September 2025',
+            impact: language === 'hi' ? [
+                'नियमित पुस्तकालय सेवाएं',
+                'शैक्षणिक संसाधन उपलब्ध',
+                'छात्रों के लिए अध्ययन सामग्री'
+            ] : [
+                'Regular library services',
+                'Academic resources available',
+                'Study materials for students'
+            ],
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
+            category: language === 'hi' ? 'शिक्षा' : 'Education'
+        },
+        {
+            id: 4,
+            title: language === 'hi' ? 'धेवधा मुख्य द्वार सौंदर्यीकरण' : 'Dhevdha Main Gate Beautification',
+            description: language === 'hi'
+                ? 'गांव के गौरव का प्रतीक भव्य स्वागत द्वार। मजबूत और आकर्षक बनाने के लिए गेट संरचना का पुनर्निर्माण।'
+                : 'Grand welcome gate symbolizing village pride. Gate structure redesigned to make it strong and attractive.',
+            budget: '₹2,42,500',
             duration: language === 'hi' ? '25 दिन' : '25 days',
             beneficiaries: language === 'hi' ? 'सभी गांववासी' : 'All villagers',
-            completionDate: language === 'hi' ? 'दिसंबर 2024' : 'December 2024',
+            completionDate: language === 'hi' ? 'दिसंबर 2025' : 'December 2025',
             impact: language === 'hi' ? [
+                'कुल खर्च ₹3,56,000',
                 'गांव की पहचान में वृद्धि',
-                'पर्यटन में सुधार',
-                'सामुदायिक गौरव'
+                'पर्यटन में सुधार'
             ] : [
+                'Total spent ₹3,56,000',
                 'Enhanced village identity',
-                'Improved tourism',
-                'Community pride'
+                'Improved tourism'
             ],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659397/IMG_3746_fm9sza.jpg',
             category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure'
@@ -157,45 +156,117 @@ const Project = () => {
     const upcomingProjects = [
         {
             id: 1,
-            title: language === 'hi' ? 'डिजिटल लाइब्रेरी उद्घाटन' : 'Digital Library Inauguration',
+            title: language === 'hi' ? 'बुद्धवा महादेव, महादेव स्थान' : 'Budhwa Mahadev, Mahadev Sthan',
             description: language === 'hi'
-                ? 'ई-लर्निंग संसाधनों और कंप्यूटर प्रशिक्षण केंद्र के साथ नई डिजिटल लाइब्रेरी का शुभारंभ।'
-                : 'Launch of new digital library with e-learning resources and computer training center.',
-            budget: '₹5 lakh',
-            startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
-            icon: '💡',
+                ? 'बुद्धवा महादेव मंदिर में सीमा दीवार और सुरक्षा कार्य। मंदिर परिसर की सुरक्षा और सौंदर्यीकरण।'
+                : 'Boundary wall and protection work at Budhwa Mahadev temple for security and beautification.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: '',
+            icon: '🕉️',
         },
         {
             id: 2,
-            title: language === 'hi' ? 'महिला सशक्तिकरण केंद्र' : 'Women Empowerment Center',
+            title: language === 'hi' ? 'धार्मिक विरासत - छठ घाट सीढ़ियों की पेंटिंग' : 'Religious Heritage – Chhath Ghat Stairs Painting',
             description: language === 'hi'
-                ? 'गांव की महिलाओं के लिए कौशल विकास और व्यावसायिक प्रशिक्षण केंद्र।'
-                : 'Skill development and vocational training center for village women.',
-            budget: '₹3 lakh',
-            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763068920/330207172_529598739266971_2580032597949579545_n_ibhdce.jpg',
-            icon: '👩',
+                ? 'छठ घाट की सीढ़ियों पर रंगीन पेंटिंग। पारंपरिक और आधुनिक कला का संगम।'
+                : 'Colorful painting on Chhath Ghat stairs. Fusion of traditional and modern art.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: '',
+            icon: '🎨',
         },
         {
             id: 3,
-            title: language === 'hi' ? 'सोलर स्ट्रीट लाइटिंग परियोजना' : 'Solar Street Lighting Project',
+            title: language === 'hi' ? 'पार्वती मंदिर, महादेव स्थान' : 'Parvati Temple, Mahadev Sthan',
             description: language === 'hi'
-                ? 'मुख्य गांव की सड़कों पर सोलर-संचालित स्ट्रीट लाइट्स स्थापित करना।'
-                : 'Installing solar-powered street lights across main village roads.',
-            budget: '₹4 lakh',
+                ? 'शिव मंदिर के सामने माँ पार्वती की मूर्ति स्थापना का प्रस्ताव। धार्मिक स्थल की पूर्णता।'
+                : 'Proposal to install Maa Parvati idol in front of Shiv temple for completeness of religious site.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: '',
+            icon: '🙏',
+        },
+        {
+            id: 4,
+            title: language === 'hi' ? 'वृक्षारोपण' : 'Tree Plantation',
+            description: language === 'hi'
+                ? 'तालाब के दोनों ओर वृक्षारोपण। पर्यावरण संरक्षण और हरित आवरण बढ़ाने के लिए सामुदायिक पहल।'
+                : 'Plantation on both sides of the pond. Community initiative for environmental protection.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जून 2026' : 'June 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: '',
+            icon: '🌳',
+        },
+        {
+            id: 5,
+            title: language === 'hi' ? 'महारानी स्थान मंदिर गुंबद' : 'Maharani Sthan Temple Dome',
+            description: language === 'hi'
+                ? 'मंदिर गुंबद का सौंदर्यीकरण या संरचनात्मक विस्तार। पारंपरिक वास्तुकला का संरक्षण।'
+                : 'Beautification or structural expansion of temple dome preserving traditional architecture.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जुलाई 2026' : 'July 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766517455/IMG_20251206_112053836_tnkgij.jpg',
+            icon: '🛕',
+        },
+        {
+            id: 6,
+            title: language === 'hi' ? 'सिद्धमणि स्थान' : 'Siddhmani Sthan',
+            description: language === 'hi'
+                ? 'सीमा दीवार और सुरक्षा कार्य। धार्मिक स्थल की सुरक्षा और रखरखाव के लिए व्यापक योजना।'
+                : 'Boundary wall and protection work. Comprehensive plan for security and maintenance.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'अगस्त 2026' : 'August 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1770475281/WhatsApp_Image_2025-12-09_at_11.27.01_AM_k4kiof.jpg',
+            icon: '⚡',
+        },
+        {
+            id: 7,
+            title: language === 'hi' ? 'सोलर स्ट्रीट लाइट' : 'Solar Street Lights',
+            description: language === 'hi'
+                ? 'मुख्य धेवधा रोड से शिवाला तक प्रत्येक खंभे पर सोलर/इलेक्ट्रिक लाइट। पर्यावरण अनुकूल समाधान।'
+                : 'Solar/electric lights on each pole from main Dhevdha road to Shivala. Eco-friendly solution.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
-            status: language === 'hi' ? 'नियोजित' : 'Planned',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
             icon: '☀️',
+        },
+        {
+            id: 8,
+            title: language === 'hi' ? 'सांस्कृतिक पुनरुद्धार कार्यक्रम' : 'Cultural Revival Program',
+            description: language === 'hi'
+                ? 'राष्ट्रीय नाट्य कला और पारंपरिक लोक कलाओं का पुनरुद्धार। स्थानीय कलाकारों को प्रशिक्षण।'
+                : 'Revival of national drama arts and traditional folk arts with training for local artists.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'जनवरी 2026' : 'January 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
+            icon: '🎭',
+        },
+        {
+            id: 9,
+            title: language === 'hi' ? 'डिजिटल लाइब्रेरी' : 'Digital Library',
+            description: language === 'hi'
+                ? 'ई-लर्निंग संसाधन और कंप्यूटर प्रशिक्षण केंद्र। 20 कंप्यूटर और हाई-स्पीड इंटरनेट।'
+                : 'E-learning resources and computer training center with 20 computers and high-speed internet.',
+            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
+            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
+            icon: '💡',
         },
     ];
 
     const impactStats = [
         {
-            number: '₹7L',
+            number: '₹7L+',
             label: language === 'hi' ? 'कुल धनराशि' : 'Total Funds',
             icon: DollarSign,
             color: 'from-green-500 to-emerald-600',
@@ -306,7 +377,7 @@ const Project = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={containerVariants}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8"
                         >
                             {completedProjects.map((project, index) => (
                                 <motion.div
@@ -426,7 +497,7 @@ const Project = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={containerVariants}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                         >
                             {ongoingProjects.map((project, index) => (
                                 <motion.div
