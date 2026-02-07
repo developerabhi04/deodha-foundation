@@ -10,29 +10,29 @@ const AboutHero = () => {
   const { language } = useLanguage();
 
   const stats = [
-    { 
-      value: '140+', 
+    {
+      value: '20',
       label: language === 'hi' ? 'संस्थापक सदस्य' : 'Founding Members',
-      icon: Users, 
-      color: 'from-blue-600 to-indigo-600' 
+      icon: Users,
+      color: 'from-blue-600 to-indigo-600'
     },
-    { 
-      value: '₹5.22L', 
+    {
+      value: '₹7L',
       label: language === 'hi' ? 'सामुदायिक निवेश' : 'Community Investment',
-      icon: Award, 
-      color: 'from-green-600 to-emerald-600' 
+      icon: Award,
+      color: 'from-green-600 to-emerald-600'
     },
-    { 
-      value: '10K+', 
+    {
+      value: '10K+',
       label: language === 'hi' ? 'प्रभावित जीवन' : 'Lives Impacted',
-      icon: Heart, 
-      color: 'from-pink-600 to-rose-600' 
+      icon: Heart,
+      color: 'from-pink-600 to-rose-600'
     },
-    { 
-      value: '100%', 
+    {
+      value: '100%',
       label: language === 'hi' ? 'पारदर्शिता' : 'Transparency',
-      icon: Shield, 
-      color: 'from-purple-600 to-violet-600' 
+      icon: Shield,
+      color: 'from-purple-600 to-violet-600'
     }
   ];
 

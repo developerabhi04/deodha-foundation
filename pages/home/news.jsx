@@ -461,12 +461,12 @@ const NewsSection = () => {
                                         <span>{language === 'hi' ? 'आंकड़े' : 'STATS'}</span>
                                     </h3>
                                     <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 mb-1.5 text-center">
-                                        <div className="text-lg font-bold">₹5.22L</div>
+                                        <div className="text-lg font-bold">₹7L</div>
                                         <div className="text-xs">{language === 'hi' ? 'कुल बजट' : 'Budget'}</div>
                                     </div>
                                     <div className="grid grid-cols-3 gap-1.5">
                                         <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
-                                            <div className="text-base font-bold">5</div>
+                                            <div className="text-base font-bold">4</div>
                                             <div className="text-xs">{language === 'hi' ? 'पूर्ण' : 'Done'}</div>
                                         </div>
                                         <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
@@ -474,7 +474,7 @@ const NewsSection = () => {
                                             <div className="text-xs">{language === 'hi' ? 'चल रहे' : 'Active'}</div>
                                         </div>
                                         <div className="bg-white/20 backdrop-blur rounded-lg p-1.5 text-center">
-                                            <div className="text-base font-bold">7</div>
+                                            <div className="text-base font-bold">9</div>
                                             <div className="text-xs">{language === 'hi' ? 'आगामी' : 'Coming'}</div>
                                         </div>
                                     </div>

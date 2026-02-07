@@ -118,7 +118,8 @@ const ProjectsSection = () => {
             gradient: 'from-yellow-500 to-orange-500',
             bgColor: 'bg-yellow-100',
             textColor: 'text-yellow-700',
-            count: ongoingProjects.length
+            // count: ongoingProjects.length 
+            count: 2
         },
         {
             id: 'completed',
@@ -127,7 +128,8 @@ const ProjectsSection = () => {
             gradient: 'from-green-500 to-emerald-500',
             bgColor: 'bg-green-100',
             textColor: 'text-green-700',
-            count: completedProjects.length
+            // count: completedProjects.length
+            count: 4
         },
         {
             id: 'upcoming',
@@ -136,7 +138,8 @@ const ProjectsSection = () => {
             gradient: 'from-blue-500 to-indigo-500',
             bgColor: 'bg-blue-100',
             textColor: 'text-blue-700',
-            count: upcomingProjects.length
+            // count: upcomingProjects.length
+            count: 9
         }
     ];
 

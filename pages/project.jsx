@@ -195,8 +195,8 @@ const Project = () => {
 
     const impactStats = [
         {
-            number: '₹4.22L',
-            label: language === 'hi' ? 'कुल निवेश' : 'Total Investment',
+            number: '₹7L',
+            label: language === 'hi' ? 'कुल धनराशि' : 'Total Funds',
             icon: DollarSign,
             color: 'from-green-500 to-emerald-600',
             bgColor: 'bg-green-50'

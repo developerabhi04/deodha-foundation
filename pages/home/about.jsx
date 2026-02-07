@@ -286,13 +286,13 @@ const AboutSection = () => {
                                 {/* Stats Bar - Responsive grid */}
                                 <div className="mt-4 sm:mt-6 grid grid-cols-3 gap-2 sm:gap-4 pt-4 sm:pt-6 border-t-2 border-gray-100">
                                     <div className="text-center">
-                                        <div className="text-xl sm:text-2xl font-bold text-green-600">140</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-green-600">20</div>
                                         <div className="text-xs text-gray-600">
                                             {language === 'hi' ? 'मुख्य सदस्य' : 'Core Members'}
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">₹5.22L</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">₹7L</div>
                                         <div className="text-xs text-gray-600">
                                             {language === 'hi' ? 'निवेश' : 'Investment'}
                                         </div>

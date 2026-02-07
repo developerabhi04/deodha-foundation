@@ -9,11 +9,11 @@ const AboutPlaces = () => {
     const { language } = useLanguage();
 
     const importantPlaces = [
-        {
-            name: language === 'hi' ? 'इमामगढ़' : 'Imamgadha',
-            image: '',
-            link: '/places/imamgadha'
-        },
+        // {
+        //     name: language === 'hi' ? 'इमामगढ़' : 'Imamgadha',
+        //     image: '',
+        //     link: '/places/imamgadha'
+        // },
         {
             name: language === 'hi' ? 'धाजा अंगना (शियूरिया महारानी)' : 'Dhaja Angana (Shiyuria Maharani)',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067508/IMG_3556_rgwkg2.jpg',
@@ -26,9 +26,9 @@ const AboutPlaces = () => {
         },
         {
             name: language === 'hi' ? 'महादेव स्थान ' : 'Mahadev Sthan',
-            image: 'https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/203981777_4890374357646324_7717674512950099284_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=N195ARWr0zkQ7kNvwEflUa-&_nc_oc=Adk1MS8iT0Jg0TBkmFlGW70oD4t7Fu6Pi04WwwIRulygFaArVN8zU4qprvH__ov9cuM&_nc_zt=23&_nc_ht=scontent-bom1-1.xx&_nc_gid=j1017jfTajK0Hq55DQ9VDQ&oh=00_AfnhMXv-KV11kpF-liW2uxYscZnJP9-qKiP_gAQmxaJM6Q&oe=6973AD5E',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766518018/IMG_20251209_124454539_atdgkh.jpg',
             link: '/places/mahadev-sthan'
-        },      
+        },
         {
             name: language === 'hi' ? 'पोखर' : 'Pond (Pokhar)',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913597/Image2_z836i5.jpg',
@@ -46,12 +46,12 @@ const AboutPlaces = () => {
         },
         {
             name: language === 'hi' ? 'निंगोरिया स्थान' : 'Ninguriya Sthan',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766667694/IMG_20251205_150057375_2_ttws9b.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766666688/IMG_20251205_144239346_1_ng9bgg.jpg',
             link: '/places/ninguriya-sthan'
         },
         {
             name: language === 'hi' ? 'अहरा' : 'Ahara',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766666688/IMG_20251205_144239346_1_ng9bgg.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1770472163/WhatsApp_Image_2025-12-05_at_2.32.55_PM_qu9xfv.jpg',
             link: '/places/ahara'
         }
     ];

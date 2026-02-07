@@ -224,7 +224,7 @@ export default function Contact() {
                       <h3 className="font-semibold text-gray-900 mb-1">
                         {language === 'hi' ? 'फोन' : 'Phone'}
                       </h3>
-                      <p className="text-gray-600">+91 9971358384</p>
+                      <p className="text-gray-600">+91 7678666621</p>
                     </div>
                   </div>
 
@@ -236,7 +236,7 @@ export default function Contact() {
                       <h3 className="font-semibold text-gray-900 mb-1">
                         {language === 'hi' ? 'ईमेल' : 'Email'}
                       </h3>
-                      <p className="text-gray-600">contact@dheodhavikassamiti.org</p>
+                      <p className="text-gray-600">dheodhavikassamiti@gmail.com</p>
                     </div>
                   </div>
                 </div>

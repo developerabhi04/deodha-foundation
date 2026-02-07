@@ -134,9 +134,9 @@ const AboutFeatures = () => {
             <div className="mt-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
                 <div className="grid md:grid-cols-4 gap-8 text-center">
                     {[
-                        { value: '₹3.93L', label: language === 'hi' ? 'कुल निवेश' : 'Total Investment' },
-                        { value: '2', label: language === 'hi' ? 'पूर्ण परियोजनाएं' : 'Completed Projects' },
-                        { value: '3', label: language === 'hi' ? 'चल रही परियोजनाएं' : 'Ongoing Projects' },
+                        { value: '₹7L', label: language === 'hi' ? 'कुल निवेश' : 'Total Investment' },
+                        { value: '4', label: language === 'hi' ? 'पूर्ण परियोजनाएं' : 'Completed Projects' },
+                        { value: '2', label: language === 'hi' ? 'चल रही परियोजनाएं' : 'Ongoing Projects' },
                         { value: '10K+', label: language === 'hi' ? 'लाभार्थी' : 'Beneficiaries' }
                     ].map((stat, index) => (
                         <motion.div

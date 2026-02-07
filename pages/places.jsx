@@ -40,7 +40,7 @@ const Places = () => {
     },
     {
       id: 'high-school',
-      name: language === 'hi' ? 'उत्कर्मित हाई विद्यालय (10+2)' : 'Upgraded High School (10+2)',
+      name: language === 'hi' ? 'उत्कर्मित माध्यमिक उच्च विद्यालय (+2), धेवधा' : 'Upgraded High School (+2)',
       category: 'education',
       image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913599/Highschool_tyycra.jpg',
       description: language === 'hi'
@@ -56,8 +56,8 @@ const Places = () => {
       category: 'education',
       image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943439/83870336_3305898712760571_5537012631879024640_n_uitcqu.jpg',
       description: language === 'hi'
-        ? 'कक्षा 6-8 के लिए मध्य विद्यालय'
-        : 'Middle school for classes 6-8',
+        ? 'कक्षा 1-8 के लिए मध्य विद्यालय'
+        : 'Middle school for classes 1 to 8',
       location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
       distance: '0.4 km'
     },
@@ -111,29 +111,29 @@ const Places = () => {
       distance: '0.8 km',
       established: '1935'
     },
-    {
-      id: 'shivalaya',
-      name: language === 'hi' ? 'शिवालय' : 'Shivalaya',
-      category: 'religious',
-      image: 'https://kutri.in/wp-content/uploads/2024/08/Kutri-village-37-1-768x1024.jpeg',
-      description: language === 'hi'
-        ? 'भगवान शिव का प्राचीन मंदिर'
-        : 'Ancient temple of Lord Shiva',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.7 km',
-      established: '1945'
-    },
-    {
-      id: 'nayka-babaji',
-      name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
-      category: 'religious',
-      image: '',
-      description: language === 'hi'
-        ? 'स्थानीय धार्मिक स्थल'
-        : 'Local religious place',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.5 km'
-    },
+    // {
+    //   id: 'shivalaya',
+    //   name: language === 'hi' ? 'शिवालय' : 'Shivalaya',
+    //   category: 'religious',
+    //   image: 'https://kutri.in/wp-content/uploads/2024/08/Kutri-village-37-1-768x1024.jpeg',
+    //   description: language === 'hi'
+    //     ? 'भगवान शिव का प्राचीन मंदिर'
+    //     : 'Ancient temple of Lord Shiva',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.7 km',
+    //   established: '1945'
+    // },
+    // {
+    //   id: 'nayka-babaji',
+    //   name: language === 'hi' ? 'नयका बाबाजी' : 'Nayka Babaji',
+    //   category: 'religious',
+    //   image: '',
+    //   description: language === 'hi'
+    //     ? 'स्थानीय धार्मिक स्थल'
+    //     : 'Local religious place',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.5 km'
+    // },
     {
       id: 'jai-baba-dhiwal',
       name: language === 'hi' ? 'जय बाबा डिहवाल' : 'Jai Baba Dhiwal',
@@ -149,7 +149,7 @@ const Places = () => {
       id: 'siddhamani-than',
       name: language === 'hi' ? 'सिद्धमणि थान' : 'Siddhamani Than',
       category: 'religious',
-      image: '',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1770475262/WhatsApp_Image_2025-12-09_at_11.27.01_AM_1_abopaw.jpg',
       description: language === 'hi'
         ? 'सिद्धमणि जी का पवित्र स्थान'
         : 'Sacred place of Siddhamani Ji',
@@ -157,7 +157,7 @@ const Places = () => {
       distance: '0.9 km'
     },
     {
-      id: 'brahmapichash-sthan',
+      id: 'brahmapichas-sthan',
       name: language === 'hi' ? 'ब्रह्मपिचास स्थान' : 'Brahmapichash Sthan',
       category: 'religious',
       image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913592/BrahPichas1_nyjbm5.jpg',
@@ -178,28 +178,28 @@ const Places = () => {
       location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
       distance: '1.2 km'
     },
-    {
-      id: 'dargah',
-      name: language === 'hi' ? 'दरगाह' : 'Dargah',
-      category: 'religious',
-      image: 'https://media.telanganatoday.com/wp-content/uploads/2023/05/Dargah.jpg',
-      description: language === 'hi'
-        ? 'स्थानीय इस्लामिक पूजा स्थल'
-        : 'Local Islamic place of worship',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.4 km'
-    },
-    {
-      id: 'imamgadha',
-      name: language === 'hi' ? 'इमामगढ़ा' : 'Imamgadha',
-      category: 'religious',
-      image: '',
-      description: language === 'hi'
-        ? 'शिया मुस्लिम समुदाय का महत्वपूर्ण स्थल'
-        : 'Important place for Shia Muslim community',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.5 km'
-    },
+    // {
+    //   id: 'dargah',
+    //   name: language === 'hi' ? 'दरगाह' : 'Dargah',
+    //   category: 'religious',
+    //   image: 'https://media.telanganatoday.com/wp-content/uploads/2023/05/Dargah.jpg',
+    //   description: language === 'hi'
+    //     ? 'स्थानीय इस्लामिक पूजा स्थल'
+    //     : 'Local Islamic place of worship',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.4 km'
+    // },
+    // {
+    //   id: 'imamgadha',
+    //   name: language === 'hi' ? 'इमामगढ़ा' : 'Imamgadha',
+    //   category: 'religious',
+    //   image: '',
+    //   description: language === 'hi'
+    //     ? 'शिया मुस्लिम समुदाय का महत्वपूर्ण स्थल'
+    //     : 'Important place for Shia Muslim community',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.5 km'
+    // },
 
     // Community & Infrastructure
     {
@@ -226,41 +226,41 @@ const Places = () => {
       distance: '0.2 km',
       established: '1990'
     },
-    {
-      id: 'sangat-sthal',
-      name: language === 'hi' ? 'संगत स्थल' : 'Sangat Sthal',
-      category: 'community',
-      image: '',
-      description: language === 'hi'
-        ? 'सामुदायिक सभा और धार्मिक कार्यक्रमों का स्थल'
-        : 'Place for community gatherings and religious events',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.3 km'
-    },
-    {
-      id: 'bank-of-baroda',
-      name: language === 'hi' ? 'बैंक ऑफ बड़ौदा' : 'Bank of Baroda',
-      category: 'infrastructure',
-      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195455/156703-untitled-design-2023-10-11t152935012_bh4c0c.avif',
-      description: language === 'hi'
-        ? 'बैंकिंग और वित्तीय सेवाएं'
-        : 'Banking and financial services',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.2 km',
-      established: '2010'
-    },
-    {
-      id: 'post-office',
-      name: language === 'hi' ? 'पोस्ट ऑफ़िस' : 'Post Office',
-      category: 'infrastructure',
-      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195248/post-office-nandapur-koraput-government-organisations-mbttc7uv57_q38v2k.avif',
-      description: language === 'hi'
-        ? 'डाक और बैंकिंग सेवाएं'
-        : 'Postal and banking services',
-      location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
-      distance: '0.3 km',
-      established: '1980'
-    },
+    // {
+    //   id: 'sangat-sthal',
+    //   name: language === 'hi' ? 'संगत स्थल' : 'Sangat Sthal',
+    //   category: 'community',
+    //   image: '',
+    //   description: language === 'hi'
+    //     ? 'सामुदायिक सभा और धार्मिक कार्यक्रमों का स्थल'
+    //     : 'Place for community gatherings and religious events',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.3 km'
+    // },
+    // {
+    //   id: 'bank-of-baroda',
+    //   name: language === 'hi' ? 'बैंक ऑफ बड़ौदा' : 'Bank of Baroda',
+    //   category: 'infrastructure',
+    //   image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195455/156703-untitled-design-2023-10-11t152935012_bh4c0c.avif',
+    //   description: language === 'hi'
+    //     ? 'बैंकिंग और वित्तीय सेवाएं'
+    //     : 'Banking and financial services',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.2 km',
+    //   established: '2010'
+    // },
+    // {
+    //   id: 'post-office',
+    //   name: language === 'hi' ? 'पोस्ट ऑफ़िस' : 'Post Office',
+    //   category: 'infrastructure',
+    //   image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763195248/post-office-nandapur-koraput-government-organisations-mbttc7uv57_q38v2k.avif',
+    //   description: language === 'hi'
+    //     ? 'डाक और बैंकिंग सेवाएं'
+    //     : 'Postal and banking services',
+    //   location: language === 'hi' ? 'धेवधा गाँव' : 'Dheodha Village',
+    //   distance: '0.3 km',
+    //   established: '1980'
+    // },
     {
       id: 'pokhar',
       name: language === 'hi' ? 'पोखर' : 'Pond (Pokhar)',
@@ -277,7 +277,7 @@ const Places = () => {
       id: 'ahara',
       name: language === 'hi' ? 'अहरा' : 'Ahara',
       category: 'infrastructure',
-      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766666688/IMG_20251205_144239346_1_ng9bgg.jpg',
+      image: 'https://res.cloudinary.com/dusalynec/image/upload/v1770472160/WhatsApp_Image_2025-12-05_at_2.32.45_PM_yhld6k.jpg',
       description: language === 'hi'
         ? 'पारंपरिक जल संग्रहण प्रणाली'
         : 'Traditional water harvesting system',

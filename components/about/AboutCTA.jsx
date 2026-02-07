@@ -116,20 +116,16 @@ const AboutCTA = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                value: '₹3.93L',
+                value: '₹7L',
                 label: language === 'hi' ? 'कुल निवेश' : 'Total Investment'
               },
               {
                 value: '10K+',
                 label: language === 'hi' ? 'प्रभावित जीवन' : 'Lives Impacted'
               },
-              {
-                value: '5',
-                label: language === 'hi' ? 'सक्रिय परियोजनाएं' : 'Active Projects'
-              }
             ].map((stat, index) => (
               <motion.div
                 key={index}

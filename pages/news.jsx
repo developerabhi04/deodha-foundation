@@ -162,7 +162,7 @@ const News = () => {
 
     const impactStats = [
         {
-            number: '₹4.22L',
+            number: '₹7L',
             label: language === 'hi' ? 'कुल फंड संग्रहित' : 'Total Funds Raised'
         },
         

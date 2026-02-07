@@ -159,8 +159,8 @@ const FAQ = () => {
                             <button
                                 onClick={() => setSelectedCategory('all')}
                                 className={`px-6 py-3 rounded-xl font-semibold transition-all ${selectedCategory === 'all'
-                                        ? 'bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg scale-105'
-                                        : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md border-2 border-gray-200'
+                                    ? 'bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg scale-105'
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md border-2 border-gray-200'
                                     }`}
                             >
                                 {language === 'hi' ? 'सभी' : 'All'}
@@ -172,8 +172,8 @@ const FAQ = () => {
                                         key={category.id}
                                         onClick={() => setSelectedCategory(category.id)}
                                         className={`group px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2 ${selectedCategory === category.id
-                                                ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
-                                                : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md border-2 border-gray-200'
+                                            ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                                            : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md border-2 border-gray-200'
                                             }`}
                                     >
                                         <Icon className={`w-5 h-5 ${selectedCategory === category.id ? 'text-white' : 'text-gray-500'
@@ -328,14 +328,14 @@ const FAQ = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href="mailto:dhewadhavikas@gmail.com"
+                                    href="mailto:dheodhavikassamiti@gmail.com"
                                     className="inline-flex items-center justify-center space-x-2 bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all shadow-lg hover:scale-105"
                                 >
                                     <Mail className="w-5 h-5" />
                                     <span>{language === 'hi' ? 'ईमेल करें' : 'Email Us'}</span>
                                 </a>
                                 <a
-                                    href="tel:+919525383048"
+                                    href="tel:+917678666621"
                                     className="inline-flex items-center justify-center space-x-2 bg-green-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-900 transition-all shadow-lg hover:scale-105"
                                 >
                                     <Phone className="w-5 h-5" />
