@@ -261,6 +261,7 @@ const Project = () => {
             icon: '💡',
         },
     ];
+    
 
     const impactStats = [
         {
