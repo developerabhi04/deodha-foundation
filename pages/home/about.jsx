@@ -31,9 +31,9 @@ const AboutSection = () => {
             color: 'from-green-500 to-emerald-600',
         },
         {
-            name: language === 'hi' ? 'मितेंद्र कुमार' : 'Mitendra Kumar',
-            role: language === 'hi' ? 'सचिव' : 'Secretary',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761915194/FuntyPhoto2_qrhwg3.jpg',
+            name: language === 'hi' ? 'श्री संतोष कुमार' : 'Shree Santosh Kumar',
+            role: language === 'hi' ? 'महा सचिव' : 'Secretary',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521297/WhatsApp_Image_2026-02-19_at_10.40.23_PM_hccryy.jpg',
             color: 'from-purple-500 to-violet-600',
         },
         {

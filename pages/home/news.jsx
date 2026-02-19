@@ -210,6 +210,16 @@ const NewsSection = () => {
             size: '245 KB',
             isNew: true,
         },
+        {
+            id: 5,
+            title: language === 'hi' ? 'परियोजनाएं' : 'Projects',
+            titleOriginal: 'Projects.docx',
+            filePath: '/documents/Projects.docx',
+            fileType: 'docx',
+            icon: '📁',
+            size: '245 KB',
+            isNew: true,
+        },
     ];
 
     const newsTickerItems = language === 'hi'

@@ -16,17 +16,7 @@ const ProjectsSection = () => {
 
     // Projects Data
     const ongoingProjects = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
-            description: language === 'hi'
-                ? 'आकर्षक सेल्फी पॉइंट का निर्माण कार्य प्रगति पर है। यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र बनेगा।'
-                : 'Construction of an attractive selfie point is in progress. This will become a new attraction for tourists and locals.',
-            budget: '₹30,000',
-            progress: 60,
-            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
-        },
+
         {
             id: 2,
             title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
@@ -85,6 +75,17 @@ const ProjectsSection = () => {
             completionDate: language === 'hi' ? 'दिसंबर 2025' : 'December 2025',
             impact: language === 'hi' ? '₹3,56,000 खर्च' : '₹3,56,000 spent',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659397/IMG_3746_fm9sza.jpg',
+        },
+        {
+            id: 5,
+            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
+            description: language === 'hi'
+                ? 'यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र।'
+                : 'This will a new attraction for tourists and locals.',
+            budget: '₹45,000',
+            completionDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
+            impact: language === 'hi' ? 'पर्यटक आकर्षण' : 'Tourist attraction',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521608/WhatsApp_Image_2026-02-19_at_10.48.06_PM_jatvjo.jpg',
         },
     ];
 

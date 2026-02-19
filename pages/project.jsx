@@ -14,29 +14,7 @@ const Project = () => {
 
     // UPDATED Projects Data
     const ongoingProjects = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
-            description: language === 'hi'
-                ? 'आकर्षक सेल्फी पॉइंट का निर्माण कार्य प्रगति पर है। यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र बनेगा।'
-                : 'Construction of an attractive selfie point is in progress. This will become a new attraction for tourists and locals.',
-            budget: '₹30,000',
-            progress: 60,
-            status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHsDCbl6aqaG4-_I-otj1xrnKqLAzApMreQ&s',
-            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
-            expectedCompletion: language === 'hi' ? 'मार्च 2026' : 'March 2026',
-            timeline: language === 'hi' ? '2 महीने' : '2 months',
-            features: language === 'hi' ? [
-                'आधुनिक डिज़ाइन और निर्माण',
-                'पर्यटकों के लिए आकर्षण',
-                'फोटोग्राफी के लिए विशेष स्थान'
-            ] : [
-                'Modern design and construction',
-                'Tourist attraction spot',
-                'Special photography location'
-            ],
-        },
+
         {
             id: 2,
             title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
@@ -151,57 +129,77 @@ const Project = () => {
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659397/IMG_3746_fm9sza.jpg',
             category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure'
         },
+        {
+            id: 5,
+            title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
+            description: language === 'hi'
+                ? ' यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र।'
+                : 'This will be a new attraction for tourists and locals.',
+            budget: '₹45,000',
+            progress: 60,
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521608/WhatsApp_Image_2026-02-19_at_10.48.06_PM_jatvjo.jpg',
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
+            expectedCompletion: language === 'hi' ? 'फ़रवरी 2026' : 'February 2026',
+            timeline: language === 'hi' ? '2 महीने' : '2 months',
+            features: language === 'hi' ? [
+                'पर्यटकों के लिए आकर्षण',
+                'फोटोग्राफी के लिए विशेष स्थान'
+            ] : [
+                'Tourist attraction spot',
+                'Special photography location'
+            ],
+        },
     ];
 
     const upcomingProjects = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'बुद्धवा महादेव, महादेव स्थान' : 'Budhwa Mahadev, Mahadev Sthan',
-            description: language === 'hi'
-                ? 'बुद्धवा महादेव मंदिर में सीमा दीवार और सुरक्षा कार्य। मंदिर परिसर की सुरक्षा और सौंदर्यीकरण।'
-                : 'Boundary wall and protection work at Budhwa Mahadev temple for security and beautification.',
-            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-            startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
-            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-            image: '',
-            icon: '🕉️',
-        },
-        {
-            id: 2,
-            title: language === 'hi' ? 'धार्मिक विरासत - छठ घाट सीढ़ियों की पेंटिंग' : 'Religious Heritage – Chhath Ghat Stairs Painting',
-            description: language === 'hi'
-                ? 'छठ घाट की सीढ़ियों पर रंगीन पेंटिंग। पारंपरिक और आधुनिक कला का संगम।'
-                : 'Colorful painting on Chhath Ghat stairs. Fusion of traditional and modern art.',
-            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-            startDate: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
-            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-            image: '',
-            icon: '🎨',
-        },
-        {
-            id: 3,
-            title: language === 'hi' ? 'पार्वती मंदिर, महादेव स्थान' : 'Parvati Temple, Mahadev Sthan',
-            description: language === 'hi'
-                ? 'शिव मंदिर के सामने माँ पार्वती की मूर्ति स्थापना का प्रस्ताव। धार्मिक स्थल की पूर्णता।'
-                : 'Proposal to install Maa Parvati idol in front of Shiv temple for completeness of religious site.',
-            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-            startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
-            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-            image: '',
-            icon: '🙏',
-        },
-        {
-            id: 4,
-            title: language === 'hi' ? 'वृक्षारोपण' : 'Tree Plantation',
-            description: language === 'hi'
-                ? 'तालाब के दोनों ओर वृक्षारोपण। पर्यावरण संरक्षण और हरित आवरण बढ़ाने के लिए सामुदायिक पहल।'
-                : 'Plantation on both sides of the pond. Community initiative for environmental protection.',
-            budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-            startDate: language === 'hi' ? 'जून 2026' : 'June 2026',
-            status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-            image: '',
-            icon: '🌳',
-        },
+        // {
+        //     id: 1,
+        //     title: language === 'hi' ? 'बुद्धवा महादेव, महादेव स्थान' : 'Budhwa Mahadev, Mahadev Sthan',
+        //     description: language === 'hi'
+        //         ? 'बुद्धवा महादेव मंदिर में सीमा दीवार और सुरक्षा कार्य। मंदिर परिसर की सुरक्षा और सौंदर्यीकरण।'
+        //         : 'Boundary wall and protection work at Budhwa Mahadev temple for security and beautification.',
+        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+        //     startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
+        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+        //     image: '',
+        //     icon: '🕉️',
+        // },
+        // {
+        //     id: 2,
+        //     title: language === 'hi' ? 'धार्मिक विरासत - छठ घाट सीढ़ियों की पेंटिंग' : 'Religious Heritage – Chhath Ghat Stairs Painting',
+        //     description: language === 'hi'
+        //         ? 'छठ घाट की सीढ़ियों पर रंगीन पेंटिंग। पारंपरिक और आधुनिक कला का संगम।'
+        //         : 'Colorful painting on Chhath Ghat stairs. Fusion of traditional and modern art.',
+        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+        //     startDate: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
+        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+        //     image: '',
+        //     icon: '🎨',
+        // },
+        // {
+        //     id: 3,
+        //     title: language === 'hi' ? 'पार्वती मंदिर, महादेव स्थान' : 'Parvati Temple, Mahadev Sthan',
+        //     description: language === 'hi'
+        //         ? 'शिव मंदिर के सामने माँ पार्वती की मूर्ति स्थापना का प्रस्ताव। धार्मिक स्थल की पूर्णता।'
+        //         : 'Proposal to install Maa Parvati idol in front of Shiv temple for completeness of religious site.',
+        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+        //     startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
+        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+        //     image: '',
+        //     icon: '🙏',
+        // },
+        // {
+        //     id: 4,
+        //     title: language === 'hi' ? 'वृक्षारोपण' : 'Tree Plantation',
+        //     description: language === 'hi'
+        //         ? 'तालाब के दोनों ओर वृक्षारोपण। पर्यावरण संरक्षण और हरित आवरण बढ़ाने के लिए सामुदायिक पहल।'
+        //         : 'Plantation on both sides of the pond. Community initiative for environmental protection.',
+        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
+        //     startDate: language === 'hi' ? 'जून 2026' : 'June 2026',
+        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
+        //     image: '',
+        //     icon: '🌳',
+        // },
         {
             id: 5,
             title: language === 'hi' ? 'महारानी स्थान मंदिर गुंबद' : 'Maharani Sthan Temple Dome',
