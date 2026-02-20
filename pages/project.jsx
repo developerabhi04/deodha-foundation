@@ -14,9 +14,8 @@ const Project = () => {
 
     // UPDATED Projects Data
     const ongoingProjects = [
-
         {
-            id: 2,
+            id: 1,
             title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
             description: language === 'hi'
                 ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
@@ -261,7 +260,7 @@ const Project = () => {
             icon: '💡',
         },
     ];
-    
+
 
     const impactStats = [
         {
@@ -498,7 +497,7 @@ const Project = () => {
                             variants={containerVariants}
                             className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                         >
-                            {ongoingProjects.map((project, index) => (
+                            {ongoingProjects?.map((project, index) => (
                                 <motion.div
                                     key={project.id}
                                     variants={itemVariants}
