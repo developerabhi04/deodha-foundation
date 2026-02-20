@@ -163,9 +163,9 @@ const TeamPage = () => {
                                 </span>
                             </h1>
 
-                            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-                                Five visionary leaders who invested <strong className="text-gray-900">₹3.93 Lakhs</strong> to transform Dheodha into a model village. Each brings unique expertise and unwavering commitment to community development.
-                            </p>
+                            {/* <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+                                Five visionary to transform Dheodha into a model village. Each brings unique expertise and unwavering commitment to community development.
+                            </p> */}
 
                             {/* Search Bar */}
                             <div className="max-w-xl mx-auto">

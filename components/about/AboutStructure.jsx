@@ -35,8 +35,8 @@ const AboutStructure = () => {
             : 'Implementation of the Village Development Plan'
         },
         {
-          title: language === 'hi' ? 'सचिव' : 'Secretary',
-          name: 'Mitendra Kumar',
+          title: language === 'hi' ? 'महा सचिव' : 'Secretary',
+          name: 'Shree Santosh Kumar',
           icon: FileText,
           color: 'from-purple-600 to-violet-600',
           responsibilities: language === 'hi'
