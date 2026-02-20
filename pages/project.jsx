@@ -1,25 +1,29 @@
-// pages/Project.jsx - PROFESSIONAL REDESIGN
+// pages/Project.jsx - PROFESSIONAL REDESIGN (FIXED)
 import Hero from '@/components/Hero';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
     CheckCircle, Clock, TrendingUp, Users, Calendar, ArrowRight,
-    Target, Award, Heart as HeartIcon, UserPlus, Sparkles,
+    Target, Award, UserPlus, Sparkles,
     DollarSign, BarChart3, Zap
 } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 
 const Project = () => {
-    const { language } = useLanguage();
+    // ✅ FIX 1: SSR Protection — prevents context crash during Next.js static build
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => { setIsMounted(true); }, []);
 
-    // UPDATED Projects Data
+    // ✅ FIX 2: Safe fallback — if context is undefined during SSR, default to 'en'
+    const { language } = useLanguage() || { language: 'en' };
+
     const ongoingProjects = [
         {
             id: 1,
             title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
             description: language === 'hi'
                 ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
-                : 'Beautification and durable flooring inside the premises. This will enhance the area\'s beauty and durability.',
+                : "Beautification and durable flooring inside the premises. This will enhance the area's beauty and durability.",
             budget: '₹1,50,000',
             progress: 45,
             status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
@@ -27,15 +31,9 @@ const Project = () => {
             category: language === 'hi' ? 'धार्मिक स्थल' : 'Religious Site',
             expectedCompletion: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
             timeline: language === 'hi' ? '3 महीने' : '3 months',
-            features: language === 'hi' ? [
-                'टिकाऊ फ्लोरिंग सामग्री',
-                'सुंदर डिजाइन पैटर्न',
-                'आसान रखरखाव'
-            ] : [
-                'Durable flooring material',
-                'Beautiful design pattern',
-                'Easy maintenance'
-            ],
+            features: language === 'hi'
+                ? ['टिकाऊ फ्लोरिंग सामग्री', 'सुंदर डिजाइन पैटर्न', 'आसान रखरखाव']
+                : ['Durable flooring material', 'Beautiful design pattern', 'Easy maintenance'],
         },
     ];
 
@@ -50,17 +48,11 @@ const Project = () => {
             duration: language === 'hi' ? '22 दिन' : '22 days',
             beneficiaries: language === 'hi' ? 'संपूर्ण गांव' : 'Entire Village',
             completionDate: language === 'hi' ? 'अगस्त 2025' : 'August 2025',
-            impact: language === 'hi' ? [
-                'कुल खर्च ₹1,51,000',
-                'जल भराव की समस्या समाप्त',
-                'मानसून के दौरान बेहतर आवागमन'
-            ] : [
-                'Total spent ₹1,51,000',
-                'Eliminated waterlogging problems',
-                'Better mobility during monsoon'
-            ],
+            impact: language === 'hi'
+                ? ['कुल खर्च ₹1,51,000', 'जल भराव की समस्या समाप्त', 'मानसून के दौरान बेहतर आवागमन']
+                : ['Total spent ₹1,51,000', 'Eliminated waterlogging problems', 'Better mobility during monsoon'],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761997126/abd97183-3e9b-41ad-ba51-05170a964670_csr2md.png',
-            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure'
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
         },
         {
             id: 2,
@@ -72,17 +64,11 @@ const Project = () => {
             duration: language === 'hi' ? '3 दिन' : '3 days',
             beneficiaries: language === 'hi' ? '1000+ श्रद्धालु' : '1000+ devotees',
             completionDate: language === 'hi' ? 'नवंबर 2025' : 'November 2025',
-            impact: language === 'hi' ? [
-                'कुल खर्च ₹25,128',
-                'सामुदायिक सद्भाव बढ़ा',
-                'धार्मिक उत्सव का आयोजन'
-            ] : [
-                'Total spent ₹25,128',
-                'Enhanced community harmony',
-                'Religious celebration organized'
-            ],
+            impact: language === 'hi'
+                ? ['कुल खर्च ₹25,128', 'सामुदायिक सद्भाव बढ़ा', 'धार्मिक उत्सव का आयोजन']
+                : ['Total spent ₹25,128', 'Enhanced community harmony', 'Religious celebration organized'],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1762001896/571371887_1228595669303899_1530027951067959863_n_qewddt.jpg',
-            category: language === 'hi' ? 'धार्मिक' : 'Religious'
+            category: language === 'hi' ? 'धार्मिक' : 'Religious',
         },
         {
             id: 3,
@@ -94,17 +80,11 @@ const Project = () => {
             duration: language === 'hi' ? '1 महीना' : '1 month',
             beneficiaries: language === 'hi' ? '500+ छात्र' : '500+ students',
             completionDate: language === 'hi' ? 'सितंबर 2025' : 'September 2025',
-            impact: language === 'hi' ? [
-                'नियमित पुस्तकालय सेवाएं',
-                'शैक्षणिक संसाधन उपलब्ध',
-                'छात्रों के लिए अध्ययन सामग्री'
-            ] : [
-                'Regular library services',
-                'Academic resources available',
-                'Study materials for students'
-            ],
+            impact: language === 'hi'
+                ? ['नियमित पुस्तकालय सेवाएं', 'शैक्षणिक संसाधन उपलब्ध', 'छात्रों के लिए अध्ययन सामग्री']
+                : ['Regular library services', 'Academic resources available', 'Study materials for students'],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943482/544977792_1184272213736245_6643950750768153738_n_vllvdo.jpg',
-            category: language === 'hi' ? 'शिक्षा' : 'Education'
+            category: language === 'hi' ? 'शिक्षा' : 'Education',
         },
         {
             id: 4,
@@ -116,89 +96,33 @@ const Project = () => {
             duration: language === 'hi' ? '25 दिन' : '25 days',
             beneficiaries: language === 'hi' ? 'सभी गांववासी' : 'All villagers',
             completionDate: language === 'hi' ? 'दिसंबर 2025' : 'December 2025',
-            impact: language === 'hi' ? [
-                'कुल खर्च ₹3,56,000',
-                'गांव की पहचान में वृद्धि',
-                'पर्यटन में सुधार'
-            ] : [
-                'Total spent ₹3,56,000',
-                'Enhanced village identity',
-                'Improved tourism'
-            ],
+            impact: language === 'hi'
+                ? ['कुल खर्च ₹3,56,000', 'गांव की पहचान में वृद्धि', 'पर्यटन में सुधार']
+                : ['Total spent ₹3,56,000', 'Enhanced village identity', 'Improved tourism'],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766659397/IMG_3746_fm9sza.jpg',
-            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure'
+            category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
         },
         {
+            // ✅ FIX 3: Selfie Point — added all missing fields (impact, duration, beneficiaries, completionDate)
+            // ❌ BEFORE: No impact/duration/beneficiaries/completionDate → project.impact.map() CRASHED
             id: 5,
             title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
             description: language === 'hi'
-                ? ' यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र।'
+                ? 'यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र।'
                 : 'This will be a new attraction for tourists and locals.',
             budget: '₹45,000',
-            progress: 60,
+            duration: language === 'hi' ? '2 महीने' : '2 months',
+            beneficiaries: language === 'hi' ? 'पर्यटक और स्थानीय' : 'Tourists & Locals',
+            completionDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
+            impact: language === 'hi'
+                ? ['पर्यटक आकर्षण केंद्र', 'फोटोग्राफी स्थल', 'स्थानीय पर्यटन बढ़ावा']
+                : ['Tourist attraction point', 'Photography spot', 'Boost to local tourism'],
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521608/WhatsApp_Image_2026-02-19_at_10.48.06_PM_jatvjo.jpg',
             category: language === 'hi' ? 'बुनियादी ढांचा' : 'Infrastructure',
-            expectedCompletion: language === 'hi' ? 'फ़रवरी 2026' : 'February 2026',
-            timeline: language === 'hi' ? '2 महीने' : '2 months',
-            features: language === 'hi' ? [
-                'पर्यटकों के लिए आकर्षण',
-                'फोटोग्राफी के लिए विशेष स्थान'
-            ] : [
-                'Tourist attraction spot',
-                'Special photography location'
-            ],
         },
     ];
 
     const upcomingProjects = [
-        // {
-        //     id: 1,
-        //     title: language === 'hi' ? 'बुद्धवा महादेव, महादेव स्थान' : 'Budhwa Mahadev, Mahadev Sthan',
-        //     description: language === 'hi'
-        //         ? 'बुद्धवा महादेव मंदिर में सीमा दीवार और सुरक्षा कार्य। मंदिर परिसर की सुरक्षा और सौंदर्यीकरण।'
-        //         : 'Boundary wall and protection work at Budhwa Mahadev temple for security and beautification.',
-        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-        //     startDate: language === 'hi' ? 'मार्च 2026' : 'March 2026',
-        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-        //     image: '',
-        //     icon: '🕉️',
-        // },
-        // {
-        //     id: 2,
-        //     title: language === 'hi' ? 'धार्मिक विरासत - छठ घाट सीढ़ियों की पेंटिंग' : 'Religious Heritage – Chhath Ghat Stairs Painting',
-        //     description: language === 'hi'
-        //         ? 'छठ घाट की सीढ़ियों पर रंगीन पेंटिंग। पारंपरिक और आधुनिक कला का संगम।'
-        //         : 'Colorful painting on Chhath Ghat stairs. Fusion of traditional and modern art.',
-        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-        //     startDate: language === 'hi' ? 'अप्रैल 2026' : 'April 2026',
-        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-        //     image: '',
-        //     icon: '🎨',
-        // },
-        // {
-        //     id: 3,
-        //     title: language === 'hi' ? 'पार्वती मंदिर, महादेव स्थान' : 'Parvati Temple, Mahadev Sthan',
-        //     description: language === 'hi'
-        //         ? 'शिव मंदिर के सामने माँ पार्वती की मूर्ति स्थापना का प्रस्ताव। धार्मिक स्थल की पूर्णता।'
-        //         : 'Proposal to install Maa Parvati idol in front of Shiv temple for completeness of religious site.',
-        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-        //     startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
-        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-        //     image: '',
-        //     icon: '🙏',
-        // },
-        // {
-        //     id: 4,
-        //     title: language === 'hi' ? 'वृक्षारोपण' : 'Tree Plantation',
-        //     description: language === 'hi'
-        //         ? 'तालाब के दोनों ओर वृक्षारोपण। पर्यावरण संरक्षण और हरित आवरण बढ़ाने के लिए सामुदायिक पहल।'
-        //         : 'Plantation on both sides of the pond. Community initiative for environmental protection.',
-        //     budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
-        //     startDate: language === 'hi' ? 'जून 2026' : 'June 2026',
-        //     status: language === 'hi' ? 'योजना चरण' : 'Not Started',
-        //     image: '',
-        //     icon: '🌳',
-        // },
         {
             id: 5,
             title: language === 'hi' ? 'महारानी स्थान मंदिर गुंबद' : 'Maharani Sthan Temple Dome',
@@ -261,43 +185,42 @@ const Project = () => {
         },
     ];
 
-
     const impactStats = [
         {
             number: '₹7L+',
             label: language === 'hi' ? 'कुल धनराशि' : 'Total Funds',
             icon: DollarSign,
             color: 'from-green-500 to-emerald-600',
-            bgColor: 'bg-green-50'
+            bgColor: 'bg-green-50',
         },
         {
             number: `${ongoingProjects.length + completedProjects.length + upcomingProjects.length}`,
             label: language === 'hi' ? 'कुल परियोजनाएं' : 'Total Projects',
             icon: BarChart3,
             color: 'from-blue-500 to-indigo-600',
-            bgColor: 'bg-blue-50'
+            bgColor: 'bg-blue-50',
         },
         {
             number: '2000+',
             label: language === 'hi' ? 'लाभार्थी' : 'Beneficiaries',
             icon: Users,
             color: 'from-purple-500 to-pink-600',
-            bgColor: 'bg-purple-50'
-        }
+            bgColor: 'bg-purple-50',
+        },
     ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
-        }
+        visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
     };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
+        visible: { opacity: 1, y: 0 },
     };
+
+    // ✅ FIX 1: Don't render until mounted on client (avoids SSR context issues)
+    if (!isMounted) return null;
 
     return (
         <>
@@ -311,6 +234,7 @@ const Project = () => {
             />
 
             <div className="bg-gradient-to-b from-gray-50 via-white to-gray-50">
+
                 {/* Impact Stats Section */}
                 <section className="py-12 sm:py-16 lg:py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -375,7 +299,7 @@ const Project = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={containerVariants}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8"
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                         >
                             {completedProjects.map((project, index) => (
                                 <motion.div
@@ -383,7 +307,6 @@ const Project = () => {
                                     variants={itemVariants}
                                     className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                                 >
-                                    {/* Image */}
                                     <div className="relative h-48 sm:h-56 overflow-hidden">
                                         <img
                                             src={project.image}
@@ -391,20 +314,15 @@ const Project = () => {
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-
-                                        {/* Status Badge */}
                                         <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1">
                                             <CheckCircle className="w-3 h-3" />
                                             <span>{language === 'hi' ? 'पूर्ण' : 'Done'}</span>
                                         </div>
-
-                                        {/* Category Badge */}
                                         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-xs font-bold">
                                             {project.category}
                                         </div>
                                     </div>
 
-                                    {/* Content */}
                                     <div className="p-5 sm:p-6">
                                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
                                             {project.title}
@@ -413,7 +331,6 @@ const Project = () => {
                                             {project.description}
                                         </p>
 
-                                        {/* Stats Grid */}
                                         <div className="grid grid-cols-2 gap-3 mb-4">
                                             <div className="bg-gray-50 rounded-xl p-3">
                                                 <div className="text-xs text-gray-500 mb-1">
@@ -429,7 +346,7 @@ const Project = () => {
                                             </div>
                                         </div>
 
-                                        {/* Impact Section */}
+                                        {/* ✅ FIX 3 applied here — impact?.map() safe even if somehow undefined */}
                                         <div className="bg-green-50 rounded-xl p-3 mb-4">
                                             <div className="flex items-center space-x-2 mb-2">
                                                 <Zap className="w-4 h-4 text-green-600" />
@@ -438,7 +355,7 @@ const Project = () => {
                                                 </span>
                                             </div>
                                             <ul className="space-y-1">
-                                                {project.impact.map((item, idx) => (
+                                                {project.impact?.map((item, idx) => (
                                                     <li key={idx} className="text-xs text-green-800 flex items-start">
                                                         <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
                                                         <span className="line-clamp-1">{item}</span>
@@ -447,7 +364,6 @@ const Project = () => {
                                             </ul>
                                         </div>
 
-                                        {/* Footer */}
                                         <div className="flex items-center justify-between pt-3 border-t border-gray-100 text-xs sm:text-sm">
                                             <div className="flex items-center space-x-1 text-gray-500">
                                                 <Calendar className="w-4 h-4" />
@@ -503,7 +419,6 @@ const Project = () => {
                                     variants={itemVariants}
                                     className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                                 >
-                                    {/* Image with Progress */}
                                     <div className="relative h-48 sm:h-56 overflow-hidden">
                                         <img
                                             src={project.image}
@@ -511,14 +426,10 @@ const Project = () => {
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-                                        {/* Status Badge */}
                                         <div className="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center space-x-1">
                                             <Clock className="w-3 h-3" />
                                             <span>{project.status}</span>
                                         </div>
-
-                                        {/* Progress Bar */}
                                         <div className="absolute bottom-4 left-4 right-4">
                                             <div className="flex justify-between text-white text-xs sm:text-sm font-semibold mb-2">
                                                 <span>{language === 'hi' ? 'प्रगति' : 'Progress'}</span>
@@ -531,12 +442,11 @@ const Project = () => {
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 1, delay: 0.5 }}
                                                     className="h-full bg-gradient-to-r from-green-400 to-emerald-500 rounded-full shadow-lg"
-                                                ></motion.div>
+                                                />
                                             </div>
                                         </div>
                                     </div>
 
-                                    {/* Content */}
                                     <div className="p-5 sm:p-6">
                                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
                                             {project.title}
@@ -545,7 +455,6 @@ const Project = () => {
                                             {project.description}
                                         </p>
 
-                                        {/* Info Grid */}
                                         <div className="bg-blue-50 rounded-xl p-4 mb-4">
                                             <div className="grid grid-cols-2 gap-3 mb-3">
                                                 <div>
@@ -567,14 +476,13 @@ const Project = () => {
                                             </div>
                                         </div>
 
-                                        {/* Features */}
                                         <div>
                                             <h4 className="font-bold text-gray-900 mb-2 text-sm flex items-center space-x-2">
                                                 <Sparkles className="w-4 h-4 text-blue-600" />
                                                 <span>{language === 'hi' ? 'विशेषताएं' : 'Features'}</span>
                                             </h4>
                                             <ul className="space-y-1.5">
-                                                {project.features.map((feature, idx) => (
+                                                {project.features?.map((feature, idx) => (
                                                     <li key={idx} className="text-xs text-gray-700 flex items-start">
                                                         <span className="text-blue-600 mr-2 flex-shrink-0">✓</span>
                                                         <span>{feature}</span>
@@ -627,7 +535,6 @@ const Project = () => {
                                     variants={itemVariants}
                                     className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-200"
                                 >
-                                    {/* Image */}
                                     <div className="relative h-48 sm:h-52 overflow-hidden">
                                         <img
                                             src={project.image}
@@ -635,19 +542,14 @@ const Project = () => {
                                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-
-                                        {/* Icon */}
                                         <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-2xl shadow-lg">
                                             {project.icon}
                                         </div>
-
-                                        {/* Status Badge */}
                                         <div className="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
                                             {project.status}
                                         </div>
                                     </div>
 
-                                    {/* Content */}
                                     <div className="p-5 sm:p-6">
                                         <div className="flex items-start justify-between mb-3">
                                             <h3 className="text-lg sm:text-xl font-bold text-gray-900 flex-1 line-clamp-1">
@@ -660,8 +562,6 @@ const Project = () => {
                                         <p className="text-sm text-gray-600 mb-4 line-clamp-3">
                                             {project.description}
                                         </p>
-
-                                        {/* Footer */}
                                         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                                             <div className="flex items-center space-x-2 text-sm text-gray-600">
                                                 <Calendar className="w-4 h-4 text-purple-500" />
@@ -686,13 +586,10 @@ const Project = () => {
                             transition={{ duration: 0.6 }}
                             className="relative bg-gradient-to-br from-green-600 via-emerald-600 to-green-700 rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center overflow-hidden"
                         >
-                            {/* Background Pattern */}
                             <div className="absolute inset-0 opacity-10">
                                 <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
                                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
                             </div>
-
-                            {/* Content */}
                             <div className="relative z-10">
                                 <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-3xl mb-6">
                                     <Award className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -719,6 +616,7 @@ const Project = () => {
                         </motion.div>
                     </div>
                 </section>
+
             </div>
         </>
     );

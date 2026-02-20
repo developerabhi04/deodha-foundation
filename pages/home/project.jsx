@@ -8,28 +8,24 @@ import {
 import Link from 'next/link';
 import { useLanguage } from '../../lib/LanguageContext';
 
-
 const ProjectsSection = () => {
     const { language } = useLanguage();
     const [activeTab, setActiveTab] = useState('ongoing');
 
-
     // Projects Data
     const ongoingProjects = [
-
         {
-            id: 2,
+            id: 1,
             title: language === 'hi' ? 'ब्रह्मपिशाच क्षेत्र में फ्लोरिंग' : 'Flooring inside Brahmpishach Area',
             description: language === 'hi'
                 ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
-                : 'Beautification and durable flooring inside the premises. This will enhance the area\'s beauty and durability.',
+                : "Beautification and durable flooring inside the premises. This will enhance the area's beauty and durability.",
             budget: '₹1,50,000',
             progress: 45,
             status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
         },
     ];
-
 
     const completedProjects = [
         {
@@ -81,14 +77,13 @@ const ProjectsSection = () => {
             title: language === 'hi' ? 'सेल्फी पॉइंट' : 'Selfie Point',
             description: language === 'hi'
                 ? 'यह स्थान पर्यटकों और स्थानीय लोगों के लिए एक नया आकर्षण केंद्र।'
-                : 'This will a new attraction for tourists and locals.',
+                : 'This will be a new attraction for tourists and locals.',
             budget: '₹45,000',
             completionDate: language === 'hi' ? 'फरवरी 2026' : 'February 2026',
             impact: language === 'hi' ? 'पर्यटक आकर्षण' : 'Tourist attraction',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521608/WhatsApp_Image_2026-02-19_at_10.48.06_PM_jatvjo.jpg',
         },
     ];
-
 
     const upcomingProjects = [
         {
@@ -192,7 +187,7 @@ const ProjectsSection = () => {
         },
     ];
 
-
+    // ✅ FIX 1: Dynamic counts using .length instead of hardcoded numbers
     const tabs = [
         {
             id: 'ongoing',
@@ -201,7 +196,7 @@ const ProjectsSection = () => {
             gradient: 'from-yellow-500 to-orange-500',
             bgColor: 'bg-yellow-100',
             textColor: 'text-yellow-700',
-            count: 2
+            count: ongoingProjects.length,   // ✅ was hardcoded 2, now dynamic = 1
         },
         {
             id: 'completed',
@@ -210,7 +205,7 @@ const ProjectsSection = () => {
             gradient: 'from-green-500 to-emerald-500',
             bgColor: 'bg-green-100',
             textColor: 'text-green-700',
-            count: 4
+            count: completedProjects.length, // ✅ was hardcoded 4, now dynamic = 5
         },
         {
             id: 'upcoming',
@@ -219,20 +214,9 @@ const ProjectsSection = () => {
             gradient: 'from-blue-500 to-indigo-500',
             bgColor: 'bg-blue-100',
             textColor: 'text-blue-700',
-            count: 9
-        }
+            count: upcomingProjects.length,  // ✅ dynamic = 9
+        },
     ];
-
-
-    const getCurrentProjects = () => {
-        switch (activeTab) {
-            case 'ongoing': return ongoingProjects;
-            case 'completed': return completedProjects;
-            case 'upcoming': return upcomingProjects;
-            default: return ongoingProjects;
-        }
-    };
-
 
     return (
         <section id="projects" className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
@@ -242,7 +226,6 @@ const ProjectsSection = () => {
                 <div className="absolute top-0 right-0 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
                 <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
             </div>
-
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -268,7 +251,6 @@ const ProjectsSection = () => {
                     </p>
                 </motion.div>
 
-
                 {/* Tab Navigation */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -289,7 +271,9 @@ const ProjectsSection = () => {
                             <div className="flex items-center justify-center space-x-2">
                                 <tab.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                                 <span>{tab.label}</span>
-                                <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${activeTab === tab.id ? 'bg-white/20 text-white' : `${tab.bgColor} ${tab.textColor}`
+                                <span className={`px-2 py-0.5 rounded-full text-xs font-bold ${activeTab === tab.id
+                                    ? 'bg-white/20 text-white'
+                                    : `${tab.bgColor} ${tab.textColor}`
                                     }`}>
                                     {tab.count}
                                 </span>
@@ -297,7 +281,6 @@ const ProjectsSection = () => {
                         </button>
                     ))}
                 </motion.div>
-
 
                 {/* Projects Grid */}
                 <AnimatePresence mode="wait">
@@ -311,7 +294,9 @@ const ProjectsSection = () => {
                     >
                         {/* Ongoing Projects */}
                         {activeTab === 'ongoing' && (
-                            <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+                            // ✅ FIX 2: Centered single-card layout — max-w-2xl mx-auto prevents
+                            //    a lone card from stretching to fill a 2-col grid on large screens
+                            <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto">
                                 {ongoingProjects.map((project, index) => (
                                     <motion.div
                                         key={project.id}
@@ -356,7 +341,7 @@ const ProjectsSection = () => {
                                                         viewport={{ once: true }}
                                                         transition={{ duration: 1, delay: 0.5 }}
                                                         className="absolute top-0 left-0 h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"
-                                                    ></motion.div>
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -364,7 +349,6 @@ const ProjectsSection = () => {
                                 ))}
                             </div>
                         )}
-
 
                         {/* Completed Projects */}
                         {activeTab === 'completed' && (
@@ -418,7 +402,6 @@ const ProjectsSection = () => {
                             </div>
                         )}
 
-
                         {/* Upcoming Projects */}
                         {activeTab === 'upcoming' && (
                             <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -468,7 +451,6 @@ const ProjectsSection = () => {
                     </motion.div>
                 </AnimatePresence>
 
-
                 {/* View All Button */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -489,6 +471,5 @@ const ProjectsSection = () => {
         </section>
     );
 };
-
 
 export default ProjectsSection;
