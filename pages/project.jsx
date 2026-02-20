@@ -497,7 +497,7 @@ const Project = () => {
                             variants={containerVariants}
                             className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                         >
-                            {ongoingProjects?.map((project, index) => (
+                            {ongoingProjects.map((project, index) => (
                                 <motion.div
                                     key={project.id}
                                     variants={itemVariants}
