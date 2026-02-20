@@ -45,17 +45,18 @@ const TeamPage = () => {
         },
         {
             id: 3,
-            name: 'Mitendra Kumar',
+            name: 'Shree Santosh Kumar',
             role: 'Secretary',
             category: 'leadership',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761915194/FuntyPhoto2_qrhwg3.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1771521297/WhatsApp_Image_2026-02-19_at_10.40.23_PM_hccryy.jpg',
             gradient: 'from-purple-600 via-violet-500 to-purple-700',
             bgColor: 'bg-purple-500',
             location: 'Dheodha, Bihar',
-            bio: 'श्री मितेन्द्र कुमार – समर्पित और सक्रिय ग्रामसेवक',
-            longBio: 'श्री मितेन्द्र कुमार, धेवधा विकास समिति के सचिव के रूप में, सभी प्रशासनिक और संगठनात्मक कार्यों का कुशलतापूर्वक संचालन करते हैं। उनकी कार्यकुशलता और समर्पण समिति की सफलता का आधार है।',
+            bio: 'श्री संतोष कुमार – समर्पित और सक्रिय ग्रामसेवक',
+            longBio: 'श्री संतोष कुमार, धेवधा विकास समिति के महा सचिव के रूप में, सभी प्रशासनिक और संगठनात्मक कार्यों का कुशलतापूर्वक संचालन करते हैं। उनकी कार्यकुशलता और समर्पण समिति की सफलता का आधार है।',
             quote: '"गांव का विकास केवल योजनाओं से नहीं, बल्कि हर व्यक्ति के सक्रिय सहयोग से संभव है।"',
         },
+
         {
             id: 4,
             name: 'Devkant Mishra',
