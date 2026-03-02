@@ -95,7 +95,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'मार्च 2026' : 'Mar 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
+            image: '',
         },
         {
             id: 2,
@@ -106,7 +106,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'अप्रैल 2026' : 'Apr 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913593/ChathPuja1_x0hxeq.jpg',
         },
         {
             id: 3,
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'मई 2026' : 'May 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763068920/330207172_529598739266971_2580032597949579545_n_ibhdce.jpg',
+            image: '',
         },
         {
             id: 4,
@@ -128,7 +128,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'जून 2026' : 'Jun 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761943481/545839216_1184272130402920_2963934031699955061_n_qt9tlk.jpg',
+            image: '',
         },
         {
             id: 5,
@@ -139,7 +139,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'जुलाई 2026' : 'Jul 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1766517455/IMG_20251206_112053836_tnkgij.jpg',
         },
         {
             id: 6,
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
             budget: language === 'hi' ? 'योजनाबद्ध' : 'To be planned',
             startDate: language === 'hi' ? 'अगस्त 2026' : 'Aug 2026',
             status: language === 'hi' ? 'नियोजित' : 'Planned',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763069558/RW-12_gneahb.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1770475262/WhatsApp_Image_2025-12-09_at_11.27.01_AM_1_abopaw.jpg',
         },
         {
             id: 7,
