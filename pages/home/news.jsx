@@ -58,115 +58,123 @@ const NewsSection = () => {
         }
     ];
 
-    const announcements = [
-        {
-            id: 1,
-            title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना: संगमरमर एवं ग्रेनाइट कार्य हेतु मिस्त्री चयन' : 'Main Gate Beautification Project: Mason Selection for Marble & Granite Work',
-            date: language === 'hi' ? '14 अक्टूबर' : 'Oct 14',
-            type: language === 'hi' ? 'परियोजना' : 'Project',
-            priority: 'high',
-            icon: '🏗️',
-            link: 'https://www.facebook.com/share/p/14NLX3EJ4AT/'
-        },
-        {
-            id: 2,
-            title: language === 'hi' ? 'छठ घाट सफाई अभियान' : 'Chhath Ghat Cleaning Campaign',
-            date: language === 'hi' ? '12 अक्टूबर' : 'Oct 12',
-            type: language === 'hi' ? 'सफाई' : 'Cleanliness',
-            icon: '🧹',
-            link: 'https://www.facebook.com/share/p/17LZcBkEYf/'
-        },
-        {
-            id: 3,
-            title: language === 'hi' ? 'छठ पूजा घाट पर सामूहिक आरती का आयोजन' : 'Collective Aarti at Chhath Puja Ghat',
-            date: language === 'hi' ? '10 अक्टूबर' : 'Oct 10',
-            type: language === 'hi' ? 'धार्मिक' : 'Religious',
-            priority: 'high',
-            icon: '🪔',
-            link: 'https://www.facebook.com/share/p/19hBuRicSg/'
-        },
-        {
-            id: 4,
-            title: language === 'hi' ? 'धन्यवाद संदेश' : 'Thank You Message',
-            date: language === 'hi' ? '8 अक्टूबर' : 'Oct 8',
-            type: language === 'hi' ? 'सूचना' : 'Information',
-            icon: '🙏',
-            link: 'https://www.facebook.com/share/p/15MQAe4h8Jn/'
-        },
-        {
-            id: 5,
-            title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना: धन्यवाद ज्ञापन धेवधा पंचायत के माननीय मुखिया श्री संदीप राजवंशी' : 'Main Gate Beautification: Thanks to Mukhiya Shri Sandeep Rajvanshi',
-            date: language === 'hi' ? '6 अक्टूबर' : 'Oct 6',
-            type: language === 'hi' ? 'धन्यवाद' : 'Gratitude',
-            icon: '🙏',
-            link: 'https://www.facebook.com/share/p/1Jg7ECsJig/'
-        },
-        {
-            id: 6,
-            title: language === 'hi' ? 'जनहित अपील – धेवधा ग्राम की सड़क और नाली की बदहाल स्थिति पर' : 'Public Appeal - Poor Condition of Road and Drains in Dheodha Village',
-            date: language === 'hi' ? '5 अक्टूबर' : 'Oct 5',
-            type: language === 'hi' ? 'अपील' : 'Appeal',
-            priority: 'high',
-            icon: '📢',
-            link: 'https://www.facebook.com/share/p/1AJKEG6dEh/'
-        },
-        {
-            id: 7,
-            title: language === 'hi' ? 'अपडेट | धेवधा विकास समिति' : 'Update | Dheodha Vikas Samiti',
-            date: language === 'hi' ? '3 अक्टूबर' : 'Oct 3',
-            type: language === 'hi' ? 'अपडेट' : 'Update',
-            icon: '📰',
-            link: 'https://www.facebook.com/share/p/1BRQgnbUtU/'
-        },
-        {
-            id: 8,
-            title: language === 'hi' ? 'धेवधा पंचायत के लिए ऐतिहासिक उपलब्धि!' : 'Historic Achievement for Dheodha Panchayat!',
-            date: language === 'hi' ? '1 अक्टूबर' : 'Oct 1',
-            type: language === 'hi' ? 'उपलब्धि' : 'Achievement',
-            priority: 'high',
-            icon: '🏆',
-            link: 'https://www.facebook.com/share/p/17HqE3XLzs/'
-        },
-        {
-            id: 9,
-            title: language === 'hi' ? 'हार्दिक बधाई एवं शुभकामनाएँ' : 'Heartfelt Congratulations and Best Wishes',
-            date: language === 'hi' ? '28 सितंबर' : 'Sep 28',
-            type: language === 'hi' ? 'बधाई' : 'Congratulations',
-            icon: '🎉',
-            link: 'https://www.facebook.com/share/p/1ETzKvhMcX/'
-        },
-        {
-            id: 10,
-            title: language === 'hi' ? 'धन्यवाद एवं सादर आभार' : 'Thanks and Gratitude',
-            date: language === 'hi' ? '25 सितंबर' : 'Sep 25',
-            type: language === 'hi' ? 'धन्यवाद' : 'Thanks',
-            icon: '🙏',
-            link: 'https://www.facebook.com/share/p/1aQBh2fPSR/'
-        },
-        {
-            id: 11,
-            title: language === 'hi' ? 'ग्राम संवाद सह निगरानी समिति – बैठक निष्कर्ष' : 'Village Dialogue cum Monitoring Committee - Meeting Conclusions',
-            date: language === 'hi' ? '22 सितंबर' : 'Sep 22',
-            type: language === 'hi' ? 'बैठक' : 'Meeting',
-            icon: '📋',
-            link: 'https://www.facebook.com/share/p/17NHZenKqY/'
-        },
-        {
-            id: 12,
-            title: language === 'hi' ? 'घोषणा – ब्रह्म पिचास स्थान पर सेवा कार्य' : 'Announcement - Service Work at Brahma Pichas Sthan',
-            date: language === 'hi' ? '20 सितंबर' : 'Sep 20',
-            type: language === 'hi' ? 'घोषणा' : 'Announcement',
-            icon: '🔔',
-            link: 'https://www.facebook.com/share/p/1Gi4FQfyVw/'
-        },
-        {
-            id: 13,
-            title: language === 'hi' ? 'हार्दिक बधाई एवं शुभकामनाएँ' : 'Heartfelt Congratulations and Best Wishes',
-            date: language === 'hi' ? '18 सितंबर' : 'Sep 18',
-            type: language === 'hi' ? 'बधाई' : 'Congratulations',
-            icon: '🎊',
-            link: 'https://www.facebook.com/share/p/14PMpS7qtKn/'
-        }
+    const announcements = [{
+        id: 1,
+        title: language === 'hi' ? '🎉 नव‑नियुक्त कार्यकारी सचिव Bam Singh को हार्दिक शुभकामनाएँ।' : '🎉 Hearty congratulations to the newly appointed Executive Secretary Bam Singh.',
+        date: language === 'hi' ? '1 मार्च' : 'March 1',
+        type: language === 'hi' ? 'सूचना' : 'Information',
+        priority: 'high',
+        icon: '🏗️',
+        link: 'https://www.facebook.com/share/p/17p7CYJm6S/'
+    },
+    {
+        id: 1,
+        title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना: संगमरमर एवं ग्रेनाइट कार्य हेतु मिस्त्री चयन' : 'Main Gate Beautification Project: Mason Selection for Marble & Granite Work',
+        date: language === 'hi' ? '14 अक्टूबर' : 'Oct 14',
+        type: language === 'hi' ? 'परियोजना' : 'Project',
+        priority: 'high',
+        icon: '🏗️',
+        link: 'https://www.facebook.com/share/p/14NLX3EJ4AT/'
+    },
+    {
+        id: 2,
+        title: language === 'hi' ? 'छठ घाट सफाई अभियान' : 'Chhath Ghat Cleaning Campaign',
+        date: language === 'hi' ? '12 अक्टूबर' : 'Oct 12',
+        type: language === 'hi' ? 'सफाई' : 'Cleanliness',
+        icon: '🧹',
+        link: 'https://www.facebook.com/share/p/17LZcBkEYf/'
+    },
+    {
+        id: 3,
+        title: language === 'hi' ? 'छठ पूजा घाट पर सामूहिक आरती का आयोजन' : 'Collective Aarti at Chhath Puja Ghat',
+        date: language === 'hi' ? '10 अक्टूबर' : 'Oct 10',
+        type: language === 'hi' ? 'धार्मिक' : 'Religious',
+        priority: 'high',
+        icon: '🪔',
+        link: 'https://www.facebook.com/share/p/19hBuRicSg/'
+    },
+    {
+        id: 4,
+        title: language === 'hi' ? 'धन्यवाद संदेश' : 'Thank You Message',
+        date: language === 'hi' ? '8 अक्टूबर' : 'Oct 8',
+        type: language === 'hi' ? 'सूचना' : 'Information',
+        icon: '🙏',
+        link: 'https://www.facebook.com/share/p/15MQAe4h8Jn/'
+    },
+    {
+        id: 5,
+        title: language === 'hi' ? 'मुख्य द्वार सौंदर्यीकरण परियोजना: धन्यवाद ज्ञापन धेवधा पंचायत के माननीय मुखिया श्री संदीप राजवंशी' : 'Main Gate Beautification: Thanks to Mukhiya Shri Sandeep Rajvanshi',
+        date: language === 'hi' ? '6 अक्टूबर' : 'Oct 6',
+        type: language === 'hi' ? 'धन्यवाद' : 'Gratitude',
+        icon: '🙏',
+        link: 'https://www.facebook.com/share/p/1Jg7ECsJig/'
+    },
+    {
+        id: 6,
+        title: language === 'hi' ? 'जनहित अपील – धेवधा ग्राम की सड़क और नाली की बदहाल स्थिति पर' : 'Public Appeal - Poor Condition of Road and Drains in Dheodha Village',
+        date: language === 'hi' ? '5 अक्टूबर' : 'Oct 5',
+        type: language === 'hi' ? 'अपील' : 'Appeal',
+        priority: 'high',
+        icon: '📢',
+        link: 'https://www.facebook.com/share/p/1AJKEG6dEh/'
+    },
+    {
+        id: 7,
+        title: language === 'hi' ? 'अपडेट | धेवधा विकास समिति' : 'Update | Dheodha Vikas Samiti',
+        date: language === 'hi' ? '3 अक्टूबर' : 'Oct 3',
+        type: language === 'hi' ? 'अपडेट' : 'Update',
+        icon: '📰',
+        link: 'https://www.facebook.com/share/p/1BRQgnbUtU/'
+    },
+    {
+        id: 8,
+        title: language === 'hi' ? 'धेवधा पंचायत के लिए ऐतिहासिक उपलब्धि!' : 'Historic Achievement for Dheodha Panchayat!',
+        date: language === 'hi' ? '1 अक्टूबर' : 'Oct 1',
+        type: language === 'hi' ? 'उपलब्धि' : 'Achievement',
+        priority: 'high',
+        icon: '🏆',
+        link: 'https://www.facebook.com/share/p/17HqE3XLzs/'
+    },
+    {
+        id: 9,
+        title: language === 'hi' ? 'हार्दिक बधाई एवं शुभकामनाएँ' : 'Heartfelt Congratulations and Best Wishes',
+        date: language === 'hi' ? '28 सितंबर' : 'Sep 28',
+        type: language === 'hi' ? 'बधाई' : 'Congratulations',
+        icon: '🎉',
+        link: 'https://www.facebook.com/share/p/1ETzKvhMcX/'
+    },
+    {
+        id: 10,
+        title: language === 'hi' ? 'धन्यवाद एवं सादर आभार' : 'Thanks and Gratitude',
+        date: language === 'hi' ? '25 सितंबर' : 'Sep 25',
+        type: language === 'hi' ? 'धन्यवाद' : 'Thanks',
+        icon: '🙏',
+        link: 'https://www.facebook.com/share/p/1aQBh2fPSR/'
+    },
+    {
+        id: 11,
+        title: language === 'hi' ? 'ग्राम संवाद सह निगरानी समिति – बैठक निष्कर्ष' : 'Village Dialogue cum Monitoring Committee - Meeting Conclusions',
+        date: language === 'hi' ? '22 सितंबर' : 'Sep 22',
+        type: language === 'hi' ? 'बैठक' : 'Meeting',
+        icon: '📋',
+        link: 'https://www.facebook.com/share/p/17NHZenKqY/'
+    },
+    {
+        id: 12,
+        title: language === 'hi' ? 'घोषणा – ब्रह्म पिचास स्थान पर सेवा कार्य' : 'Announcement - Service Work at Brahma Pichas Sthan',
+        date: language === 'hi' ? '20 सितंबर' : 'Sep 20',
+        type: language === 'hi' ? 'घोषणा' : 'Announcement',
+        icon: '🔔',
+        link: 'https://www.facebook.com/share/p/1Gi4FQfyVw/'
+    },
+    {
+        id: 13,
+        title: language === 'hi' ? 'हार्दिक बधाई एवं शुभकामनाएँ' : 'Heartfelt Congratulations and Best Wishes',
+        date: language === 'hi' ? '18 सितंबर' : 'Sep 18',
+        type: language === 'hi' ? 'बधाई' : 'Congratulations',
+        icon: '🎊',
+        link: 'https://www.facebook.com/share/p/14PMpS7qtKn/'
+    }
     ];
 
     const referenceDocuments = [

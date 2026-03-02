@@ -20,10 +20,10 @@ const ProjectsSection = () => {
             description: language === 'hi'
                 ? 'परिसर के अंदर सुंदरीकरण और टिकाऊ फ्लोरिंग का कार्य। इससे क्षेत्र की सुंदरता और स्थायित्व में वृद्धि होगी।'
                 : "Beautification and durable flooring inside the premises. This will enhance the area's beauty and durability.",
-            budget: '₹1,50,000',
+            budget: '₹3,00,000',
             progress: 45,
             status: language === 'hi' ? 'प्रगति पर' : 'In Progress',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761989019/122229215_4119849248032176_6598869593962715102_n_hxkb7o.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913593/BrahmPichas2_faqb4s.jpg',
         },
     ];
 
