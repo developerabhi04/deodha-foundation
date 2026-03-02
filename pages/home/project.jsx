@@ -48,7 +48,7 @@ const ProjectsSection = () => {
             budget: '₹25,000',
             completionDate: language === 'hi' ? 'नवंबर 2025' : 'November 2025',
             impact: language === 'hi' ? '₹25,128 खर्च' : '₹25,128 spent',
-            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763067938/Largest-water-conservation-awareness-campaign_jmvlgn.jpg',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1761913593/ChathPuja1_x0hxeq.jpg',
         },
         {
             id: 3,
