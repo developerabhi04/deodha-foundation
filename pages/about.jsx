@@ -44,11 +44,10 @@ const About = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-8 py-4 rounded-full font-semibold transition-all ${
-                    activeTab === tab.id
+                  className={`px-8 py-4 rounded-full font-semibold transition-all ${activeTab === tab.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg scale-105'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -59,11 +58,11 @@ const About = () => {
             {activeTab === 'story' && <AboutStory />}
             {activeTab === 'vision' && <AboutVisionMission />}
             {activeTab === 'features' && <AboutFeatures />}
-            {activeTab === 'structure' && <AboutStructure />}
+            {/* {activeTab === 'structure' && <AboutStructure />} */}
           </div>
         </section>
 
-      
+
 
         {/* CTA Section */}
         <AboutCTA />
