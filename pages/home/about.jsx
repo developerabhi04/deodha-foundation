@@ -52,7 +52,7 @@ const AboutSection = () => {
             name: language === 'hi' ? 'ब्रजेश कुमार' : 'Bam Shankar',
             role: language === 'hi' ? 'उप-सचिव' : 'Vice-Secretary',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1774883367/Bam_Shankar_Ji_psqpay.png',
-            color: 'from-orange-500 to-amber-600',
+            color: 'from-red-500 to-green-600',
         },
     ];
 
