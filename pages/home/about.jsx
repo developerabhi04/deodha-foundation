@@ -47,7 +47,13 @@ const AboutSection = () => {
             role: language === 'hi' ? 'उप-सचिव' : 'Vice-Secretary',
             image: 'https://res.cloudinary.com/dusalynec/image/upload/v1763231704/IMG-20251115-WA0006-Picsart-AiImageEnhancer_la6ecw.jpg',
             color: 'from-orange-500 to-amber-600',
-        }
+        },
+        {
+            name: language === 'hi' ? 'ब्रजेश कुमार' : 'Bam Shankar',
+            role: language === 'hi' ? 'उप-सचिव' : 'Vice-Secretary',
+            image: 'https://res.cloudinary.com/dusalynec/image/upload/v1774883367/Bam_Shankar_Ji_psqpay.png',
+            color: 'from-orange-500 to-amber-600',
+        },
     ];
 
     const focusAreas = [
