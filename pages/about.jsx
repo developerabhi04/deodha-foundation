@@ -39,7 +39,7 @@ const About = () => {
                 { id: 'story', label: language === 'hi' ? 'हमारी कहानी' : 'Our Story' },
                 { id: 'vision', label: language === 'hi' ? 'विज़न और मिशन' : 'Vision & Mission' },
                 { id: 'features', label: language === 'hi' ? 'हमारी विशेषताएँ' : 'Our Features' },
-                { id: 'structure', label: language === 'hi' ? 'संगठनात्मक संरचना' : 'Structure' }
+                {/* { id: 'structure', label: language === 'hi' ? 'संगठनात्मक संरचना' : 'Structure' } */}
               ].map((tab) => (
                 <button
                   key={tab.id}
